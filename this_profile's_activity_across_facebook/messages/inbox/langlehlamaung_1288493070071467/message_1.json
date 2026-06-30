@@ -1,0 +1,32 @@
+{
+  "participants": [
+    {
+      "name": "Langle Hla Maung"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1778042866105,
+      "content": "\u00e1\u0080\u0099\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b9\u00e1\u0080\u0082\u00e1\u0080\u009c\u00e1\u0080\u00ac\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0081\u008b Nobel Mount College \u00e1\u0080\u0099\u00e1\u0080\u00be \u00e1\u0080\u0080\u00e1\u0080\u00bc\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0086\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0090\u00e1\u0080\u009a\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0081\u008b\n\nGED (6) Months \u00e1\u0080\u0090\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u0080\n\u00e1\u0080\u009e\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u0090\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u0080\u00e1\u0080\u00bc\u00e1\u0080\u00b1\u00e1\u0080\u00b8 (24)\u00e1\u0080\u009e\u00e1\u0080\u00ad\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u0080\u00e1\u0080\u00bb\u00e1\u0080\u0095\u00e1\u0080\u00ba + Registration Fees (Text book free + Teaching Material free(2) \u00e1\u0080\u009e\u00e1\u0080\u00ad\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u0080\u00e1\u0080\u00bb\u00e1\u0080\u0095\u00e1\u0080\u00ba\u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0081\u008b",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1778042865310,
+      "content": "You are responding to a user comment to a post on your Page. View comment.(https://facebook.com/100063966013095/posts/pfbid0QCuNfQgDQsL9t6eKoGFvHqBSPr7sLKMCTeokQ2onrzsFN2KVhqaTGUgYXKF7H2dVl/?comment_id=2441159662984438)",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Langle Hla Maung",
+  "is_still_participant": false,
+  "thread_path": "inbox/langlehlamaung_1288493070071467",
+  "magic_words": [
+    
+  ]
+}

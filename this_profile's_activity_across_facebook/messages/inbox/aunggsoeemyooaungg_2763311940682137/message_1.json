@@ -1,0 +1,32 @@
+{
+  "participants": [
+    {
+      "name": "Aungg Soee Myoo Aungg"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1777798065178,
+      "content": "09780775668 \nCv form\u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u0095\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u00b7\u00e1\u0080\u0095\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00b7\u00e1\u0080\u00ba",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Aungg Soee Myoo Aungg",
+      "timestamp_ms": 1777797946551,
+      "content": "GED maths teacher part time\u00e1\u0080\u009c\u00e1\u0080\u00bb\u00e1\u0080\u00be\u00e1\u0080\u00b1\u00e1\u0080\u00ac\u00e1\u0080\u0080\u00e1\u0080\u00ba\u00e1\u0080\u0081\u00e1\u0080\u00bb\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u009c\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u00b7\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0097\u00e1\u0080\u00bb",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Aungg Soee Myoo Aungg",
+  "is_still_participant": false,
+  "thread_path": "inbox/aunggsoeemyooaungg_2763311940682137",
+  "magic_words": [
+    
+  ]
+}

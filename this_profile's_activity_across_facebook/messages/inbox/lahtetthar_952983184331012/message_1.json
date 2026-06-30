@@ -1,0 +1,53 @@
+{
+  "participants": [
+    {
+      "name": "La Htet Thar"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1774863320798,
+      "content": "Online Class \u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u00ad\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0090\u00e1\u0080\u009a\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1774863149451,
+      "content": "\u00e1\u0080\u0099\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b9\u00e1\u0080\u0082\u00e1\u0080\u009c\u00e1\u0080\u00ac\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0081\u008b Nobel Mount College \u00e1\u0080\u0099\u00e1\u0080\u00be \u00e1\u0080\u0080\u00e1\u0080\u00bc\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0086\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0090\u00e1\u0080\u009a\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0081\u008b",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "La Htet Thar",
+      "timestamp_ms": 1774861973959,
+      "content": "Online Class \u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u00ad\u00e1\u0080\u009c\u00e1\u0080\u00ac\u00e1\u0080\u00b8\u00e1\u0080\u0097\u00e1\u0080\u00bb",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "La Htet Thar",
+      "timestamp_ms": 1774861964421,
+      "content": "CCNA class \u00e1\u0080\u0090\u00e1\u0080\u0080\u00e1\u0080\u00ba\u00e1\u0080\u0081\u00e1\u0080\u00bb\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u009c\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u00b7\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0097\u00e1\u0080\u00bb",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "La Htet Thar",
+      "timestamp_ms": 1774861956525,
+      "content": "Hi",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "La Htet Thar",
+  "is_still_participant": false,
+  "thread_path": "inbox/lahtetthar_952983184331012",
+  "magic_words": [
+    
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "participants": [
+    {
+      "name": "\u00e1\u0080\u0094\u00e1\u0080\u00ac \u00e1\u0080\u009b\u00e1\u0080\u00ae"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1763771483154,
+      "content": "\u00e1\u0080\u0099\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b9\u00e1\u0080\u0082\u00e1\u0080\u009c\u00e1\u0080\u00ac\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7 Nobel Mount College \u00e1\u0080\u0099\u00e1\u0080\u00be \u00e1\u0080\u0080\u00e1\u0080\u00bc\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0086\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0090\u00e1\u0080\u009a\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e1\u0080\u0094\u00e1\u0080\u00ac \u00e1\u0080\u009b\u00e1\u0080\u00ae",
+      "timestamp_ms": 1763766012472,
+      "content": "Hi",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1763766011759,
+      "content": "Hi \u00e1\u0080\u0094\u00e1\u0080\u00ac! Please let us know how we can help you.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1763766011326,
+      "content": "\u00e1\u0080\u0094\u00e1\u0080\u00ac \u00e1\u0080\u009b\u00e1\u0080\u00ae replied to an ad.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00e1\u0080\u0094\u00e1\u0080\u00ac \u00e1\u0080\u009b\u00e1\u0080\u00ae",
+  "is_still_participant": false,
+  "thread_path": "inbox/122227065452285592",
+  "magic_words": [
+    
+  ]
+}

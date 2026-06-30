@@ -1,0 +1,39 @@
+{
+  "timestamp": 1757763775,
+  "media": [
+    
+  ],
+  "label_values": [
+    {
+      "dict": [
+        {
+          "dict": [
+            {
+              "label": "Have you accepted this badge",
+              "value": "Accepted"
+            },
+            {
+              "label": "Number of years in group",
+              "value": ""
+            },
+            {
+              "label": "Latest time awarded",
+              "timestamp_value": 1757763770
+            },
+            {
+              "label": "Name",
+              "value": "Admin"
+            },
+            {
+              "label": "Group",
+              "value": "Zero to Professional (Batch-1)"
+            }
+          ],
+          "title": ""
+        }
+      ],
+      "title": "Badges"
+    }
+  ],
+  "fbid": "1319231246453379"
+}

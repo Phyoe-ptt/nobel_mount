@@ -1,0 +1,102 @@
+{
+  "media": [
+    
+  ],
+  "label_values": [
+    {
+      "label": "Send message with enter key",
+      "value": "True"
+    },
+    {
+      "label": "Emoji colour",
+      "value": "0"
+    },
+    {
+      "label": "Notifications for 1:1 threads",
+      "value": "All"
+    },
+    {
+      "label": "Do not disturb schedule should be used",
+      "value": "False"
+    },
+    {
+      "label": "Do not disturb start time in seconds after midnight",
+      "value": "0"
+    },
+    {
+      "label": "Do not disturb end time in seconds after midnight",
+      "value": "0"
+    },
+    {
+      "label": "Notifications for group threads",
+      "value": "All"
+    },
+    {
+      "label": "Notifications for business threads",
+      "value": "All"
+    },
+    {
+      "label": "Notifications for Marketplace threads",
+      "value": "All"
+    },
+    {
+      "label": "Notifications for reactions",
+      "value": "True"
+    },
+    {
+      "label": "Messages from mutual friends",
+      "value": "Requests"
+    },
+    {
+      "label": "Messages from mutual friends"
+    },
+    {
+      "label": "Messages from mutual friends"
+    },
+    {
+      "label": "Messages from people in the same Facebook group"
+    },
+    {
+      "label": "Messages from people in the same Facebook group"
+    },
+    {
+      "label": "Messages from people in the same Facebook group"
+    },
+    {
+      "label": "Settings for people with your phone number",
+      "value": "Requests"
+    },
+    {
+      "label": "Settings for people with your phone number"
+    },
+    {
+      "label": "Settings for people with your phone number"
+    },
+    {
+      "label": "Settings for messages from other people on Facebook"
+    },
+    {
+      "label": "Settings for messages from other people on Facebook"
+    },
+    {
+      "label": "Settings for messages from other people on Facebook"
+    },
+    {
+      "label": "Notifications for unread message reminders",
+      "value": "False"
+    },
+    {
+      "label": "Contact sharing disabled",
+      "value": "False"
+    },
+    {
+      "label": "Who is allowed to share your contact?",
+      "value": "Anyone"
+    },
+    {
+      "label": "Read receipts disabled",
+      "value": "Enabled"
+    }
+  ],
+  "fbid": "420552400086957"
+}

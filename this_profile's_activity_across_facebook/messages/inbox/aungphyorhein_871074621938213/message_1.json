@@ -1,0 +1,39 @@
+{
+  "participants": [
+    {
+      "name": "\u00c4\u0080\u00c3\u00bc\u00c5\u008bg P\u00c4\u00a7y\u00c7\u00bfr \u00c4\u00a6e\u00c4\u00af\u00c5\u008b"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1759725483191,
+      "content": "\u00e1\u0080\u0099\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b9\u00e1\u0080\u0082\u00e1\u0080\u009c\u00e1\u0080\u00ac\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0081\u008b Nobel Mount College \u00e1\u0080\u0099\u00e1\u0080\u00be \u00e1\u0080\u0080\u00e1\u0080\u00bc\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0086\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0090\u00e1\u0080\u009a\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0081\u008b",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00c4\u0080\u00c3\u00bc\u00c5\u008bg P\u00c4\u00a7y\u00c7\u00bfr \u00c4\u00a6e\u00c4\u00af\u00c5\u008b",
+      "timestamp_ms": 1759725437821,
+      "content": "Can I learn more about your business?",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00c4\u0080\u00c3\u00bc\u00c5\u008bg P\u00c4\u00a7y\u00c7\u00bfr \u00c4\u00a6e\u00c4\u00af\u00c5\u008b",
+      "timestamp_ms": 1759725437711,
+      "content": "Can you tell me more about your ad?",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00c4\u0080\u00c3\u00bc\u00c5\u008bg P\u00c4\u00a7y\u00c7\u00bfr \u00c4\u00a6e\u00c4\u00af\u00c5\u008b",
+  "is_still_participant": false,
+  "thread_path": "inbox/aungphyorhein_871074621938213",
+  "magic_words": [
+    
+  ]
+}

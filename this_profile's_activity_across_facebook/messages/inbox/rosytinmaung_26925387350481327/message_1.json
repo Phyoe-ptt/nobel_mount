@@ -1,0 +1,124 @@
+{
+  "participants": [
+    {
+      "name": "Rosy Tin Maung"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Rosy Tin Maung",
+      "timestamp_ms": 1779201642115,
+      "content": "Thank you for yr information.",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "Nobel Mount College"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1779201247981,
+      "content": "We have already RLA Tr .",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Rosy Tin Maung",
+      "timestamp_ms": 1779200530991,
+      "content": "May I know is there any vacancy for RLA tr post?",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1779200530210,
+      "content": "Hi, Rosy! Please let us know how we can help you.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1779200529560,
+      "content": "Rosy Tin Maung replied to an ad.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Rosy Tin Maung",
+      "timestamp_ms": 1777821085182,
+      "content": "I also sent my CV to yr  viber .",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Rosy Tin Maung",
+      "timestamp_ms": 1777820556883,
+      "photos": [
+        {
+          "uri": "this_profile's_activity_across_facebook/messages/inbox/rosytinmaung_26925387350481327/photos/1352566213403808.jpg",
+          "creation_timestamp": 1777820556
+        },
+        {
+          "uri": "this_profile's_activity_across_facebook/messages/inbox/rosytinmaung_26925387350481327/photos/826253483868437.jpg",
+          "creation_timestamp": 1777820556
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Rosy Tin Maung",
+      "timestamp_ms": 1777820556388,
+      "content": "Thank you.\nHere is my CV",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1777816284533,
+      "content": "09780775668 (Viber) and pls kindly send.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1777816241876,
+      "content": "If you interest pls kindly send me your CV",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Rosy Tin Maung",
+      "timestamp_ms": 1777810629748,
+      "content": "May I know is there any vacancy for English tr post?",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1777810629133,
+      "content": "Hi Rosy! Please let us know how we can help you.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1777810628339,
+      "content": "Rosy Tin Maung replied to an ad.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Rosy Tin Maung",
+  "is_still_participant": false,
+  "thread_path": "inbox/rosytinmaung_26925387350481327",
+  "magic_words": [
+    
+  ]
+}

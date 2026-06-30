@@ -1,0 +1,258 @@
+[
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Phone ID",
+        "value": "0D4702FE-B29F-4CB0-8779-99AAB7E0EC3C"
+      },
+      {
+        "label": "Indicates if syncing is on",
+        "value": "Default"
+      },
+      {
+        "label": "Creation time",
+        "timestamp_value": 1759048435
+      },
+      {
+        "label": "Updated time",
+        "timestamp_value": 1759048435
+      },
+      {
+        "label": "Last sync time",
+        "timestamp_value": 1759048435
+      },
+      {
+        "label": "Indicates if your device allows Facebook to read your contacts",
+        "value": "False"
+      }
+    ],
+    "fbid": "1224981306310725"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Phone ID",
+        "value": "863999A4-4921-4CBB-B54B-69D38F1FE20C"
+      },
+      {
+        "label": "Indicates if syncing is on",
+        "value": "Default"
+      },
+      {
+        "label": "Creation time",
+        "timestamp_value": 1719986512
+      },
+      {
+        "label": "Updated time",
+        "timestamp_value": 1719986512
+      },
+      {
+        "label": "Last sync time",
+        "timestamp_value": 1719986512
+      },
+      {
+        "label": "Indicates if your device allows Facebook to read your contacts",
+        "value": "False"
+      }
+    ],
+    "fbid": "888221263320066"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Phone ID",
+        "value": "26DD995C-3A74-4FB0-B9A1-F70BB70D02D9"
+      },
+      {
+        "label": "Indicates if syncing is on",
+        "value": "Default"
+      },
+      {
+        "label": "Creation time",
+        "timestamp_value": 1695441437
+      },
+      {
+        "label": "Updated time",
+        "timestamp_value": 1695441437
+      },
+      {
+        "label": "Last sync time",
+        "timestamp_value": 1695441437
+      },
+      {
+        "label": "Indicates if your device allows Facebook to read your contacts",
+        "value": "False"
+      }
+    ],
+    "fbid": "717637087045152"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Phone ID",
+        "value": "A386A41E-C1F7-4A59-9BBE-D651987F2A56"
+      },
+      {
+        "label": "Indicates if syncing is on",
+        "value": "Default"
+      },
+      {
+        "label": "Creation time",
+        "timestamp_value": 1676044272
+      },
+      {
+        "label": "Updated time",
+        "timestamp_value": 1677809533
+      },
+      {
+        "label": "Last sync time",
+        "timestamp_value": 1676044272
+      },
+      {
+        "label": "Indicates if your device allows Facebook to read your contacts",
+        "value": "True"
+      }
+    ],
+    "fbid": "581908123951383"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Phone ID",
+        "value": "d70844a6-e010-43aa-8bfa-4278d747ab34"
+      },
+      {
+        "label": "Indicates if syncing is on",
+        "value": "Off"
+      },
+      {
+        "label": "Creation time",
+        "timestamp_value": 1662381465
+      },
+      {
+        "label": "Updated time",
+        "timestamp_value": 1662946542
+      },
+      {
+        "label": "Last sync time",
+        "timestamp_value": 1662946542
+      },
+      {
+        "label": "Indicates if your device allows Facebook to read your contacts",
+        "value": "True"
+      }
+    ],
+    "fbid": "458933896248807"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Phone ID",
+        "value": "432AC3F5-5EA2-49B6-8195-60BC112F1487"
+      },
+      {
+        "label": "Indicates if syncing is on",
+        "value": "Default"
+      },
+      {
+        "label": "Creation time",
+        "timestamp_value": 1662359969
+      },
+      {
+        "label": "Updated time",
+        "timestamp_value": 1662359969
+      },
+      {
+        "label": "Last sync time",
+        "timestamp_value": 1662359969
+      },
+      {
+        "label": "Indicates if your device allows Facebook to read your contacts",
+        "value": "True"
+      }
+    ],
+    "fbid": "458750426267154"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Phone ID",
+        "value": "F2AFD971-AFD1-4CED-BA7E-B240BFE83EC9"
+      },
+      {
+        "label": "Indicates if syncing is on",
+        "value": "Default"
+      },
+      {
+        "label": "Creation time",
+        "timestamp_value": 1661527196
+      },
+      {
+        "label": "Updated time",
+        "timestamp_value": 1661527196
+      },
+      {
+        "label": "Last sync time",
+        "timestamp_value": 1661527196
+      },
+      {
+        "label": "Indicates if your device allows Facebook to read your contacts",
+        "value": "True"
+      }
+    ],
+    "fbid": "452037373605126"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Phone ID",
+        "value": "1E77B6F4-B132-4F04-9069-8131D47B8360"
+      },
+      {
+        "label": "Indicates if syncing is on",
+        "value": "Default"
+      },
+      {
+        "label": "Creation time",
+        "timestamp_value": 1657330330
+      },
+      {
+        "label": "Updated time",
+        "timestamp_value": 1659357824
+      },
+      {
+        "label": "Last sync time",
+        "timestamp_value": 1657330330
+      },
+      {
+        "label": "Indicates if your device allows Facebook to read your contacts",
+        "value": "True"
+      }
+    ],
+    "fbid": "419098206899043"
+  }
+]

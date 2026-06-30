@@ -1,0 +1,7660 @@
+[
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "A61B3781-4F40-4916-B0D6-3F2D4A62C734"
+      },
+      {
+        "label": "Device ID",
+        "value": "ACFFB2CB-62A7-47A6-8BFA-631562E84012"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1781835112
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781868023
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "FA79E546-0DFD-4E6D-A3DD-75EC0FC34539",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1776930759
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1776934422
+              }
+            ]
+          },
+          {
+            "label": "74196EC0-B933-49C1-B329-80690172E760",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1776930759
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1781863482
+              }
+            ]
+          },
+          {
+            "label": "A61B3781-4F40-4916-B0D6-3F2D4A62C734",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1776930199
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1777039303
+              }
+            ]
+          },
+          {
+            "label": "ACFFB2CB-62A7-47A6-8BFA-631562E84012",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1781835112
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1781856068
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone18,4"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "912"
+          },
+          {
+            "value": "420"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "True"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Current connection status",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/548.0.0.28.107;FBBV/879717782;FBDV/iPhone18,4;FBMD/iPhone;FBSN/iOS;FBSV/26.2.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone18,4"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "912"
+          },
+          {
+            "value": "420"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "True"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/548.0.0.28.107;FBBV/879717782;FBDV/iPhone18,4;FBMD/iPhone;FBSN/iOS;FBSV/26.2.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone18,4"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/520.0.0.62.107;FBBV/776890074;FBDV/iPad14,4;FBMD/iPad;FBSN/iPadOS;FBSV/18.6;FBSS/2;FBCR/;FBID/tablet;FBLC/en_US;FBOP/0]"
+      }
+    ],
+    "fbid": "28522347404079471"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "8CEC0950-96C9-4847-84B3-946FAA0A1FA2"
+      },
+      {
+        "label": "Device ID",
+        "value": "8CEC0950-96C9-4847-84B3-946FAA0A1FA2"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1748705117
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781856417
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "14"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-M336B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2207"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.8125"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "7"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Current connection status",
+        "value": "2403:6200:88a8:6b7a:c192:c2ca:9aa0:5af3"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 14; SM-M336B Build/UP1A.231005.007) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_US;FBBV/991058722;FBCR/AIS;FBMF/samsung;FBBD/samsung;FBDV/SM-M336B;FBSV/14;FBCA/arm64-v8a:null;FBDM/{density=2.8125,width=1080,height=2207};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "14"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-M336B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2207"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.8125"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "7"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 14; SM-M336B Build/UP1A.231005.007) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_US;FBBV/991058722;FBCR/AIS;FBMF/samsung;FBBD/samsung;FBDV/SM-M336B;FBSV/14;FBCA/arm64-v8a:null;FBDM/{density=2.8125,width=1080,height=2207};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "14"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-M336B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2207"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.8125"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 14; SM-M336B Build/UP1A.231005.007) [FBAN/Orca-Android;FBAV/518.0.0.53.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/769733565;FBCR/null;FBMF/samsung;FBBD/samsung;FBDV/SM-M336B;FBSV/14;FBCA/arm64-v8a:null;FBDM/{density=2.8125,width=1080,height=2207};FB_FW/1;]"
+      }
+    ],
+    "fbid": "9768422889937213"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "12BBE61B-43D2-4FD8-85A4-9E5D7A633467"
+      },
+      {
+        "label": "Device ID",
+        "value": "12BBE61B-43D2-4FD8-85A4-9E5D7A633467"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1779773106
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781770446
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5"
+      },
+      {
+        "label": "Device type",
+        "value": "iPad17,1"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1210"
+          },
+          {
+            "value": "834"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Current connection status",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": ""
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5"
+      },
+      {
+        "label": "Device type",
+        "value": "iPad17,1"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1210"
+          },
+          {
+            "value": "834"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": ""
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": ""
+      },
+      {
+        "label": "OS version",
+        "value": ""
+      },
+      {
+        "label": "Device type",
+        "value": ""
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "0"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": ""
+      }
+    ],
+    "fbid": "35852668937713859"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "C6FEF49B-80DC-4A65-B845-F24D4C2804EA"
+      },
+      {
+        "label": "Device ID",
+        "value": "C6FEF49B-80DC-4A65-B845-F24D4C2804EA"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1750065119
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781769771
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "25028RN03A"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1640"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Current connection status",
+        "value": "103.186.123.194"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; 25028RN03A Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_US;FBBV/991058508;FBCR/Telenor;FBMF/Xiaomi;FBBD/Redmi;FBDV/25028RN03A;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1640};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "25028RN03A"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1640"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; 25028RN03A Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_US;FBBV/991058508;FBCR/Telenor;FBMF/Xiaomi;FBBD/Redmi;FBDV/25028RN03A;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1640};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "25028RN03A"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1640"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; 25028RN03A Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/524.0.0.44.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/788948171;FBCR/Telenor;FBMF/Xiaomi;FBBD/Redmi;FBDV/25028RN03A;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1640};FB_FW/1;]"
+      }
+    ],
+    "fbid": "30194925710122849"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "674180A0-6D0E-41F9-9403-D089AB891A06"
+      },
+      {
+        "label": "Device ID",
+        "value": "674180A0-6D0E-41F9-9403-D089AB891A06"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1779427443
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1779727429
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "iPadOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.3"
+      },
+      {
+        "label": "Device type",
+        "value": "iPad17,1"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1210"
+          },
+          {
+            "value": "834"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Current connection status",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": ""
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iPadOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.3"
+      },
+      {
+        "label": "Device type",
+        "value": "iPad17,1"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1210"
+          },
+          {
+            "value": "834"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": ""
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": ""
+      },
+      {
+        "label": "OS version",
+        "value": ""
+      },
+      {
+        "label": "Device type",
+        "value": ""
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "0"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": ""
+      }
+    ],
+    "fbid": "26335691589439347"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "37F28F7B-33BC-49D8-847B-E987FDCD710D"
+      },
+      {
+        "label": "Device ID",
+        "value": "B826CE86-A50A-4A10-AE84-2113C16601FF"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1752228920
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781856759
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "37F28F7B-33BC-49D8-847B-E987FDCD710D",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1752226777
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1752226777
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone14,5"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "844"
+          },
+          {
+            "value": "390"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Current connection status",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/533.1.0.36.110;FBBV/823644973;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/26.0.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone14,5"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "844"
+          },
+          {
+            "value": "390"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/533.1.0.36.110;FBBV/823644973;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/26.0.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iOS"
+      },
+      {
+        "label": "OS version",
+        "value": "18.7"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone14,5"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "844"
+          },
+          {
+            "value": "390"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/525.0.0.24.106;FBBV/791202578;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/18.7;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      }
+    ],
+    "fbid": "23908332108855978"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "CF44BF56-7350-4BC3-BA9F-D1414522317C"
+      },
+      {
+        "label": "Device ID",
+        "value": "CF44BF56-7350-4BC3-BA9F-D1414522317C"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1647952789
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781856027
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "15B81889-1327-45CD-855A-BBEEA1308E89",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1761119804
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1761119804
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "13"
+      },
+      {
+        "label": "Device type",
+        "value": "RMX3491"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2170"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "realme"
+      },
+      {
+        "label": "Current connection status",
+        "value": "2a09:bac5:492c:2723::3e6:7a"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 13; RMX3491 Build/RKQ1.211119.001) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_MM;FBBV/991058519;FBCR/U9;FBMF/realme;FBBD/realme;FBDV/RMX3491;FBSV/13;FBCA/arm64-v8a:null;FBDM/{density=3.0,width=1080,height=2170};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "13"
+      },
+      {
+        "label": "Device type",
+        "value": "RMX3491"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2170"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "realme"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 13; RMX3491 Build/RKQ1.211119.001) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_MM;FBBV/991058519;FBCR/U9;FBMF/realme;FBBD/realme;FBDV/RMX3491;FBSV/13;FBCA/arm64-v8a:null;FBDM/{density=3.0,width=1080,height=2170};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "13"
+      },
+      {
+        "label": "Device type",
+        "value": "RMX3491"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2170"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "realme"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 13; RMX3491 Build/RKQ1.211119.001) [FBAN/Orca-Android;FBAV/525.0.0.44.108;FBPN/com.facebook.orca;FBLC/en_MM;FBBV/792261016;FBCR/MPT;FBMF/realme;FBBD/realme;FBDV/RMX3491;FBSV/13;FBCA/arm64-v8a:null;FBDM/{density=3.0,width=2170,height=1080};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "4805413449587900"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "9F19FA0A-735B-45EB-96A9-0F1A1474BD72"
+      },
+      {
+        "label": "Device ID",
+        "value": "FF87E7E7-FA4D-49A5-A842-827AA99C7D43"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1747220048
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781866590
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "5EE67109-3258-4321-AE1F-D19534060280",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1735760268
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1747337487
+              }
+            ]
+          },
+          {
+            "label": "9F19FA0A-735B-45EB-96A9-0F1A1474BD72",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1746259472
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1781856454
+              }
+            ]
+          },
+          {
+            "label": "FF87E7E7-FA4D-49A5-A842-827AA99C7D43",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1747220048
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1781836581
+              }
+            ]
+          },
+          {
+            "label": "32873E30-2599-470A-A9B3-E16E99594FE1",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1753171136
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1775357952
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone16,2"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "926"
+          },
+          {
+            "value": "428"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Current connection status",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/560.1.0.45.108;FBBV/964803015;FBDV/iPhone16,2;FBMD/iPhone;FBSN/iOS;FBSV/26.2.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_GB;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone16,2"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "926"
+          },
+          {
+            "value": "428"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/560.1.0.45.108;FBBV/964803015;FBDV/iPhone16,2;FBMD/iPhone;FBSN/iOS;FBSV/26.2.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_GB;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone16,2"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/511.0.0.47.107;FBBV/746600222;FBDV/iPhone13,4;FBMD/iPhone;FBSN/iOS;FBSV/18.5;FBSS/3;FBCR/;FBID/phone;FBLC/en_GB;FBOP/0]"
+      }
+    ],
+    "fbid": "4808934339208583"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "2D7DEF02-D174-4F41-8FC6-70C730CEB879"
+      },
+      {
+        "label": "Device ID",
+        "value": "2D7DEF02-D174-4F41-8FC6-70C730CEB879"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1651661904
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781711538
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "iOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone14,3"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "926"
+          },
+          {
+            "value": "428"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Current connection status",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/547.0.0.25.107;FBBV/875193976;FBDV/iPhone14,3;FBMD/iPhone;FBSN/iOS;FBSV/26.2.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_GB;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.5"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone14,3"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "926"
+          },
+          {
+            "value": "428"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/547.0.0.25.107;FBBV/875193976;FBDV/iPhone14,3;FBMD/iPhone;FBSN/iOS;FBSV/26.2.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_GB;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.3.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone14,3"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/525.0.0.24.106;FBBV/791202578;FBDV/iPhone14,3;FBMD/iPhone;FBSN/iOS;FBSV/18.6.2;FBSS/3;FBCR/;FBID/phone;FBLC/en_GB;FBOP/0]"
+      }
+    ],
+    "fbid": "4539348396166534"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "C2AB7A75-3B36-4831-911B-0FB5A63BF81A"
+      },
+      {
+        "label": "Device ID",
+        "value": "7D7277CB-FE73-4145-B48D-2F1358AEBAF1"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1752073060
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1766219712
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "7D7277CB-FE73-4145-B48D-2F1358AEBAF1",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1752073060
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1752394062
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.0.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone17,2"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "956"
+          },
+          {
+            "value": "440"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Current connection status",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/533.1.0.36.110;FBBV/823644973;FBDV/iPhone17,2;FBMD/iPhone;FBSN/iOS;FBSV/26.0.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.0.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone17,2"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "956"
+          },
+          {
+            "value": "440"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/533.1.0.36.110;FBBV/823644973;FBDV/iPhone17,2;FBMD/iPhone;FBSN/iOS;FBSV/26.0.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.0.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone17,2"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/525.0.0.24.106;FBBV/791202578;FBDV/iPhone17,2;FBMD/iPhone;FBSN/iOS;FBSV/26.0;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      }
+    ],
+    "fbid": "8309767082459861"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "4C7E9B85-7585-4AB5-A127-D83E64CAA78E"
+      },
+      {
+        "label": "Device ID",
+        "value": "4C7E9B85-7585-4AB5-A127-D83E64CAA78E"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1630341467
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781867265
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "68D9E34B-2716-47CF-9A34-C21754BEF7E1",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1688053817
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1688053817
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "10"
+      },
+      {
+        "label": "Device type",
+        "value": "Redmi K30 5G"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2174"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.75"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Current connection status",
+        "value": "46.225.99.188"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 10; Redmi K30 5G MIUI/V12.0.5.0.QGICNXM) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_US;FBBV/991058519;FBCR/MPT;FBMF/Xiaomi;FBBD/Redmi;FBDV/Redmi K30 5G;FBSV/10;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2174};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "10"
+      },
+      {
+        "label": "Device type",
+        "value": "Redmi K30 5G"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2174"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.75"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 10; Redmi K30 5G MIUI/V12.0.5.0.QGICNXM) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_US;FBBV/991058519;FBCR/MPT;FBMF/Xiaomi;FBBD/Redmi;FBDV/Redmi K30 5G;FBSV/10;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2174};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "10"
+      },
+      {
+        "label": "Device type",
+        "value": "Redmi K30 5G"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2174"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.75"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "6"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 10; Redmi K30 5G MIUI/V12.0.5.0.QGICNXM) [FBAN/Orca-Android;FBAV/524.0.0.44.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/788948112;FBCR/Ooredoo;FBMF/Xiaomi;FBBD/Redmi;FBDV/Redmi K30 5G;FBSV/10;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2174};FB_FW/1;]"
+      }
+    ],
+    "fbid": "4258174537609151"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "D70844A6-E010-43AA-8BFA-4278D747AB34"
+      },
+      {
+        "label": "Device ID",
+        "value": "D70844A6-E010-43AA-8BFA-4278D747AB34"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1660481828
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1777524131
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "RMX3263"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1448"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "6"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "realme"
+      },
+      {
+        "label": "Current connection status",
+        "value": "103.81.113.34"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; RMX3263 Build/RP1A.201005.001) [FBAN/Orca-Android;FBAV/548.0.0.37.65;FBPN/com.facebook.orca;FBLC/en_US;FBBV/879726922;FBCR/null;FBMF/realme;FBBD/realme;FBDV/RMX3263;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1448};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "RMX3263"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1448"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "6"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "realme"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; RMX3263 Build/RP1A.201005.001) [FBAN/Orca-Android;FBAV/548.0.0.37.65;FBPN/com.facebook.orca;FBLC/en_US;FBBV/879726922;FBCR/null;FBMF/realme;FBBD/realme;FBDV/RMX3263;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1448};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "RMX3263"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1448"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "6"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "realme"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; RMX3263 Build/RP1A.201005.001) [FBAN/Orca-Android;FBAV/524.0.0.44.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/788948110;FBCR/MPT;FBMF/realme;FBBD/realme;FBDV/RMX3263;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1448};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "7736827723054953"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "20F4577A-6C69-4140-9DDD-313216F115A8"
+      },
+      {
+        "label": "Device ID",
+        "value": "20F4577A-6C69-4140-9DDD-313216F115A8"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1731392192
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781856014
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "20F4577A-6C69-4140-9DDD-313216F115A8",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1731392192
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1775481458
+              }
+            ]
+          },
+          {
+            "label": "1B32D4BB-6AF1-4927-AB66-A3AED3DB5B0D",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1769274443
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1775482638
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "iOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.3.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone14,5"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "844"
+          },
+          {
+            "value": "390"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Current connection status",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/564.0.0.41.103;FBBV/988438975;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/26.3.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iOS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.3.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone14,5"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "844"
+          },
+          {
+            "value": "390"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/564.0.0.41.103;FBBV/988438975;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/26.3.1;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "iPhone OS"
+      },
+      {
+        "label": "OS version",
+        "value": "26.3.1"
+      },
+      {
+        "label": "Device type",
+        "value": "iPhone14,5"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": ""
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": ""
+      },
+      {
+        "label": "Latest user agent",
+        "value": "LightSpeed [FBAN/MessengerLiteForiOS;FBAV/525.0.0.24.106;FBBV/791202578;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/26.0;FBSS/3;FBCR/;FBID/phone;FBLC/en_US;FBOP/0]"
+      }
+    ],
+    "fbid": "9035415256470830"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "C89F8F62-2955-4B42-9072-490CA9A8E1A4"
+      },
+      {
+        "label": "Device ID",
+        "value": "C89F8F62-2955-4B42-9072-490CA9A8E1A4"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1744526364
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781198790
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "53B805A8-05CE-4C6A-A0D9-DB8A316F06B1",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1744911306
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1746038081
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "24090RA29G"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2712"
+          },
+          {
+            "value": "1220"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3.25"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Current connection status",
+        "value": "40.160.241.192"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; 24090RA29G Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/564.0.0.42.89;FBPN/com.facebook.orca;FBLC/en_US;FBBV/984961945;FBCR/ATOM 4.5G;FBMF/Xiaomi;FBBD/Redmi;FBDV/24090RA29G;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=3.25,width=1220,height=2712};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "24090RA29G"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2712"
+          },
+          {
+            "value": "1220"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3.25"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; 24090RA29G Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/564.0.0.42.89;FBPN/com.facebook.orca;FBLC/en_US;FBBV/984961945;FBCR/ATOM 4.5G;FBMF/Xiaomi;FBBD/Redmi;FBDV/24090RA29G;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=3.25,width=1220,height=2712};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "24090RA29G"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2712"
+          },
+          {
+            "value": "1220"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3.25"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; 24090RA29G Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/525.0.0.44.108;FBPN/com.facebook.orca;FBLC/en_US;FBBV/792260941;FBCR/dtac.Better Together;FBMF/Xiaomi;FBBD/Redmi;FBDV/24090RA29G;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=3.25,width=1220,height=2712};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "9297282997050067"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "1C3D06D4-FDAA-4151-999D-F8EA86E81345"
+      },
+      {
+        "label": "Device ID",
+        "value": "1C3D06D4-FDAA-4151-999D-F8EA86E81345"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1735314129
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781856594
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-A055F"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1600"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "1.875"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Current connection status",
+        "value": "195.210.125.102"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; SM-A055F Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/991058486;FBCR/U9;FBMF/samsung;FBBD/samsung;FBDV/SM-A055F;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=1.875,width=720,height=1600};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-A055F"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1600"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "1.875"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; SM-A055F Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/991058486;FBCR/U9;FBMF/samsung;FBBD/samsung;FBDV/SM-A055F;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=1.875,width=720,height=1600};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-A055F"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1600"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "1.875"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; SM-A055F Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/525.0.0.44.108;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/792260880;FBCR/Ooredoo;FBMF/samsung;FBBD/samsung;FBDV/SM-A055F;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=1.875,width=720,height=1600};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "8905829199472429"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "D4E248F8-9CDD-4458-8B79-2299906E8CBA"
+      },
+      {
+        "label": "Device ID",
+        "value": "D4E248F8-9CDD-4458-8B79-2299906E8CBA"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1756725734
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1764925324
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "16"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-F741B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2640"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Current connection status",
+        "value": "103.81.113.53"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 16; SM-F741B Build/BP2A.250605.031.A3) [FBAN/Orca-Android;FBAV/534.0.0.53.103;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/827849697;FBCR/MPT;FBMF/samsung;FBBD/samsung;FBDV/SM-F741B;FBSV/16;FBCA/arm64-v8a:null;FBDM/{density=3.0,width=1080,height=2640};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "16"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-F741B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2640"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 16; SM-F741B Build/BP2A.250605.031.A3) [FBAN/Orca-Android;FBAV/534.0.0.53.103;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/827849697;FBCR/MPT;FBMF/samsung;FBBD/samsung;FBDV/SM-F741B;FBSV/16;FBCA/arm64-v8a:null;FBDM/{density=3.0,width=1080,height=2640};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "15"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-F741B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2640"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "3"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "1"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 15; SM-F741B Build/AP3A.240905.015.A2) [FBAN/Orca-Android;FBAV/525.0.0.44.108;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/792260954;FBCR/null;FBMF/samsung;FBBD/samsung;FBDV/SM-F741B;FBSV/15;FBCA/arm64-v8a:null;FBDM/{density=3.0,width=1080,height=2640};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "24463898479895774"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "3CA6B4FF-4E25-4C82-B3AC-6EDCDFE04291"
+      },
+      {
+        "label": "Device ID",
+        "value": "3CA6B4FF-4E25-4C82-B3AC-6EDCDFE04291"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1653403534
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781857558
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "13"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-A226L"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2208"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.8125"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "5"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Current connection status",
+        "value": "195.210.125.128"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 13; SM-A226L Build/TP1A.220624.014) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/991058486;FBCR/Ooredoo;FBMF/samsung;FBBD/samsung;FBDV/SM-A226L;FBSV/13;FBCA/arm64-v8a:null;FBDM/{density=2.8125,width=1080,height=2208};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "13"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-A226L"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2208"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.8125"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "5"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 13; SM-A226L Build/TP1A.220624.014) [FBAN/Orca-Android;FBAV/565.0.0.43.88;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/991058486;FBCR/Ooredoo;FBMF/samsung;FBBD/samsung;FBDV/SM-A226L;FBSV/13;FBCA/arm64-v8a:null;FBDM/{density=2.8125,width=1080,height=2208};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "13"
+      },
+      {
+        "label": "Device type",
+        "value": "SM-A226L"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2208"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.8125"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "samsung"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 13; SM-A226L Build/TP1A.220624.014) [FBAN/Orca-Android;FBAV/524.0.0.44.109;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/792260669;FBCR/Ooredoo;FBMF/samsung;FBBD/samsung;FBDV/SM-A226L;FBSV/13;FBCA/arm64-v8a:null;FBDM/{density=2.8125,width=1080,height=2208};FB_FW/1;]"
+      }
+    ],
+    "fbid": "7809793902394356"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "617BF7C5-1904-4514-B978-2D0165B570B9"
+      },
+      {
+        "label": "Device ID",
+        "value": "617BF7C5-1904-4514-B978-2D0165B570B9"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1742959091
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1763452816
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "M2103K19C"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2253"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.75"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "7"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Current connection status",
+        "value": "103.105.175.6"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; M2103K19C Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/533.0.0.47.109;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/822710293;FBCR/null;FBMF/Xiaomi;FBBD/Redmi;FBDV/M2103K19C;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2253};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "M2103K19C"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2253"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.75"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "7"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; M2103K19C Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/533.0.0.47.109;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/822710293;FBCR/null;FBMF/Xiaomi;FBBD/Redmi;FBDV/M2103K19C;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2253};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "M2103K19C"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2253"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.75"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "7"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; M2103K19C Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/525.0.0.44.108;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/792261016;FBCR/Telenor;FBMF/Xiaomi;FBBD/Redmi;FBDV/M2103K19C;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2253};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "8852730461499808"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "819B1792-428E-4E59-A6C4-4CD9E7E876EB"
+      },
+      {
+        "label": "Device ID",
+        "value": "819B1792-428E-4E59-A6C4-4CD9E7E876EB"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1741075150
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1747474419
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "4"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Current connection status",
+        "value": "150.95.24.48"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/503.0.0.61.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/721735685;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "4"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/503.0.0.61.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/721735685;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "4"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/505.0.0.62.82;FBPN/com.facebook.orca;FBLC/en_US;FBBV/728023673;FBCR/null;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      }
+    ],
+    "fbid": "8586213004813266"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "69764A16-3055-40B8-B83B-C97F78ABBA12"
+      },
+      {
+        "label": "Device ID",
+        "value": "69764A16-3055-40B8-B83B-C97F78ABBA12"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1733567778
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1740989753
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Current connection status",
+        "value": "149.88.23.115"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/496.0.0.67.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/702082152;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/496.0.0.67.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/702082152;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/496.0.0.67.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/702082152;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      }
+    ],
+    "fbid": "9136913906360250"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "B8CEA14D-451A-41E1-9C30-C1BF87D0ECE2"
+      },
+      {
+        "label": "Device ID",
+        "value": "B8CEA14D-451A-41E1-9C30-C1BF87D0ECE2"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1722368106
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1733472162
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Current connection status",
+        "value": "98.98.166.170"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/485.2.0.68.111;FBPN/com.facebook.orca;FBLC/en_US;FBBV/665808184;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/485.2.0.68.111;FBPN/com.facebook.orca;FBLC/en_US;FBBV/665808184;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/485.2.0.68.111;FBPN/com.facebook.orca;FBLC/en_US;FBBV/665808184;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "7944706905622528"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "863999A4-4921-4CBB-B54B-69D38F1FE20C"
+      },
+      {
+        "label": "Device ID",
+        "value": "863999A4-4921-4CBB-B54B-69D38F1FE20C"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1719509429
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1722328388
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Current connection status",
+        "value": "135.148.172.116"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/468.0.0.45.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/625564703;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/468.0.0.45.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/625564703;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/468.0.0.45.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/625564703;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      }
+    ],
+    "fbid": "7614665608652149"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "A65FE5FD-FE7C-4F7C-9E36-ECE163D07F29"
+      },
+      {
+        "label": "Device ID",
+        "value": "A65FE5FD-FE7C-4F7C-9E36-ECE163D07F29"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1706196269
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1719389309
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "4"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Current connection status",
+        "value": "199.195.248.154"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/463.0.0.36.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/612307670;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "4"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/463.0.0.36.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/612307670;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "4"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/463.0.0.36.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/612307670;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;]"
+      }
+    ],
+    "fbid": "7216902681704042"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "26DD995C-3A74-4FB0-B9A1-F70BB70D02D9"
+      },
+      {
+        "label": "Device ID",
+        "value": "26DD995C-3A74-4FB0-B9A1-F70BB70D02D9"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1693053134
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1706170660
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Current connection status",
+        "value": "162.19.248.167"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/441.0.0.23.113;FBPN/com.facebook.orca;FBLC/en_US;FBBV/556716697;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/441.0.0.23.113;FBPN/com.facebook.orca;FBLC/en_US;FBBV/556716697;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "0"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/441.0.0.23.113;FBPN/com.facebook.orca;FBLC/en_US;FBBV/556716697;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "6396167407149219"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "432AC3F5-5EA2-49B6-8195-60BC112F1487"
+      },
+      {
+        "label": "Device ID",
+        "value": "432AC3F5-5EA2-49B6-8195-60BC112F1487"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1660483825
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1779727047
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "45D4FD94-04DC-469B-A8F4-F0260356D947",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1661682088
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1672718850
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "10"
+      },
+      {
+        "label": "Device type",
+        "value": "M2006C3MG"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1449"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2014"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "1"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Current connection status",
+        "value": "23.251.50.151"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 10; M2006C3MG MIUI/V12.0.22.0.QCRMIXM) [FBAN/Orca-Android;FBAV/560.0.0.55.69;FBPN/com.facebook.orca;FBLC/en_US;FBBV/961672875;FBCR/MYTEL;FBMF/Xiaomi;FBBD/Redmi;FBDV/M2006C3MG;FBSV/10;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1449};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "10"
+      },
+      {
+        "label": "Device type",
+        "value": "M2006C3MG"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1449"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2014"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "1"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 10; M2006C3MG MIUI/V12.0.22.0.QCRMIXM) [FBAN/Orca-Android;FBAV/560.0.0.55.69;FBPN/com.facebook.orca;FBLC/en_US;FBBV/961672875;FBCR/MYTEL;FBMF/Xiaomi;FBBD/Redmi;FBDV/M2006C3MG;FBSV/10;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1449};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "10"
+      },
+      {
+        "label": "Device type",
+        "value": "M2006C3MG"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1449"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2014"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "0"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "1"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 10; M2006C3MG MIUI/V12.0.22.0.QCRMIXM) [FBAN/Orca-Android;FBAV/519.0.0.63.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/773838158;FBCR/MYTEL;FBMF/Xiaomi;FBBD/Redmi;FBDV/M2006C3MG;FBSV/10;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1449};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "6020976131264131"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "CD78AA8B-1FBF-4C45-AD30-5F69AD2C6814"
+      },
+      {
+        "label": "Device ID",
+        "value": "CD78AA8B-1FBF-4C45-AD30-5F69AD2C6814"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1671897363
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1693039021
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Current connection status",
+        "value": "205.185.116.119"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/422.0.0.18.107;FBPN/com.facebook.orca;FBLC/en_US;FBBV/505323569;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/422.0.0.18.107;FBPN/com.facebook.orca;FBLC/en_US;FBBV/505323569;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1444"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "4"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "INFINIX MOBILITY LIMITED"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Infinix X665B Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/422.0.0.18.107;FBPN/com.facebook.orca;FBLC/en_US;FBBV/505323569;FBCR/MPT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X665B;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1444};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "5436953093079944"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "93DD82A9-864F-413E-987E-7C54E95AC3B4"
+      },
+      {
+        "label": "Device ID",
+        "value": "93DD82A9-864F-413E-987E-7C54E95AC3B4"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1660479223
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1781685733
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "RMX3263"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1448"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "1"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "realme"
+      },
+      {
+        "label": "Current connection status",
+        "value": "103.81.113.3"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; RMX3263 Build/RP1A.201005.001) [FBAN/Orca-Android;FBAV/537.0.0.52.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/844997185;FBCR/MPT;FBMF/realme;FBBD/realme;FBDV/RMX3263;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1448};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "RMX3263"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1448"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "1"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "realme"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; RMX3263 Build/RP1A.201005.001) [FBAN/Orca-Android;FBAV/537.0.0.52.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/844997185;FBCR/MPT;FBMF/realme;FBBD/realme;FBDV/RMX3263;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1448};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "RMX3263"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1448"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2015"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "1"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "realme"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; RMX3263 Build/RP1A.201005.001) [FBAN/Orca-Android;FBAV/524.0.0.44.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/788948171;FBCR/MPT;FBMF/realme;FBBD/realme;FBDV/RMX3263;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1448};FB_FW/1;]"
+      }
+    ],
+    "fbid": "5168505359913396"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "898DFCDC-B677-4534-94ED-89547EF6D3C6"
+      },
+      {
+        "label": "Device ID",
+        "value": "898DFCDC-B677-4534-94ED-89547EF6D3C6"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1575870713
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1660465471
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "8.1.0"
+      },
+      {
+        "label": "Device type",
+        "value": "CPH1803"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1424"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2013"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "OPPO"
+      },
+      {
+        "label": "Current connection status",
+        "value": "103.81.113.13"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1803 Build/OPM1.171019.026) [FBAN/Orca-Android;FBAV/372.0.0.10.112;FBPN/com.facebook.orca;FBLC/en_US;FBBV/387305623;FBCR/MPT;FBMF/OPPO;FBBD/OPPO;FBDV/CPH1803;FBSV/8.1.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1424};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "8.1.0"
+      },
+      {
+        "label": "Device type",
+        "value": "CPH1803"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1424"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2013"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "OPPO"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1803 Build/OPM1.171019.026) [FBAN/Orca-Android;FBAV/372.0.0.10.112;FBPN/com.facebook.orca;FBLC/en_US;FBBV/387305623;FBCR/MPT;FBMF/OPPO;FBBD/OPPO;FBDV/CPH1803;FBSV/8.1.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1424};FB_FW/1;] FBBK/1"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "8.1.0"
+      },
+      {
+        "label": "Device type",
+        "value": "CPH1803"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "1424"
+          },
+          {
+            "value": "720"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2013"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "2"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "OPPO"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 8.1.0; CPH1803 Build/OPM1.171019.026) [FBAN/Orca-Android;FBAV/372.0.0.10.112;FBPN/com.facebook.orca;FBLC/en_US;FBBV/387305623;FBCR/MPT;FBMF/OPPO;FBBD/OPPO;FBDV/CPH1803;FBSV/8.1.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1424};FB_FW/1;] FBBK/1"
+      }
+    ],
+    "fbid": "2583575231711368"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "Family device ID when creation",
+        "value": "A191440C-A4AD-4C88-8165-168A6391DFB2"
+      },
+      {
+        "label": "Device ID",
+        "value": "A191440C-A4AD-4C88-8165-168A6391DFB2"
+      },
+      {
+        "label": "Device ID details",
+        "dict": [
+          {
+            "label": "first_seen_time",
+            "timestamp_value": 1618048406
+          },
+          {
+            "label": "last_seen_time",
+            "timestamp_value": 1719735606
+          }
+        ]
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          {
+            "label": "9C3C0EC4-E846-4D24-BE1D-9CB2075BC957",
+            "dict": [
+              {
+                "label": "first_seen_time",
+                "timestamp_value": 1619338754
+              },
+              {
+                "label": "last_seen_time",
+                "timestamp_value": 1619338754
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Android ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser history",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Redmi Note 8 Pro"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2220"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.75"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Current connection status",
+        "value": "5.196.21.180"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Redmi Note 8 Pro Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/464.0.0.44.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/615296356;FBCR/ATOM;FBMF/Xiaomi;FBBD/Redmi;FBDV/Redmi Note 8 Pro;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2220};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Redmi Note 8 Pro"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2220"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.75"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Redmi Note 8 Pro Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/464.0.0.44.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/615296356;FBCR/ATOM;FBMF/Xiaomi;FBBD/Redmi;FBDV/Redmi Note 8 Pro;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2220};FB_FW/1;]"
+      },
+      {
+        "label": "Device ID history",
+        "dict": [
+          
+        ]
+      },
+      {
+        "label": "Android ID",
+        "value": ""
+      },
+      {
+        "label": "Hardware ID",
+        "value": ""
+      },
+      {
+        "label": "Google advertiser ID",
+        "value": ""
+      },
+      {
+        "label": "OS type",
+        "value": "Android"
+      },
+      {
+        "label": "OS version",
+        "value": "11"
+      },
+      {
+        "label": "Device type",
+        "value": "Redmi Note 8 Pro"
+      },
+      {
+        "label": "Screen size",
+        "vec": [
+          {
+            "value": "2220"
+          },
+          {
+            "value": "1080"
+          }
+        ]
+      },
+      {
+        "label": "Device density",
+        "value": "2.75"
+      },
+      {
+        "label": "Is tablet?",
+        "value": "False"
+      },
+      {
+        "label": "Year device was made",
+        "value": "2016"
+      },
+      {
+        "label": "Number of CPU cores",
+        "value": "8"
+      },
+      {
+        "label": "Number of Google accounts",
+        "value": "3"
+      },
+      {
+        "label": "Manufacturer",
+        "value": "Xiaomi"
+      },
+      {
+        "label": "Latest user agent",
+        "value": "Dalvik/2.1.0 (Linux; U; Android 11; Redmi Note 8 Pro Build/RP1A.200720.011) [FBAN/Orca-Android;FBAV/464.0.0.44.109;FBPN/com.facebook.orca;FBLC/en_US;FBBV/615296356;FBCR/ATOM;FBMF/Xiaomi;FBBD/Redmi;FBDV/Redmi Note 8 Pro;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2220};FB_FW/1;]"
+      }
+    ],
+    "fbid": "3631826023612185"
+  }
+]

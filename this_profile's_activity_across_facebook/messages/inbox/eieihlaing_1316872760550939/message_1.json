@@ -1,0 +1,58 @@
+{
+  "participants": [
+    {
+      "name": "Ei Ei Hlaing"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1781514567620,
+      "content": "June \u00e1\u0080\u009c\u00e1\u0080\u00a1\u00e1\u0080\u0090\u00e1\u0080\u00bd\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u0099\u00e1\u0080\u00be\u00e1\u0080\u00ac \u00e1\u0080\u00a1\u00e1\u0080\u0090\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u0080\u00e1\u0080\u00ad\u00e1\u0080\u00af \u00e1\u0080\u00a1\u00e1\u0080\u0095\u00e1\u0080\u00ba\u00e1\u0080\u0094\u00e1\u0080\u00be\u00e1\u0080\u00b6\u00e1\u0080\u009b\u00e1\u0080\u0084\u00e1\u0080\u00ba (\u00e1\u0081\u0083) \u00e1\u0080\u009e\u00e1\u0080\u00ad\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u0080\u00e1\u0080\u00bb\u00e1\u0080\u0095\u00e1\u0080\u00ba Discount \u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u009b\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u00ad\u00e1\u0080\u0099\u00e1\u0080\u00be\u00e1\u0080\u00ac\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "Ei Ei Hlaing"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1781430814581,
+      "content": "Duration:8 months\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00b7\u00e1\u0080\u00ba",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1781430797272,
+      "content": "MMK 600,000/ per month \u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00b7\u00e1\u0080\u00ba",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Ei Ei Hlaing",
+      "timestamp_ms": 1781428532697,
+      "content": "Pre IGCSE online \u00e1\u0080\u0085\u00e1\u0080\u00bb\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u0094\u00e1\u0080\u00be\u00e1\u0080\u00af\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8 \u00e1\u0080\u009e\u00e1\u0080\u00ad\u00e1\u0080\u0081\u00e1\u0080\u00bb\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u009c\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u00b7\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "Nobel Mount College"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Ei Ei Hlaing",
+  "is_still_participant": false,
+  "thread_path": "inbox/eieihlaing_1316872760550939",
+  "magic_words": [
+    
+  ]
+}

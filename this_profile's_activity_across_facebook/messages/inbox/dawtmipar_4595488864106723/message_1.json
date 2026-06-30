@@ -1,0 +1,52 @@
+{
+  "participants": [
+    {
+      "name": "Dawt Mi Par"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1780539357181,
+      "content": "No.50,21 Streets (lower block), Latha Township,Yangon.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Dawt Mi Par",
+      "timestamp_ms": 1780538605743,
+      "content": "Location",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "Nobel Mount College"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1780538605123,
+      "content": "Hi, Dawt! Please let us know how we can help you.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1780538604575,
+      "content": "Dawt Mi Par replied to an ad.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Dawt Mi Par",
+  "is_still_participant": false,
+  "thread_path": "inbox/dawtmipar_4595488864106723",
+  "magic_words": [
+    
+  ]
+}

@@ -1,0 +1,46 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Environment File
+        run: |
+          echo "${{ secrets.ENV_FILE_CONTENT }}" > ai-api/.env
+
+      - name: Create archive
+        run: |
+          tar --exclude='./node_modules' \
+              --exclude='./venv' \
+              --exclude='./frontend/dist' \
+              --exclude='./primary-backend/target' \
+              --exclude='./.git' \
+              -czvf deploy.tar.gz .
+
+      - name: Copy archive via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: root
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          source: "deploy.tar.gz"
+          target: "/opt/noblemount"
+
+      - name: Extract and Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: root
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          script: |
+            cd /opt/noblemount
+            tar -xzvf deploy.tar.gz
+            rm deploy.tar.gz
+            docker compose up -d --build

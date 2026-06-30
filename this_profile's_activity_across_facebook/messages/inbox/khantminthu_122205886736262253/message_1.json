@@ -1,0 +1,60 @@
+{
+  "participants": [
+    {
+      "name": "Khant Min Thu"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1759551013472,
+      "content": "ITPEC \u00e1\u0080\u0090\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u0080\u00e1\u0080\u00ad\u00e1\u0080\u00af October Intake \u00e1\u0080\u0096\u00e1\u0080\u00bd\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0080\u009c\u00e1\u0080\u00be\u00e1\u0080\u0085\u00e1\u0080\u00ba\u00e1\u0080\u0099\u00e1\u0080\u00be\u00e1\u0080\u00ac\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0081\u008b",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1759550988014,
+      "content": "\u00e1\u0080\u0099\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b9\u00e1\u0080\u0082\u00e1\u0080\u009c\u00e1\u0080\u00ac\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0081\u008b Nobel Mount College \u00e1\u0080\u0099\u00e1\u0080\u00be \u00e1\u0080\u0080\u00e1\u0080\u00bc\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0086\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0090\u00e1\u0080\u009a\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Khant Min Thu",
+      "timestamp_ms": 1759546566687,
+      "content": "Can you tell me more about your ad?",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1759546565208,
+      "content": "Hi Khant Min! Please let us know how we can help you.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1759546564195,
+      "content": "Khant Min Thu replied to an ad.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Khant Min Thu",
+      "timestamp_ms": 1759546564032,
+      "content": "Can you tell me more about your ad?",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Khant Min Thu",
+  "is_still_participant": false,
+  "thread_path": "inbox/khantminthu_122205886736262253",
+  "magic_words": [
+    
+  ]
+}

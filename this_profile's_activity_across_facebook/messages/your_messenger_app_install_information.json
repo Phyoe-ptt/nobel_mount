@@ -1,0 +1,20 @@
+{
+  "media": [
+    
+  ],
+  "label_values": [
+    {
+      "label": "Are you a Messenger user?",
+      "value": "True"
+    },
+    {
+      "label": "Latest app version that you've installed",
+      "value": "0"
+    },
+    {
+      "label": "Install time",
+      "timestamp_value": 0
+    }
+  ],
+  "fbid": "417366783738852"
+}

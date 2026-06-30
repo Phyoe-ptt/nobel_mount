@@ -1,0 +1,28 @@
+{
+  "media": [
+    
+  ],
+  "label_values": [
+    {
+      "label": "Disabled",
+      "value": "False"
+    },
+    {
+      "label": "Name",
+      "value": "Close friends"
+    },
+    {
+      "dict": [
+        
+      ],
+      "title": "Declined suggested members"
+    },
+    {
+      "dict": [
+        
+      ],
+      "title": "Members"
+    }
+  ],
+  "fbid": "435765338565663"
+}

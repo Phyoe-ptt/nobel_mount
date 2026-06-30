@@ -1,0 +1,49 @@
+{
+  "timestamp": 1757766516,
+  "media": [
+    
+  ],
+  "label_values": [
+    {
+      "label": "Shortcuts",
+      "vec": [
+        {
+          "value": "ADMIN_ASSISTANT"
+        },
+        {
+          "value": "INSIGHTS_UNIFIED"
+        },
+        {
+          "value": "ROLES_MANAGEMENT"
+        },
+        {
+          "value": "MEMBERS"
+        },
+        {
+          "value": "ADMIN_ACTIVITY_LOG"
+        },
+        {
+          "value": "SCHEDULED_POSTS"
+        },
+        {
+          "value": "GROUP_QUALITY"
+        }
+      ]
+    },
+    {
+      "dict": [
+        {
+          "dict": [
+            {
+              "label": "Name",
+              "value": "Zero to Professional (Batch-1)"
+            }
+          ],
+          "title": ""
+        }
+      ],
+      "title": "Group"
+    }
+  ],
+  "fbid": "24407233392219881"
+}

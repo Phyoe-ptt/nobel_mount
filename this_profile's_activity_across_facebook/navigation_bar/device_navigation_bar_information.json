@@ -1,0 +1,3439 @@
+[
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "SM-M336B"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "1443334177808769"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1776871928
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Composer button for creator tool"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1776871928
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for iPad"
+      },
+      {
+        "label": "Device model",
+        "value": "iPad17,1"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1781770700
+      }
+    ],
+    "fbid": "1419113650230822"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1766924601
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1766924601
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Composer button for creator tool"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1766924601
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1766924601
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1781620858
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for iPhone"
+      },
+      {
+        "label": "Device model",
+        "value": "iPhone18,4"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1781620858
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1781620858
+      }
+    ],
+    "fbid": "1299259668882888"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1765265568
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1771771627
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1765265568
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1765265568
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Composer button for creator tool"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1765265568
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for iPhone"
+      },
+      {
+        "label": "Device model",
+        "value": "iPhone14,3"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1771771627
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1771771627
+      }
+    ],
+    "fbid": "1279993884142800"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1764756097
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1773991284
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1764756097
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1764756097
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Composer button for creator tool"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1764756097
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for iPhone"
+      },
+      {
+        "label": "Device model",
+        "value": "iPhone16,2"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1773991284
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1773991284
+      }
+    ],
+    "fbid": "1279804224161766"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1764216738
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1764216738
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1764216738
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Composer button for creator tool"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1764216738
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1775461774
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for iPhone"
+      },
+      {
+        "label": "Device model",
+        "value": "iPhone14,8"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1775461774
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1775461774
+      }
+    ],
+    "fbid": "1276043087871213"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Suggestions"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Messenger"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Video"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Groups"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook Lite"
+      },
+      {
+        "label": "Device model",
+        "value": ""
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1780318646
+      }
+    ],
+    "fbid": "1263514142457441"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1762748172
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1762748172
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1762748172
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1762748172
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1762748172
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "RMX3491"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1769237153
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1776914295
+      }
+    ],
+    "fbid": "1262563869219135"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "RMX3491"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "1262563859219136"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1761569209
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1761569209
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1761569209
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1761569209
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1761569209
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1761569209
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "Infinix X6850"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1761569209
+      }
+    ],
+    "fbid": "1251013490374173"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758953661
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758953661
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758953661
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758953661
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758953661
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758953661
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "Redmi K30 5G"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1763982430
+      }
+    ],
+    "fbid": "1224066133068909"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758277562
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758277562
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758277562
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758277562
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758277562
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758277562
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "24090RA29G"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1760624252
+      }
+    ],
+    "fbid": "1217201217088734"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1757039681
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1757039681
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1757039681
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1757039681
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1757039681
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1757039681
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "SM-F741B"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1758728937
+      }
+    ],
+    "fbid": "1204315735043949"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756530751
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Pages"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756530751
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756530751
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756530751
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Video"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756530751
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "WWW (Comet)"
+      },
+      {
+        "label": "Device model",
+        "value": "23043RP34G"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1756530751
+      }
+    ],
+    "fbid": "1201006915374831"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756186493
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756186493
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756186493
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756186493
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756186493
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756186493
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "SM-A226L"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1758798262
+      }
+    ],
+    "fbid": "1197219939086862"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756099613
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756099613
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756099613
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756099613
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756099613
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1756099613
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "SM-A055F"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1759367308
+      }
+    ],
+    "fbid": "1196960199112836"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1752241194
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1758715500
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1752241194
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1752241194
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Composer button for creator tool"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1752241194
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for iPhone"
+      },
+      {
+        "label": "Device model",
+        "value": "iPhone17,2"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1758715500
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1769095427
+      }
+    ],
+    "fbid": "1159797032829153"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1776871928
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Composer button for creator tool"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1776871928
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for iPad"
+      },
+      {
+        "label": "Device model",
+        "value": "iPad14,4"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1776871928
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1776871928
+      }
+    ],
+    "fbid": "1142866334522223"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1750067547
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1750067547
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1750067547
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1750067547
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1750067547
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "25028RN03A"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1780998114
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1781164271
+      }
+    ],
+    "fbid": "1141451827997007"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "25028RN03A"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "1141451817997008"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749206299
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749206299
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Composer button for creator tool"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749206299
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749206299
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1770265565
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for iPhone"
+      },
+      {
+        "label": "Device model",
+        "value": "iPhone14,5"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1770265565
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1781857496
+      }
+    ],
+    "fbid": "1133837505425106"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749211821
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749211821
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749211821
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749211821
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749211821
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1749211821
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "M2103K19C"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1756533257
+      }
+    ],
+    "fbid": "1131398242335699"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Suggestions"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Messenger"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Video"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Groups"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook Lite"
+      },
+      {
+        "label": "Device model",
+        "value": "K"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1740672274
+      }
+    ],
+    "fbid": "722158449926349"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Suggestions"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Messenger"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Video"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Groups"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1606419207
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook Lite"
+      },
+      {
+        "label": "Device model",
+        "value": "unknown"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1690844534
+      }
+    ],
+    "fbid": "687393596736168"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1676044940
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Pages"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1719983987
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1719983987
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1719983987
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Video"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1676044940
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "WWW (Comet)"
+      },
+      {
+        "label": "Device model",
+        "value": ""
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1719983987
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1781857928
+      }
+    ],
+    "fbid": "581914590617403"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1674491472
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1674491472
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1674491472
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1717329304
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1674491472
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1717329304
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "False"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "Infinix X665B"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1717329304
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1746014318
+      }
+    ],
+    "fbid": "458932906248906"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1660633106
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1660633106
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1660633106
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1725189084
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1660633106
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1725189084
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "RMX3263"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1725189084
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1761833517
+      }
+    ],
+    "fbid": "444877587654438"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "RMX3263"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "444877584321105"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "OPPO A83"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "439038021571728"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "OPPO A83"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "439038018238395"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1658768146
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1658768146
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1658768146
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1658768146
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Video"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1658768146
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "Redmi Note 8 Pro"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1658768146
+      }
+    ],
+    "fbid": "430402675768596"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "Redmi Note 8 Pro"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "430402662435264"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1657270425
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1657270425
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1657270425
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Professional dashboard"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1677141617
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Boosted Page"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1677141617
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1657270425
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "M2006C3MG"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1677141617
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1695371030
+      }
+    ],
+    "fbid": "418584530283744"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "M2006C3MG"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "418584526950411"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "News Feed"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1657128175
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Bookmarks"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1657128175
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Notifications"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1657128175
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Timeline"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1657128175
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Video"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1657128175
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "True"
+              }
+            ]
+          },
+          {
+            "dict": [
+              {
+                "label": "Name",
+                "value": "Feeds"
+              },
+              {
+                "label": "Date added",
+                "timestamp_value": 1659352447
+              },
+              {
+                "label": "Has clicked on tab?",
+                "value": "False"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "CPH1803"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 1659352447
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 1659695260
+      }
+    ],
+    "fbid": "417366780405519"
+  },
+  {
+    "media": [
+      
+    ],
+    "label_values": [
+      {
+        "label": "The current set of apps on your navigation bar",
+        "vec": [
+          
+        ]
+      },
+      {
+        "label": "Client name",
+        "value": "Facebook for Android"
+      },
+      {
+        "label": "Device model",
+        "value": "CPH1803"
+      },
+      {
+        "label": "Last time when there was a change of apps in the navigation bar",
+        "timestamp_value": 0
+      },
+      {
+        "label": "Time these apps were last seen on device",
+        "timestamp_value": 0
+      }
+    ],
+    "fbid": "417366773738853"
+  }
+]

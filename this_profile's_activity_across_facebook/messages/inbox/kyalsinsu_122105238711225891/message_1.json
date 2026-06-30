@@ -1,0 +1,101 @@
+{
+  "participants": [
+    {
+      "name": "Kyal Sin Su"
+    },
+    {
+      "name": "Nobel Mount College"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Kyal Sin Su",
+      "timestamp_ms": 1770029714626,
+      "content": "\u00e1\u0080\u00a1\u00e1\u0080\u0086\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u0095\u00e1\u0080\u00bc\u00e1\u0080\u00b1\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0090\u00e1\u0080\u009a\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00b7\u00e1\u0080\u00ba\u00f0\u009f\u0092\u009c",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "Nobel Mount College"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1769931980525,
+      "content": "\u00e1\u0080\u00a1\u00e1\u0080\u0086\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u0095\u00e1\u0080\u00bc\u00e1\u0080\u00b1\u00e1\u0080\u009c\u00e1\u0080\u00ac\u00e1\u0080\u00b8\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1769931973624,
+      "content": "English \u00e1\u0080\u009e\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u0090\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8 timetable \u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0081\u008b \u00e1\u0081\u0083 \u00e1\u0080\u009b\u00e1\u0080\u0080\u00e1\u0080\u00ba\u00e1\u0080\u0094\u00e1\u0080\u00b1\u00e1\u0080\u00b7\u00e1\u0080\u0085\u00e1\u0080\u0096\u00e1\u0080\u00bd\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0099\u00e1\u0080\u009a\u00e1\u0080\u00ba",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "Kyal Sin Su"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1769931948961,
+      "photos": [
+        {
+          "uri": "this_profile's_activity_across_facebook/messages/inbox/kyalsinsu_122105238711225891/photos/1427913855785951.jpg",
+          "creation_timestamp": 1769931947
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Nobel Mount College",
+      "timestamp_ms": 1769756964773,
+      "content": "\u00e1\u0080\u009f\u00e1\u0080\u00af\u00e1\u0080\u0090\u00e1\u0080\u00ba\u00e1\u0080\u0080\u00e1\u0080\u00b2\u00e1\u0080\u00b7\u00e1\u0081\u008b \u00e1\u0080\u0090\u00e1\u0080\u0080\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00b1\u00e1\u0080\u00ac\u00e1\u0080\u0080\u00e1\u0080\u00ba\u00e1\u0080\u0081\u00e1\u0080\u00bd\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7 \u00e1\u0080\u009b\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0090\u00e1\u0080\u009a\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0081\u008b 2 February \u00e1\u0080\u0099\u00e1\u0080\u00be\u00e1\u0080\u00ac \u00e1\u0080\u0085\u00e1\u0080\u0090\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u0096\u00e1\u0080\u00bd\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b7\u00e1\u0080\u009c\u00e1\u0080\u00be\u00e1\u0080\u0085\u00e1\u0080\u00ba\u00e1\u0080\u0099\u00e1\u0080\u00be\u00e1\u0080\u00ac\u00e1\u0080\u0099\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u00b7 \u00e1\u0080\u009e\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u0090\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u00a1\u00e1\u0080\u0081\u00e1\u0080\u00bb\u00e1\u0080\u00ad\u00e1\u0080\u0094\u00e1\u0080\u00ba \u00e1\u0080\u0085\u00e1\u0080\u00ac\u00e1\u0080\u009b\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8 \u00e1\u0080\u0095\u00e1\u0080\u00bc\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u0095\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u00b7\u00e1\u0080\u0095\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u0091\u00e1\u0080\u00ac\u00e1\u0080\u00b8\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u0099\u00e1\u0080\u009a\u00e1\u0080\u00ba\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00ba",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "Kyal Sin Su"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Kyal Sin Su",
+      "timestamp_ms": 1769756816412,
+      "photos": [
+        {
+          "uri": "this_profile's_activity_across_facebook/messages/inbox/kyalsinsu_122105238711225891/photos/742208228961364.jpg",
+          "creation_timestamp": 1769756815
+        }
+      ],
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "Nobel Mount College"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Kyal Sin Su",
+      "timestamp_ms": 1769756812946,
+      "content": "Hello!!! Japan N5 class \u00e1\u0080\u0080Kyal Sin Su \u00e1\u0080\u0095\u00e1\u0080\u00ab\u00e1\u0080\u009b\u00e1\u0080\u00be\u00e1\u0080\u0084\u00e1\u0080\u00b7\u00e1\u0080\u00ba free eng class \u00e1\u0080\u009c\u00e1\u0080\u00b1\u00e1\u0080\u00b8\u00e1\u0080\u00a1\u00e1\u0080\u0090\u00e1\u0080\u00bd\u00e1\u0080\u0080\u00e1\u0080\u00ba \u00e1\u0080\u009e\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u0090\u00e1\u0080\u0094\u00e1\u0080\u00ba\u00e1\u0080\u00b8\u00e1\u0080\u00a1\u00e1\u0080\u0095\u00e1\u0080\u00ba\u00e1\u0080\u0081\u00e1\u0080\u00bb\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u009c\u00e1\u0080\u00ad\u00e1\u0080\u00af\u00e1\u0080\u00b7\u00e1\u0080\u0095\u00e1\u0080\u00ab\u00f0\u009f\u0092\u009c",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Kyal Sin Su",
+  "is_still_participant": false,
+  "thread_path": "inbox/kyalsinsu_122105238711225891",
+  "magic_words": [
+    
+  ]
+}

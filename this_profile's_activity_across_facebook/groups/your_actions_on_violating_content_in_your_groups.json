@@ -1,0 +1,111 @@
+{
+  "media": [
+    
+  ],
+  "label_values": [
+    {
+      "label": "Type"
+    },
+    {
+      "label": "Event time",
+      "timestamp_value": 1772525330
+    },
+    {
+      "label": "Action taken",
+      "dict": [
+        {
+          "label": "delete_posts",
+          "value": "False"
+        },
+        {
+          "label": "delete_comments",
+          "value": "False"
+        },
+        {
+          "label": "delete_stories",
+          "value": "False"
+        },
+        {
+          "label": "delete_invites",
+          "value": "False"
+        },
+        {
+          "label": "apply_to_other_groups",
+          "value": "False"
+        },
+        {
+          "label": "mute_duration",
+          "value": ""
+        },
+        {
+          "label": "rule_id",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "label": "Feedback"
+    },
+    {
+      "label": "Feedback tag"
+    },
+    {
+      "dict": [
+        {
+          "dict": [
+            {
+              "label": "URL",
+              "value": "https://www.facebook.com/groups/1211730470606478/permalink/1508967927549396/",
+              "href": "https://www.facebook.com/groups/1211730470606478/permalink/1508967927549396/"
+            },
+            {
+              "dict": [
+                {
+                  "dict": [
+                    {
+                      "label": "Name",
+                      "value": "GED \u00e1\u0080\u00a1\u00e1\u0080\u0080\u00e1\u0080\u00bc\u00e1\u0080\u00b1\u00e1\u0080\u00ac\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b8 | About GED"
+                    }
+                  ],
+                  "title": ""
+                }
+              ],
+              "title": "Group"
+            },
+            {
+              "dict": [
+                {
+                  "dict": [
+                    {
+                      "label": "Name",
+                      "value": "Nobel Mount College"
+                    }
+                  ],
+                  "title": ""
+                }
+              ],
+              "title": "Author"
+            }
+          ],
+          "title": ""
+        }
+      ],
+      "title": "Content"
+    },
+    {
+      "dict": [
+        {
+          "dict": [
+            {
+              "label": "Name",
+              "value": "GED \u00e1\u0080\u00a1\u00e1\u0080\u0080\u00e1\u0080\u00bc\u00e1\u0080\u00b1\u00e1\u0080\u00ac\u00e1\u0080\u0084\u00e1\u0080\u00ba\u00e1\u0080\u00b8 | About GED"
+            }
+          ],
+          "title": ""
+        }
+      ],
+      "title": "Group"
+    }
+  ],
+  "fbid": "839000452488383"
+}
