@@ -22,7 +22,8 @@ jobs:
               --exclude='./frontend/dist' \
               --exclude='./primary-backend/target' \
               --exclude='./.git' \
-              -czvf deploy.tar.gz .
+              -czvf /tmp/deploy.tar.gz .
+          mv /tmp/deploy.tar.gz .
 
       - name: Copy archive via SCP
         uses: appleboy/scp-action@v0.1.7
