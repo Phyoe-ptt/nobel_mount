@@ -38,18 +38,29 @@ function CreatePostComponent() {
   const generateImageMutation = useMutation({
     mutationFn: async () => {
       const prompt = `Professional education marketing banner poster, modern graphic design style, clean layout, flat vector illustration, vibrant blue and yellow color scheme, college advertisement, typography, related to ${keywords}, high quality`
+      // Use AbortController with 60s timeout for Imagen 4 generation
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 60000)
       const res = await fetch('/rag/image/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt })
+        body: JSON.stringify({ prompt }),
+        signal: controller.signal
       })
+      clearTimeout(timeoutId)
       if (!res.ok) throw new Error('Failed to generate image')
       return res.json()
     },
     onSuccess: (data) => {
       setGeneratedImage(data.image_url)
     },
-    onError: (err) => alert(err.message)
+    onError: (err: any) => {
+      if (err.name === 'AbortError') {
+        alert('Image generation timed out. Please try again.')
+      } else {
+        console.error('Image error:', err.message)
+      }
+    }
   })
 
   const publishMutation = useMutation({
