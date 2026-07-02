@@ -29,6 +29,37 @@ function KnowledgeBaseComponent() {
     }
   })
 
+  const uploadFileMutation = useMutation({
+    mutationFn: async (file: File) => {
+      const formData = new FormData()
+      formData.append('file', file)
+
+      const res = await fetch('/rag/upload-facebook-data', {
+        method: 'POST',
+        body: formData
+      })
+      if (!res.ok) throw new Error('Failed to upload file')
+      return res.json()
+    },
+    onSuccess: (data) => {
+      alert(data.message)
+    },
+    onError: (err) => {
+      alert(err.message)
+    }
+  })
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (file) {
+      if (file.name.endsWith('.json')) {
+        uploadFileMutation.mutate(file)
+      } else {
+        alert("Please select a valid JSON file.")
+      }
+    }
+  }
+
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
@@ -66,14 +97,25 @@ function KnowledgeBaseComponent() {
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-12 flex flex-col items-center justify-center text-center">
         <FileText className="w-16 h-16 text-gray-300 mb-4" />
-        <h3 className="text-lg font-bold text-gray-900 mb-2">Sync Facebook Page Posts</h3>
-        <p className="text-gray-500 max-w-sm mb-6">You can also sync your past Facebook posts so the AI knows your history.</p>
-        <button 
-          onClick={() => fetch('/rag/sync-facebook', { method: 'POST' }).then(() => alert('Sync started!'))}
-          className="text-[#C69A55] font-medium hover:underline"
-        >
-          Click here to sync Facebook posts
-        </button>
+        <h3 className="text-lg font-bold text-gray-900 mb-2">Sync Facebook Data</h3>
+        <p className="text-gray-500 max-w-sm mb-6">You can sync your past Facebook page posts or upload historical Messenger chats (JSON export) so the AI learns your history.</p>
+        
+        <div className="flex items-center gap-6">
+          <button 
+            onClick={() => fetch('/rag/sync-facebook', { method: 'POST' }).then(() => alert('Sync started!'))}
+            className="text-white bg-[#C69A55] px-6 py-2 rounded-lg font-medium hover:bg-[#B38745]"
+          >
+            Sync Page Posts (Graph API)
+          </button>
+          
+          <span className="text-gray-300 font-bold">OR</span>
+          
+          <label className="text-white bg-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-blue-700 cursor-pointer flex items-center gap-2">
+            <UploadCloud size={18} />
+            {uploadFileMutation.isPending ? 'Uploading...' : 'Upload Messenger JSON'}
+            <input type="file" accept=".json" className="hidden" onChange={handleFileUpload} disabled={uploadFileMutation.isPending} />
+          </label>
+        </div>
       </div>
     </div>
   )
