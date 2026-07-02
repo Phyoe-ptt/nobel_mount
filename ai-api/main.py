@@ -13,10 +13,12 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
 )
-import requests
-from dotenv import load_dotenv
 
 load_dotenv(override=True)
+
+# Serve avatars folder statically so D-ID can download the generated avatar images
+os.makedirs("avatars", exist_ok=True)
+app.mount("/avatars", StaticFiles(directory="avatars"), name="avatars")
 
 # Facebook Tokens (Fallback)
 FB_VERIFY_TOKEN = os.getenv("FB_VERIFY_TOKEN", "nobel_mount_secret_token")
@@ -154,7 +156,6 @@ def manual_facebook_reply(payload: ManualReplyPayload):
 
 from rag_service import generate_rag_response
 
-import base64
 import time
 
 DID_API_KEY = os.getenv("DID_API_KEY", "")
@@ -169,13 +170,14 @@ def get_did_auth_header():
 class DIDVideoPayload(BaseModel):
     script: str
     voice_id: str = "en-US-SaraNeural"
+    avatar_url: Optional[str] = "https://d-id-public-bucket.s3.amazonaws.com/alice.jpg"
 
 @app.post("/did/create-talk")
 def create_did_talk(payload: DIDVideoPayload):
     """Create a D-ID AI talking head video from a script."""
     headers = get_did_auth_header()
     body = {
-        "source_url": "https://d-id-public-bucket.s3.amazonaws.com/alice.jpg",
+        "source_url": payload.avatar_url,
         "script": {
             "type": "text",
             "subtitles": "false",
@@ -399,10 +401,12 @@ Write {payload.draft_count} long, detailed posts now:"""
 
 class ImagePayload(BaseModel):
     prompt: str
+    save_as_file: Optional[bool] = False
 
 @app.post("/rag/image/generate")
 def generate_image_endpoint(payload: ImagePayload):
     import base64
+    import uuid
     try:
         from google import genai as gai
         from google.genai import types as gtypes
@@ -411,7 +415,10 @@ def generate_image_endpoint(payload: ImagePayload):
         
         # Build a focused English prompt for best image quality
         prompt_text = payload.prompt.lower()
-        if any(k in prompt_text for k in ["japan", "japanese", "n5", "jlpt"]):
+        if payload.save_as_file:
+            # If generating an avatar for D-ID, we want a front-facing portrait
+            style = "A realistic, front-facing portrait photo of a professional person, head and shoulders, looking directly at the camera with a neutral expression, plain light background, realistic 8k photography, ideal for an avatar"
+        elif any(k in prompt_text for k in ["japan", "japanese", "n5", "jlpt"]):
             style = "Japanese language class, students studying Japanese, classroom in Myanmar, education"
         elif any(k in prompt_text for k in ["ged", "pre-ged", "pre ged", "igcse"]):
             style = "students studying for exams, books and notebooks, bright classroom, Myanmar students education"
@@ -422,22 +429,32 @@ def generate_image_endpoint(payload: ImagePayload):
         else:
             style = "students in a modern college classroom, education, learning, Myanmar"
         
-        image_prompt = f"A beautiful, professional, high-quality photo for an education advertisement. {style}. Bright, colorful, inspiring, professional photography, bokeh background, sharp focus, 4k quality."
+        image_prompt = f"A beautiful, professional, high-quality photo. {style}. Bright, colorful, inspiring, professional photography, sharp focus, 4k quality."
         
         response = client.models.generate_images(
             model="imagen-4.0-generate-001",
             prompt=image_prompt,
             config=gtypes.GenerateImagesConfig(
                 number_of_images=1,
-                aspect_ratio="16:9",
+                aspect_ratio="1:1" if payload.save_as_file else "16:9",
             )
         )
         
         if response.generated_images:
             image_bytes = response.generated_images[0].image.image_bytes
-            b64 = base64.b64encode(image_bytes).decode("utf-8")
-            data_url = f"data:image/jpeg;base64,{b64}"
-            return {"status": "success", "image_url": data_url}
+            
+            if payload.save_as_file:
+                # Save to disk so D-ID can fetch it via URL
+                filename = f"{uuid.uuid4().hex}.jpg"
+                filepath = os.path.join("avatars", filename)
+                with open(filepath, "wb") as f:
+                    f.write(image_bytes)
+                # Note: This requires the frontend to pass the server IP/domain
+                return {"status": "success", "image_url": f"/avatars/{filename}"}
+            else:
+                b64 = base64.b64encode(image_bytes).decode("utf-8")
+                data_url = f"data:image/jpeg;base64,{b64}"
+                return {"status": "success", "image_url": data_url}
         else:
             raise Exception("No image generated")
             
@@ -525,4 +542,25 @@ async def verify_payment_slip(file: UploadFile = File(...)):
         return {"status": "success", "data": data}
     except Exception as e:
         print(f"Vision error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+class ScriptPayload(BaseModel):
+    topic: str
+
+@app.post("/rag/generate-video-script")
+def generate_video_script(payload: ScriptPayload):
+    """Generate a short 15-second video script using Gemini."""
+    try:
+        from google import genai as gai
+        client = gai.Client(api_key=GEMINI_API_KEY)
+        
+        prompt = f"Write a very short, engaging 15-second video script (about 3 sentences) for a talking head video about this topic: '{payload.topic}'. Make it sound natural, enthusiastic, and professional. Do NOT include any stage directions like [smiles] or [music plays], just the spoken words."
+        
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt,
+        )
+        return {"status": "success", "script": response.text.strip()}
+    except Exception as e:
+        print("Error generating script:", e)
         raise HTTPException(status_code=500, detail=str(e))
