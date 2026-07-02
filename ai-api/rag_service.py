@@ -31,6 +31,8 @@ def generate_embedding(text: str) -> list[float]:
 
 def add_document_to_kb(content: str):
     """Adds a document to the Knowledge Base (Supabase pgvector)."""
+    conn = None
+    cursor = None
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
@@ -39,14 +41,10 @@ def add_document_to_kb(content: str):
         cursor.execute("SELECT id FROM documents WHERE content = %s LIMIT 1", (content,))
         if cursor.fetchone():
             print("Document already exists, skipping.")
-            cursor.close()
-            conn.close()
             return False
 
         embedding = generate_embedding(content)
         if not embedding:
-            cursor.close()
-            conn.close()
             return False
             
         # Convert list of floats to Postgres vector format: '[0.1, 0.2, ...]'
@@ -57,14 +55,17 @@ def add_document_to_kb(content: str):
             (content, vector_str)
         )
         conn.commit()
-        cursor.close()
-        conn.close()
         clean_content_for_print = content[:50].encode('ascii', 'replace').decode('ascii')
         print(f"Added document: {clean_content_for_print}...")
         return True
     except Exception as e:
         print(f"DB Insert Error: {e}")
         return False
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
 
 def search_knowledge_base(query: str, limit: int = 15) -> str:
     """Searches Supabase pgvector for relevant context based on the query."""
@@ -72,6 +73,8 @@ def search_knowledge_base(query: str, limit: int = 15) -> str:
     if not query_embedding:
         return ""
         
+    conn = None
+    cursor = None
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
@@ -89,14 +92,16 @@ def search_knowledge_base(query: str, limit: int = 15) -> str:
         )
         
         results = cursor.fetchall()
-        cursor.close()
-        conn.close()
-        
         contexts = [row[0] for row in results if row[1] > 0.1] # Similarity threshold
         return "\n\n".join(contexts)
     except Exception as e:
         print(f"Vector Search Error: {e}")
         return ""
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
 
 def generate_rag_response(message_text: str) -> str:
     """Combines vector search context with Gemini generation."""
