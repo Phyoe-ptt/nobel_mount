@@ -46,6 +46,64 @@ function AutoPilotComponent() {
     }
   })
 
+  const [isGenerating, setIsGenerating] = React.useState(false)
+
+  const handleGenerateNow = async () => {
+    if (!localConfig.pageProfileText) {
+      alert("Please enter an AI Page Profile first!")
+      return
+    }
+    
+    setIsGenerating(true)
+    try {
+      // 1. Generate Post
+      const postRes = await fetch('/rag/generate-post', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ keywords: localConfig.pageProfileText, draft_count: 1, writing_mode: 'informative' })
+      })
+      if (!postRes.ok) throw new Error('Failed to generate post text')
+      const postData = await postRes.json()
+      const generatedText = postData.posts[0]
+
+      // 2. Generate Image
+      const prompt = `Professional marketing banner, ${localConfig.pageProfileText}, high quality`
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 60000)
+      const imgRes = await fetch('/rag/image/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt }),
+        signal: controller.signal
+      })
+      clearTimeout(timeoutId)
+      if (!imgRes.ok) throw new Error('Failed to generate image')
+      const imgData = await imgRes.json()
+      const imageUrl = imgData.image_url
+
+      // 3. Publish to Facebook (Simulating Auto-Publish Mode)
+      const pubRes = await fetch('/facebook/publish', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: generatedText, image_url: imageUrl })
+      })
+      if (!pubRes.ok) {
+        const errData = await pubRes.json()
+        throw new Error(errData.detail || 'Failed to publish to Facebook')
+      }
+
+      alert("✨ Auto-Pilot Success! Post and image generated and successfully published to Facebook Page!")
+    } catch (err: any) {
+      if (err.name === 'AbortError') {
+        alert("Image generation timed out. Please try again.")
+      } else {
+        alert("Error during Auto-Pilot generation: " + err.message)
+      }
+    } finally {
+      setIsGenerating(false)
+    }
+  }
+
   return (
     <div className="max-w-4xl mx-auto space-y-6 pb-24">
       
@@ -178,8 +236,12 @@ function AutoPilotComponent() {
 
       {/* Bottom Action Buttons */}
       <div className="fixed bottom-0 right-0 left-0 lg:left-64 bg-[#FDFBF7]/80 backdrop-blur-md border-t border-stone-200 p-4 px-6 flex justify-end gap-4 z-10">
-        <button className="bg-white border border-stone-200 hover:bg-stone-50 text-stone-800 font-medium text-sm py-2 px-6 rounded-lg transition-colors shadow-sm">
-          Generate drafts now
+        <button 
+          onClick={handleGenerateNow}
+          disabled={isGenerating}
+          className="bg-white border border-stone-200 hover:bg-stone-50 text-stone-800 font-medium text-sm py-2 px-6 rounded-lg transition-colors shadow-sm disabled:opacity-50"
+        >
+          {isGenerating ? 'Running Auto-Pilot...' : 'Generate drafts now'}
         </button>
         <button 
           onClick={() => saveMutation.mutate(localConfig)}
