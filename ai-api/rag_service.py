@@ -11,7 +11,7 @@ if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
 
 # Database Configuration
-DB_URL = "postgresql://postgres.vusexelcckkqncjkiuch:wENwO2e7G968rmmu@aws-1-ap-southeast-2.pooler.supabase.com:5432/postgres"
+DB_URL = "postgresql://postgres.vusexelcckkqncjkiuch:wENwO2e7G968rmmu@aws-1-ap-southeast-2.pooler.supabase.com:6543/postgres"
 
 def get_db_connection():
     return psycopg2.connect(DB_URL)
