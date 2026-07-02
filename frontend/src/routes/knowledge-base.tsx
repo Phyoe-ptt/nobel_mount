@@ -49,6 +49,21 @@ function KnowledgeBaseComponent() {
     }
   })
 
+  const syncMutation = useMutation({
+    mutationFn: async () => {
+      const res = await fetch('/rag/sync-facebook', { method: 'POST' })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.detail || 'Sync failed')
+      return data
+    },
+    onSuccess: (data) => {
+      alert(data.message || 'Sync successful!')
+    },
+    onError: (err) => {
+      alert(err.message)
+    }
+  })
+
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (file) {
@@ -102,22 +117,11 @@ function KnowledgeBaseComponent() {
         
         <div className="flex items-center gap-6">
           <button 
-            onClick={async () => {
-              try {
-                const res = await fetch('/rag/sync-facebook', { method: 'POST' })
-                const data = await res.json()
-                if (!res.ok) {
-                  alert(data.detail || 'Sync failed')
-                } else {
-                  alert(data.message || 'Sync successful!')
-                }
-              } catch (e) {
-                alert('Error syncing Facebook posts')
-              }
-            }}
-            className="text-white bg-[#C69A55] px-6 py-2 rounded-lg font-medium hover:bg-[#B38745]"
+            onClick={() => syncMutation.mutate()}
+            disabled={syncMutation.isPending}
+            className="text-white bg-[#C69A55] px-6 py-2 rounded-lg font-medium hover:bg-[#B38745] disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Sync Page Posts (Graph API)
+            {syncMutation.isPending ? 'Syncing...' : 'Sync Page Posts (Graph API)'}
           </button>
           
           <span className="text-gray-300 font-bold">OR</span>
