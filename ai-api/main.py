@@ -402,16 +402,33 @@ class ImagePayload(BaseModel):
 @app.post("/rag/image/generate")
 def generate_image_endpoint(payload: ImagePayload):
     import urllib.parse
+    import random
     try:
-        # User does not have enough Gemini tokens/quota for Imagen
-        # We will use Pollinations.ai which is a free public image generation API
-        encoded_prompt = urllib.parse.quote(payload.prompt)
-        image_url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1024&height=1024&nologo=true"
+        # Use Unsplash for high-quality stock photos
+        # Extract key topic from prompt for better search
+        prompt_text = payload.prompt.lower()
+        
+        # Map keywords to relevant Unsplash search terms
+        if any(k in prompt_text for k in ["japan", "japanese", "n5", "jlpt"]):
+            query = "japan students study language learning classroom"
+        elif any(k in prompt_text for k in ["ged", "pre-ged", "pre ged", "igcse"]):
+            query = "students studying exam preparation high school"
+        elif any(k in prompt_text for k in ["ccna", "network", "cisco", "it", "cyber"]):
+            query = "technology computer network engineering college"
+        elif any(k in prompt_text for k in ["english", "ielts", "toefl"]):
+            query = "students learning english classroom education"
+        else:
+            query = "students college education classroom university learning"
+        
+        # Add a random seed to avoid same image every time
+        seed = random.randint(1, 1000)
+        encoded_query = urllib.parse.quote(query)
+        image_url = f"https://source.unsplash.com/featured/1024x576/?{encoded_query}&sig={seed}"
         
         return {"status": "success", "image_url": image_url}
     except Exception as e:
         print("Image generation failed:", str(e))
-        return {"status": "success", "image_url": "https://placehold.co/600x600?text=Image+Generation+Failed"}
+        return {"status": "success", "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1024&q=80"}
 
 class PublishPayload(BaseModel):
     message: str
