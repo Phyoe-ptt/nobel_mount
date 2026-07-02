@@ -22,7 +22,8 @@ function AutoPilotComponent() {
   const [localConfig, setLocalConfig] = React.useState<any>({
     dailyPostingEnabled: true,
     pageProfileText: '',
-    scheduleTimes: '09:00 AM'
+    scheduleTimes: '09:00 AM',
+    publishMode: 'auto'
   })
 
   React.useEffect(() => {
@@ -81,18 +82,32 @@ function AutoPilotComponent() {
       const imgData = await imgRes.json()
       const imageUrl = imgData.image_url
 
-      // 3. Publish to Facebook (Simulating Auto-Publish Mode)
-      const pubRes = await fetch('/facebook/publish', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: generatedText, image_url: imageUrl })
-      })
-      if (!pubRes.ok) {
-        const errData = await pubRes.json()
-        throw new Error(errData.detail || 'Failed to publish to Facebook')
+      // 3. Publish to Facebook OR Save to Queue
+      if (localConfig.publishMode === 'draft') {
+        const queueRes = await fetch('/api/social-posts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            content: generatedText, 
+            imageUrl: imageUrl, 
+            status: 'DRAFT',
+            createdAt: new Date().toISOString()
+          })
+        })
+        if (!queueRes.ok) throw new Error('Failed to save to Queue')
+        alert("✨ Auto-Pilot Success! Post and image generated and saved to Queue for review.")
+      } else {
+        const pubRes = await fetch('/facebook/publish', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: generatedText, image_url: imageUrl })
+        })
+        if (!pubRes.ok) {
+          const errData = await pubRes.json()
+          throw new Error(errData.detail || 'Failed to publish to Facebook')
+        }
+        alert("✨ Auto-Pilot Success! Post and image generated and successfully published to Facebook Page!")
       }
-
-      alert("✨ Auto-Pilot Success! Post and image generated and successfully published to Facebook Page!")
     } catch (err: any) {
       if (err.name === 'AbortError') {
         alert("Image generation timed out. Please try again.")
@@ -224,9 +239,13 @@ function AutoPilotComponent() {
 
             <div>
               <label className="block text-sm font-bold text-stone-900 mb-2">Publish Mode</label>
-              <select className="w-full bg-white border border-stone-200 rounded-lg px-3 py-2 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400">
-                <option>Save as Draft (Review manually)</option>
-                <option selected>Auto-Publish (Queue automatically)</option>
+              <select 
+                value={localConfig.publishMode || 'auto'}
+                onChange={e => setLocalConfig({...localConfig, publishMode: e.target.value})}
+                className="w-full bg-white border border-stone-200 rounded-lg px-3 py-2 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400"
+              >
+                <option value="draft">Save as Draft (Review manually)</option>
+                <option value="auto">Auto-Publish (Queue automatically)</option>
               </select>
             </div>
           </div>
