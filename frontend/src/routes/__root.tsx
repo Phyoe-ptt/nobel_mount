@@ -3,7 +3,7 @@ import { Outlet, createRootRoute, Link, useLocation } from '@tanstack/react-rout
 import { 
   LayoutDashboard, PenTool, Video, Zap, Megaphone, ListOrdered, 
   BookOpen, MessageSquare, LineChart, Settings, ShieldAlert, 
-  Users, Package, Menu, Sun, LogOut, PanelLeftClose
+  Users, Package, Menu, Sun, LogOut, PanelLeftClose, Database
 } from 'lucide-react'
 
 export const Route = createRootRoute({
@@ -21,6 +21,7 @@ function RootComponent() {
     { path: '/auto-pilot', label: 'Auto-Pilot', icon: Zap },
     { path: '/ads', label: 'Ads', icon: Megaphone },
     { path: '/queue', label: 'Queue', icon: ListOrdered },
+    { path: '/knowledge-base', label: 'Knowledge Base', icon: Database },
     { path: '/user-manual', label: 'User Manual', icon: BookOpen },
     { path: '/inbox', label: 'Sales Inbox', icon: MessageSquare },
     { path: '/page-insights', label: 'Page Insights', icon: LineChart },
