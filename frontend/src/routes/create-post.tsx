@@ -37,7 +37,7 @@ function CreatePostComponent() {
 
   const generateImageMutation = useMutation({
     mutationFn: async () => {
-      const prompt = `Professional photography for an education college in Myanmar, showing ${keywords}, cinematic lighting, high quality, 8k resolution`
+      const prompt = `A highly professional marketing flyer and promotional poster for an education college, modern graphic design, clean layout, UI/UX style, vector flat illustration, vibrant colors (blue and yellow), education theme related to ${keywords}, typography, high quality 8k`
       const res = await fetch('/rag/image/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
