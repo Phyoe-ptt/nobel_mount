@@ -405,3 +405,33 @@ def publish_to_facebook(payload: PublishPayload):
     except Exception as e:
         print("Publishing Error:", str(e))
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/rag/verify-payment-slip")
+async def verify_payment_slip(file: UploadFile = File(...)):
+    import google.generativeai as genai
+    import json
+    try:
+        content = await file.read()
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        
+        prompt = """Analyze this image. It is supposed to be a Myanmar payment slip (KPay or WavePay).
+        Extract the following:
+        1. Is it a valid payment slip? (true/false)
+        2. Amount transferred (number only, no commas or currency symbols)
+        3. Transaction Date (YYYY-MM-DD format if possible)
+        4. Transaction ID
+        
+        Return ONLY a raw JSON object (no markdown formatting, no backticks) with keys: {"valid": true/false, "amount": 0, "date": "", "transaction_id": ""}
+        """
+        
+        response = model.generate_content([
+            prompt,
+            {"mime_type": file.content_type, "data": content}
+        ])
+        
+        text = response.text.replace("```json", "").replace("```", "").strip()
+        data = json.loads(text)
+        return {"status": "success", "data": data}
+    except Exception as e:
+        print(f"Vision error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))

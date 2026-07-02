@@ -35,4 +35,22 @@ public class InboxController {
             return ResponseEntity.ok(facebookMessageRepository.save(msg));
         }).orElse(ResponseEntity.notFound().build());
     }
+
+    @PutMapping("/lead-status/{id}")
+    public ResponseEntity<FacebookMessage> updateLeadStatus(@PathVariable java.util.UUID id, @RequestBody java.util.Map<String, String> body) {
+        return facebookMessageRepository.findById(id).map(msg -> {
+            msg.setLeadStatus(body.get("status"));
+            return ResponseEntity.ok(facebookMessageRepository.save(msg));
+        }).orElse(ResponseEntity.notFound().build());
+    }
+
+    @PutMapping("/payment/{id}")
+    public ResponseEntity<FacebookMessage> verifyPayment(@PathVariable java.util.UUID id, @RequestBody java.util.Map<String, Object> body) {
+        return facebookMessageRepository.findById(id).map(msg -> {
+            if (body.containsKey("verified")) {
+                msg.setPaymentVerified((Boolean) body.get("verified"));
+            }
+            return ResponseEntity.ok(facebookMessageRepository.save(msg));
+        }).orElse(ResponseEntity.notFound().build());
+    }
 }

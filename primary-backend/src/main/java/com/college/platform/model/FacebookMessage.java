@@ -30,6 +30,15 @@ public class FacebookMessage {
     @Column(name = "is_resolved")
     private boolean resolved;
 
+    @Column(name = "lead_status")
+    private String leadStatus;
+
+    @Column(name = "payment_slip_url", columnDefinition = "TEXT")
+    private String paymentSlipUrl;
+
+    @Column(name = "payment_verified")
+    private boolean paymentVerified;
+
     @Column(name = "created_at", insertable = false, updatable = false)
     private LocalDateTime createdAt;
 
@@ -37,7 +46,7 @@ public class FacebookMessage {
     public FacebookMessage() {
     }
 
-    public FacebookMessage(UUID id, String senderId, String recipientId, String messageText, boolean fromAi, boolean requiresHuman, boolean resolved, LocalDateTime createdAt) {
+    public FacebookMessage(UUID id, String senderId, String recipientId, String messageText, boolean fromAi, boolean requiresHuman, boolean resolved, String leadStatus, String paymentSlipUrl, boolean paymentVerified, LocalDateTime createdAt) {
         this.id = id;
         this.senderId = senderId;
         this.recipientId = recipientId;
@@ -45,6 +54,9 @@ public class FacebookMessage {
         this.fromAi = fromAi;
         this.requiresHuman = requiresHuman;
         this.resolved = resolved;
+        this.leadStatus = leadStatus;
+        this.paymentSlipUrl = paymentSlipUrl;
+        this.paymentVerified = paymentVerified;
         this.createdAt = createdAt;
     }
 
@@ -69,6 +81,15 @@ public class FacebookMessage {
 
     public boolean isResolved() { return resolved; }
     public void setResolved(boolean resolved) { this.resolved = resolved; }
+
+    public String getLeadStatus() { return leadStatus; }
+    public void setLeadStatus(String leadStatus) { this.leadStatus = leadStatus; }
+
+    public String getPaymentSlipUrl() { return paymentSlipUrl; }
+    public void setPaymentSlipUrl(String paymentSlipUrl) { this.paymentSlipUrl = paymentSlipUrl; }
+
+    public boolean isPaymentVerified() { return paymentVerified; }
+    public void setPaymentVerified(boolean paymentVerified) { this.paymentVerified = paymentVerified; }
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }

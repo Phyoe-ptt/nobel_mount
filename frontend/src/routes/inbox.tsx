@@ -32,6 +32,34 @@ function InboxComponent() {
     }
   })
 
+  const leadStatusMutation = useMutation({
+    mutationFn: async ({ id, status }: { id: string, status: string }) => {
+      const res = await fetch(`/api/inbox/lead-status/${id}`, { 
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status })
+      })
+      return res.json()
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['inbox'] })
+    }
+  })
+
+  const verifyPaymentMutation = useMutation({
+    mutationFn: async ({ id, verified }: { id: string, verified: boolean }) => {
+      const res = await fetch(`/api/inbox/payment/${id}`, { 
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ verified })
+      })
+      return res.json()
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['inbox'] })
+    }
+  })
+
   // Group messages by customer (assuming senderId is customer when not from AI, and recipientId is customer when from AI)
   const groupedConversations = React.useMemo(() => {
     const groups: Record<string, any[]> = {}
@@ -112,6 +140,19 @@ function InboxComponent() {
                     {new Date(c.lastMsg.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                   </span>
                 </div>
+                <div className="flex gap-2 items-center mb-1">
+                  <select 
+                    value={c.lastMsg.leadStatus || ''} 
+                    onChange={(e) => leadStatusMutation.mutate({ id: c.lastMsg.id, status: e.target.value })}
+                    onClick={e => e.stopPropagation()}
+                    className="text-[10px] bg-white border border-gray-200 rounded px-1 py-0.5 text-gray-700 font-bold"
+                  >
+                    <option value="">No Status</option>
+                    <option value="NEW_LEAD">New Lead</option>
+                    <option value="FOLLOW_UP">Follow-up</option>
+                    <option value="ENROLLED">Enrolled</option>
+                  </select>
+                </div>
                 <p className="text-xs text-gray-500 truncate">{c.lastMsg.messageText}</p>
                 {c.hasUnresolvedHandoff && (
                   <span className="mt-2 inline-block px-2 py-0.5 bg-red-100 text-red-700 text-[10px] font-bold uppercase rounded-full">
@@ -183,6 +224,24 @@ function InboxComponent() {
                       <p className="text-sm whitespace-pre-wrap leading-relaxed">
                         {msg.messageText}
                       </p>
+
+                      {msg.paymentSlipUrl && (
+                        <div className="mt-3 p-3 bg-white/50 rounded-xl border border-gray-100">
+                          <p className="text-xs font-bold text-gray-800 mb-2">Payment Slip (AI Vision Scanned)</p>
+                          <img src={msg.paymentSlipUrl} alt="Slip" className="w-full max-w-[200px] rounded-lg mb-2 border border-gray-200" />
+                          
+                          {msg.paymentVerified ? (
+                            <div className="text-[10px] font-bold text-green-700 bg-green-100 px-2 py-1 rounded inline-block">✅ Verified</div>
+                          ) : (
+                            <button 
+                              onClick={() => verifyPaymentMutation.mutate({ id: msg.id, verified: true })}
+                              className="text-[10px] font-bold text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded"
+                            >
+                              Approve Payment
+                            </button>
+                          )}
+                        </div>
+                      )}
 
                       {/* Timestamp */}
                       <div className={`text-[10px] mt-2 ${!msg.fromAi ? 'text-gray-400' : 'text-blue-200'}`}>

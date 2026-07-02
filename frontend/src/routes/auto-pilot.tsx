@@ -2,12 +2,49 @@ import { createFileRoute } from '@tanstack/react-router'
 import * as React from 'react'
 import { ShieldCheck, Clock, X } from 'lucide-react'
 
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+
 export const Route = createFileRoute('/auto-pilot')({
   component: AutoPilotComponent,
 })
 
 function AutoPilotComponent() {
-  const [isAutonomousEnabled, setIsAutonomousEnabled] = React.useState(true)
+  const queryClient = useQueryClient()
+  
+  const { data: config } = useQuery({
+    queryKey: ['autopilotConfig'],
+    queryFn: async () => {
+      const res = await fetch('/api/autopilot')
+      return res.json()
+    }
+  })
+
+  const [localConfig, setLocalConfig] = React.useState<any>({
+    dailyPostingEnabled: true,
+    pageProfileText: '',
+    scheduleTimes: '09:00 AM'
+  })
+
+  React.useEffect(() => {
+    if (config) {
+      setLocalConfig(config)
+    }
+  }, [config])
+
+  const saveMutation = useMutation({
+    mutationFn: async (newConfig: any) => {
+      const res = await fetch('/api/autopilot', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newConfig)
+      })
+      return res.json()
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['autopilotConfig'] })
+      alert("Autopilot Settings saved successfully!")
+    }
+  })
 
   return (
     <div className="max-w-4xl mx-auto space-y-6 pb-24">
@@ -27,8 +64,8 @@ function AutoPilotComponent() {
             <input 
               type="checkbox" 
               className="sr-only peer" 
-              checked={isAutonomousEnabled}
-              onChange={e => setIsAutonomousEnabled(e.target.checked)}
+              checked={localConfig.dailyPostingEnabled}
+              onChange={e => setLocalConfig({...localConfig, dailyPostingEnabled: e.target.checked})}
             />
             <div className="w-11 h-6 bg-stone-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#C69A55]"></div>
           </label>
@@ -53,7 +90,9 @@ function AutoPilotComponent() {
         <div className="mb-8">
           <label className="block text-sm font-bold text-stone-900 mb-2">AI Page Profile (Strategy)</label>
           <textarea 
-            defaultValue="focusing on IT Career development in Myanmar, Network Engineering, CCNA, Cyber Security, Cloud Technology, Microsoft Server, and Japan Language Classes. Provide clear and encouraging learning paths for students."
+            value={localConfig.pageProfileText}
+            onChange={e => setLocalConfig({...localConfig, pageProfileText: e.target.value})}
+            placeholder="focusing on IT Career development in Myanmar..."
             className="w-full h-24 bg-[#FDFBF7] border border-stone-200 rounded-xl p-3 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-shadow resize-none"
           />
           <p className="text-xs text-stone-500 mt-2">
@@ -68,25 +107,41 @@ function AutoPilotComponent() {
           <div>
             <label className="block text-sm font-bold text-stone-900 mb-3">Daily Schedule Times</label>
             <div className="space-y-3">
-              {[
-                { time: '01:00 PM' },
-                { time: '07:00 PM' },
-                { time: '09:00 AM' }
-              ].map((schedule, idx) => (
+              {(localConfig.scheduleTimes ? localConfig.scheduleTimes.split(',') : []).map((schedule: string, idx: number) => (
                 <div key={idx} className="flex items-center gap-3">
                   <div className="relative flex-1">
                     <input 
                       type="text" 
-                      defaultValue={schedule.time}
+                      value={schedule.trim()}
+                      onChange={e => {
+                        const times = localConfig.scheduleTimes.split(',').map((s: string) => s.trim())
+                        times[idx] = e.target.value
+                        setLocalConfig({...localConfig, scheduleTimes: times.join(',')})
+                      }}
                       className="w-full bg-white border border-stone-200 rounded-lg pl-3 pr-10 py-2 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400"
                     />
                     <Clock size={16} className="absolute right-3 top-2.5 text-stone-400 pointer-events-none" />
                   </div>
-                  <button className="p-2 text-stone-400 hover:text-stone-700 transition-colors">
+                  <button 
+                    onClick={() => {
+                      const times = localConfig.scheduleTimes.split(',').filter((_: any, i: number) => i !== idx)
+                      setLocalConfig({...localConfig, scheduleTimes: times.join(',')})
+                    }}
+                    className="p-2 text-stone-400 hover:text-stone-700 transition-colors"
+                  >
                     <X size={16} />
                   </button>
                 </div>
               ))}
+              <button 
+                onClick={() => {
+                  const current = localConfig.scheduleTimes ? localConfig.scheduleTimes : ''
+                  setLocalConfig({...localConfig, scheduleTimes: current ? current + ',12:00 PM' : '12:00 PM'})
+                }}
+                className="text-xs text-[#C69A55] font-bold hover:underline"
+              >
+                + Add Time
+              </button>
             </div>
             <p className="text-[11px] text-stone-500 mt-3 leading-relaxed">
               Add up to 3 times per day. Posts will be generated and scheduled for these exact times. (Must be at least 2 hours apart)
@@ -126,8 +181,12 @@ function AutoPilotComponent() {
         <button className="bg-white border border-stone-200 hover:bg-stone-50 text-stone-800 font-medium text-sm py-2 px-6 rounded-lg transition-colors shadow-sm">
           Generate drafts now
         </button>
-        <button className="bg-[#C69A55] hover:bg-[#B38745] text-stone-900 font-bold text-sm py-2 px-6 rounded-lg transition-colors shadow-sm">
-          Save Settings
+        <button 
+          onClick={() => saveMutation.mutate(localConfig)}
+          disabled={saveMutation.isPending}
+          className="bg-[#C69A55] hover:bg-[#B38745] text-white font-bold text-sm py-2 px-6 rounded-lg transition-colors shadow-sm disabled:opacity-50"
+        >
+          {saveMutation.isPending ? 'Saving...' : 'Save Settings'}
         </button>
       </div>
 

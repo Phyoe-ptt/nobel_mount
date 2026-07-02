@@ -2,12 +2,22 @@ import { createFileRoute } from '@tanstack/react-router'
 import * as React from 'react'
 import { Megaphone, RefreshCw, Check, X } from 'lucide-react'
 
+import { useQuery } from '@tanstack/react-query'
+
 export const Route = createFileRoute('/ads')({
   component: AdsComponent,
 })
 
 function AdsComponent() {
   const [activeTab, setActiveTab] = React.useState('browse')
+
+  const { data: posts = [] } = useQuery({
+    queryKey: ['socialPosts'],
+    queryFn: async () => {
+      const res = await fetch('/api/social-posts')
+      return res.json()
+    }
+  })
 
   return (
     <div className="max-w-4xl mx-auto space-y-6 pb-24">
@@ -72,44 +82,45 @@ function AdsComponent() {
             AI reads comments when possible and writes short informal Burmese notes — low-quality posts are flagged but still listed.
           </p>
           <div className="text-[11px] text-stone-400 mb-6 space-y-1">
-            <p>Last updated 6/30/2026, 9:41:42 AM · cache expires after 6h</p>
-            <p>97 eligible posts (top 100 by engagement from your page)</p>
+            <p>{posts.length} eligible posts found from database</p>
           </div>
 
-          {/* Browse Post Card */}
-          <div className="border border-stone-200 rounded-xl p-5 mb-4">
-            <p className="text-sm font-bold text-stone-900 mb-3 leading-relaxed">
-              IT နယ်ပယ်မှာ အနာဂတ်တစ်ခုကို တည်ဆောက်ချင်တယ်ဆိုရင် Noble Mount ကို လာရောက်လေ့လာဖို့ ဖိတ်ခေါ်ပါတယ်။ 100% Theory + 100% Lab နဲ့ သင်ကြားပေးနေပါပြီ...
-            </p>
-            
-            <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="text-[10px] font-bold text-stone-600 border border-stone-200 px-2 py-1 rounded-md bg-stone-50">Page history</span>
-              <span className="text-xs font-bold text-stone-700">Score 260</span>
-              <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-1 rounded-md">High potential</span>
-              <span className="text-xs text-stone-500">245 likes · 5 comments</span>
-            </div>
+          {/* Browse Post Cards */}
+          {posts.length === 0 ? (
+            <div className="text-center py-8 text-stone-500">No posts available. Generate some from the Queue page!</div>
+          ) : posts.map((post: any, idx: number) => (
+            <div key={post.id || idx} className="border border-stone-200 rounded-xl p-5 mb-4">
+              <p className="text-sm font-bold text-stone-900 mb-3 leading-relaxed">
+                {post.content.length > 200 ? post.content.substring(0, 200) + '...' : post.content}
+              </p>
+              
+              <div className="flex flex-wrap items-center gap-2 mb-3">
+                <span className="text-[10px] font-bold text-stone-600 border border-stone-200 px-2 py-1 rounded-md bg-stone-50">
+                  {post.status || 'DRAFT'}
+                </span>
+                <span className="text-xs text-stone-500">
+                  {new Date(post.createdAt).toLocaleDateString()}
+                </span>
+              </div>
 
-            <p className="text-sm text-stone-600 mb-4 leading-relaxed bg-[#FDFBF7] p-3 rounded-lg border border-stone-100">
-              ဒီပိုစ့်က IT Career အကြောင်းရှင်းပြထားတော့ စိတ်ဝင်စားမှုမြင့်တယ်။ လူငယ်တွေနဲ့ နည်းပညာဝါသနာပါသူတွေကို Target ထားပြီး Boost လိုက်ရင် လူပိုမြင်ရမယ်။
-            </p>
+              {post.imageUrl && (
+                <div className="mb-4 rounded-lg overflow-hidden border border-stone-100 bg-stone-50">
+                  <img src={post.imageUrl} alt="Post media" className="w-full h-auto max-h-48 object-cover" />
+                </div>
+              )}
 
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-1 rounded">MM</span>
-              <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-1 rounded">Ages 18-30</span>
-              <span className="text-[10px] font-medium text-stone-600 border border-stone-200 px-2 py-1 rounded">IT Career</span>
-              <span className="text-[10px] font-medium text-stone-600 border border-stone-200 px-2 py-1 rounded">Network Engineer</span>
-              <span className="text-[10px] font-medium text-stone-600 border border-stone-200 px-2 py-1 rounded">Education</span>
+              <div className="flex items-center gap-4 text-xs font-medium border-t border-stone-100 pt-4">
+                <span className="text-emerald-800 bg-emerald-100 px-2 py-1 rounded">Audience: MM Education</span>
+                <span className="text-stone-500">Target reach ≥ 2,500</span>
+                {post.status === 'PUBLISHED' && (
+                  <a href="#" className="text-[#C69A55] hover:underline ml-auto">View on Facebook</a>
+                )}
+                <button className="bg-[#C69A55] hover:bg-[#B38745] text-white font-bold px-4 py-1.5 rounded-lg transition-colors ml-auto">
+                  Create boost
+                </button>
+              </div>
             </div>
-
-            <div className="flex items-center gap-4 text-xs font-medium border-t border-stone-100 pt-4">
-              <span className="text-emerald-800 bg-emerald-100 px-2 py-1 rounded">Audience: balanced</span>
-              <span className="text-stone-500">Target reach ≥ 2,500 by 24h</span>
-              <a href="#" className="text-[#C69A55] hover:underline ml-auto">View on Facebook</a>
-              <button className="bg-[#C69A55] hover:bg-[#B38745] text-white font-bold px-4 py-1.5 rounded-lg transition-colors">
-                Create boost
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       )}
 

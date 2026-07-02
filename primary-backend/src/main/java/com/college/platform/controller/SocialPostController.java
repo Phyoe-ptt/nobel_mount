@@ -15,6 +15,11 @@ public class SocialPostController {
     @Autowired
     private SocialPostRepository socialPostRepository;
 
+    @GetMapping
+    public java.util.List<SocialPost> getAllPosts() {
+        return socialPostRepository.findAll();
+    }
+
     @PostMapping
     public SocialPost createPost(@RequestBody SocialPost post) {
         post.setCreatedAt(LocalDateTime.now());

@@ -2,19 +2,55 @@ import { createFileRoute } from '@tanstack/react-router'
 import * as React from 'react'
 import { Package, Plus } from 'lucide-react'
 
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+
 export const Route = createFileRoute('/packages')({
   component: PackagesComponent,
 })
 
 function PackagesComponent() {
-  const [autoFollowUp, setAutoFollowUp] = React.useState(true)
+  const queryClient = useQueryClient()
 
-  const packages = [
-    { name: 'CCNA Bootcamp', slug: 'ccna-bootcamp', price: '350,000 MMK' },
-    { name: 'Network Engineering Diploma', slug: 'network-eng', price: '500,000 MMK' },
-    { name: 'Cyber Security + CEH', slug: 'cyber-sec-ceh', price: '450,000 MMK' },
-    { name: 'Japan Language Level 3', slug: 'n3-class', price: '250,000 MMK' },
-  ]
+  const { data: packages = [] } = useQuery({
+    queryKey: ['packages'],
+    queryFn: async () => {
+      const res = await fetch('/api/packages')
+      return res.json()
+    }
+  })
+
+  const { data: followUpConfig } = useQuery({
+    queryKey: ['followUpConfig'],
+    queryFn: async () => {
+      const res = await fetch('/api/settings/follow-up')
+      return res.json()
+    }
+  })
+
+  const [localConfig, setLocalConfig] = React.useState<any>({
+    autoSend: true, delayHours: 1, maxFollowUps: 2, accuracyThreshold: 10
+  })
+
+  React.useEffect(() => {
+    if (followUpConfig) {
+      setLocalConfig(followUpConfig)
+    }
+  }, [followUpConfig])
+
+  const saveSettingsMutation = useMutation({
+    mutationFn: async (newConfig: any) => {
+      const res = await fetch('/api/settings/follow-up', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newConfig)
+      })
+      return res.json()
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['followUpConfig'] })
+      alert("Settings saved successfully!")
+    }
+  })
 
   return (
     <div className="max-w-4xl mx-auto space-y-8 pb-24">
@@ -52,14 +88,16 @@ function PackagesComponent() {
               </tr>
             </thead>
             <tbody className="divide-y divide-stone-100">
-              {packages.map((pkg, idx) => (
-                <tr key={idx} className="group hover:bg-[#FDFBF7] transition-colors">
+              {packages.length === 0 ? (
+                <tr><td colSpan={5} className="py-4 text-center text-stone-500">No packages found. Add one!</td></tr>
+              ) : packages.map((pkg: any, idx: number) => (
+                <tr key={pkg.id || idx} className="group hover:bg-[#FDFBF7] transition-colors">
                   <td className="py-4 px-4 font-medium text-stone-900">{pkg.name}</td>
                   <td className="py-4 px-4 text-stone-500 font-mono text-xs">{pkg.slug}</td>
                   <td className="py-4 px-4 text-stone-700">{pkg.price}</td>
                   <td className="py-4 px-4">
                     <span className="bg-[#C69A55] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">
-                      Active
+                      {pkg.status}
                     </span>
                   </td>
                   <td className="py-4 px-4 text-right space-x-2">
@@ -88,8 +126,8 @@ function PackagesComponent() {
             <input 
               type="checkbox" 
               className="sr-only peer" 
-              checked={autoFollowUp}
-              onChange={e => setAutoFollowUp(e.target.checked)}
+              checked={localConfig.autoSend}
+              onChange={e => setLocalConfig({...localConfig, autoSend: e.target.checked})}
             />
             <div className="w-9 h-5 bg-stone-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-stone-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#C69A55] relative"></div>
             <span className="text-sm font-bold text-stone-700">Auto-send follow-ups (otherwise staff must approve)</span>
@@ -100,7 +138,8 @@ function PackagesComponent() {
               <label className="block text-sm font-bold text-stone-900 mb-2">Follow-up delay (hours after last customer message)</label>
               <input 
                 type="number" 
-                defaultValue={1} 
+                value={localConfig.delayHours} 
+                onChange={e => setLocalConfig({...localConfig, delayHours: parseInt(e.target.value) || 0})}
                 className="w-full bg-white border border-stone-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#C69A55] outline-none" 
               />
               <p className="text-[10px] text-stone-500 mt-2">Example: 12 - follow up 12 hours after the customer's last message.</p>
@@ -109,7 +148,8 @@ function PackagesComponent() {
               <label className="block text-sm font-bold text-stone-900 mb-2">Max follow-ups per conversation (days)</label>
               <input 
                 type="number" 
-                defaultValue={2} 
+                value={localConfig.maxFollowUps} 
+                onChange={e => setLocalConfig({...localConfig, maxFollowUps: parseInt(e.target.value) || 0})}
                 className="w-full bg-white border border-stone-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#C69A55] outline-none" 
               />
             </div>
@@ -119,14 +159,19 @@ function PackagesComponent() {
             <label className="block text-sm font-bold text-stone-900 mb-2">Unresolved accuracy threshold (%)</label>
             <input 
               type="number" 
-              defaultValue={10} 
+              value={localConfig.accuracyThreshold} 
+              onChange={e => setLocalConfig({...localConfig, accuracyThreshold: parseInt(e.target.value) || 0})}
               className="w-full max-w-sm bg-white border border-stone-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#C69A55] outline-none" 
             />
           </div>
 
           <div className="pt-2">
-            <button className="bg-[#C69A55] hover:bg-[#B38745] text-white font-bold px-6 py-2 rounded-lg transition-colors shadow-sm">
-              Save settings
+            <button 
+              onClick={() => saveSettingsMutation.mutate(localConfig)}
+              className="bg-[#C69A55] hover:bg-[#B38745] text-white font-bold px-6 py-2 rounded-lg transition-colors shadow-sm disabled:opacity-50"
+              disabled={saveSettingsMutation.isPending}
+            >
+              {saveSettingsMutation.isPending ? 'Saving...' : 'Save settings'}
             </button>
           </div>
         </div>
