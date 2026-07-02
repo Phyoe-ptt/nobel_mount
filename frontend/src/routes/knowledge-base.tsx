@@ -34,7 +34,7 @@ function KnowledgeBaseComponent() {
       const formData = new FormData()
       formData.append('file', file)
 
-      const res = await fetch('/rag/upload-facebook-data', {
+      const res = await fetch('/rag/upload-document', {
         method: 'POST',
         body: formData
       })
@@ -67,10 +67,12 @@ function KnowledgeBaseComponent() {
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (file) {
-      if (file.name.endsWith('.json')) {
+      const validTypes = ['.pdf', '.docx', '.xlsx', '.xls', '.csv', '.txt', '.json']
+      const isValid = validTypes.some(ext => file.name.toLowerCase().endsWith(ext))
+      if (isValid) {
         uploadFileMutation.mutate(file)
       } else {
-        alert("Please select a valid JSON file.")
+        alert("Please select a valid document (PDF, Word, Excel, CSV, TXT, JSON).")
       }
     }
   }
@@ -112,8 +114,8 @@ function KnowledgeBaseComponent() {
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-12 flex flex-col items-center justify-center text-center">
         <FileText className="w-16 h-16 text-gray-300 mb-4" />
-        <h3 className="text-lg font-bold text-gray-900 mb-2">Sync Facebook Data</h3>
-        <p className="text-gray-500 max-w-sm mb-6">You can sync your past Facebook page posts or upload historical Messenger chats (JSON export) so the AI learns your history.</p>
+        <h3 className="text-lg font-bold text-gray-900 mb-2">Sync Facebook or Upload Files</h3>
+        <p className="text-gray-500 max-w-sm mb-6">You can sync your past Facebook page posts or upload historical Messenger chats (JSON) or course schedules (Excel/Word/PDF).</p>
         
         <div className="flex items-center gap-6">
           <button 
@@ -128,8 +130,8 @@ function KnowledgeBaseComponent() {
           
           <label className="text-white bg-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-blue-700 cursor-pointer flex items-center gap-2">
             <UploadCloud size={18} />
-            {uploadFileMutation.isPending ? 'Uploading...' : 'Upload Messenger JSON'}
-            <input type="file" accept=".json" className="hidden" onChange={handleFileUpload} disabled={uploadFileMutation.isPending} />
+            {uploadFileMutation.isPending ? 'Uploading...' : 'Upload Document (PDF/Excel/Word)'}
+            <input type="file" accept=".json,.pdf,.docx,.xlsx,.xls,.csv,.txt" className="hidden" onChange={handleFileUpload} disabled={uploadFileMutation.isPending} />
           </label>
         </div>
       </div>

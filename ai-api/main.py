@@ -260,6 +260,43 @@ async def upload_facebook_data(file: UploadFile = File(...)):
     
     return {"status": "success", "synced_posts": count, "message": f"Successfully ingested {count} posts"}
 
+@app.post("/rag/upload-document")
+async def upload_multi_format_document(file: UploadFile = File(...)):
+    import tempfile
+    import os
+    from document_parser import process_and_store_document
+    from data_ingestion import ingest_facebook_json
+    
+    allowed_exts = [".pdf", ".docx", ".xlsx", ".xls", ".csv", ".txt", ".json"]
+    ext = os.path.splitext(file.filename)[1].lower()
+    
+    if ext not in allowed_exts:
+        raise HTTPException(status_code=400, detail=f"Unsupported file format: {ext}. Allowed: {', '.join(allowed_exts)}")
+        
+    if ext == ".json":
+        content = await file.read()
+        json_str = content.decode("utf-8")
+        count = ingest_facebook_json(json_str)
+        return {"status": "success", "chunks_stored": count, "message": f"Successfully ingested {count} posts from JSON"}
+        
+    try:
+        # Save to temp file
+        with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as temp:
+            content = await file.read()
+            temp.write(content)
+            temp_path = temp.name
+            
+        # Parse and store
+        chunks_stored = process_and_store_document(temp_path, file.filename)
+        
+        # Cleanup
+        os.remove(temp_path)
+        
+        return {"status": "success", "chunks_stored": chunks_stored, "message": f"Successfully learned {chunks_stored} pieces of information from {file.filename}"}
+    except Exception as e:
+        print(f"Error processing document upload: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to process document: {str(e)}")
+
 @app.post("/rag/add-document")
 def add_custom_document(payload: DocumentPayload):
     success = add_document_to_kb(payload.content)
