@@ -1,6 +1,11 @@
 from fastapi import FastAPI, Request, HTTPException, UploadFile, File
 from pydantic import BaseModel
+from typing import List, Optional
 import os
+import requests
+import base64
+from fastapi.staticfiles import StaticFiles
+from dotenv import load_dotenv
 
 app = FastAPI(title="AI API Backend", description="FastAPI service for Video Generation and RAG")
 
