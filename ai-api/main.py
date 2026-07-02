@@ -211,6 +211,10 @@ from facebook_sync import sync_page_posts
 @app.post("/rag/sync-facebook")
 def trigger_facebook_sync():
     result = sync_page_posts(limit=20)
+    
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+
     added = result.get("added", 0)
     skipped = result.get("skipped", 0)
     total = result.get("total", 0)

@@ -102,7 +102,19 @@ function KnowledgeBaseComponent() {
         
         <div className="flex items-center gap-6">
           <button 
-            onClick={() => fetch('/rag/sync-facebook', { method: 'POST' }).then(() => alert('Sync started!'))}
+            onClick={async () => {
+              try {
+                const res = await fetch('/rag/sync-facebook', { method: 'POST' })
+                const data = await res.json()
+                if (!res.ok) {
+                  alert(data.detail || 'Sync failed')
+                } else {
+                  alert(data.message || 'Sync successful!')
+                }
+              } catch (e) {
+                alert('Error syncing Facebook posts')
+              }
+            }}
             className="text-white bg-[#C69A55] px-6 py-2 rounded-lg font-medium hover:bg-[#B38745]"
           >
             Sync Page Posts (Graph API)

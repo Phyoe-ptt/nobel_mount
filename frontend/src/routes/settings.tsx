@@ -13,7 +13,8 @@ function SettingsComponent() {
     autoSend: true,
     delayHours: 1,
     maxFollowUps: 2,
-    accuracyThreshold: 85
+    accuracyThreshold: 85,
+    fbToken: ''
   })
 
   const { data: config, isLoading } = useQuery({
@@ -21,7 +22,16 @@ function SettingsComponent() {
     queryFn: async () => {
       const res = await fetch('/api/settings/follow-up')
       if (!res.ok) throw new Error('Failed to fetch')
-      return res.json()
+      const followUpData = await res.json()
+      
+      const tokenRes = await fetch('/api/settings/facebook-token')
+      let fbToken = ''
+      if (tokenRes.ok) {
+        const tokenData = await tokenRes.json()
+        fbToken = tokenData.token || ''
+      }
+      
+      return { ...followUpData, fbToken }
     }
   })
 
@@ -38,7 +48,15 @@ function SettingsComponent() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       })
-      if (!res.ok) throw new Error('Failed to save')
+      if (!res.ok) throw new Error('Failed to save follow-up settings')
+      
+      const tokenRes = await fetch('/api/settings/facebook-token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: data.fbToken })
+      })
+      if (!tokenRes.ok) throw new Error('Failed to save Facebook token')
+      
       return res.json()
     },
     onSuccess: () => {
@@ -125,6 +143,28 @@ function SettingsComponent() {
                 className="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Facebook Integration Settings */}
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mt-6">
+        <div className="p-6 border-b border-gray-200 bg-gray-50/50">
+          <h2 className="text-lg font-bold text-gray-900">Facebook Integration</h2>
+          <p className="text-sm text-gray-500 mt-1">Connect your Facebook Page to allow AI sync and posting.</p>
+        </div>
+        
+        <div className="p-6 space-y-6">
+          <div>
+            <label className="block text-sm font-semibold text-gray-900 mb-2">Facebook Page Access Token (Long-Lived)</label>
+            <p className="text-xs text-gray-500 mb-3">If auto-sync stops working, your token might have expired. Generate a new long-lived token from Facebook Developer Dashboard and paste it here.</p>
+            <input 
+              type="password" 
+              placeholder="EAA..."
+              value={formData.fbToken}
+              onChange={e => setFormData({...formData, fbToken: e.target.value})}
+              className="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+            />
           </div>
         </div>
 
