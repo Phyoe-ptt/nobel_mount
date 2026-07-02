@@ -401,34 +401,55 @@ class ImagePayload(BaseModel):
 
 @app.post("/rag/image/generate")
 def generate_image_endpoint(payload: ImagePayload):
-    import urllib.parse
-    import random
+    import base64
     try:
-        # Use Unsplash for high-quality stock photos
-        # Extract key topic from prompt for better search
+        from google import genai as gai
+        from google.genai import types as gtypes
+        
+        client = gai.Client(api_key=GEMINI_API_KEY)
+        
+        # Build a focused English prompt for best image quality
         prompt_text = payload.prompt.lower()
-        
-        # Map keywords to relevant Unsplash search terms
         if any(k in prompt_text for k in ["japan", "japanese", "n5", "jlpt"]):
-            query = "japan students study language learning classroom"
+            style = "Japanese language class, students studying Japanese, classroom in Myanmar, education"
         elif any(k in prompt_text for k in ["ged", "pre-ged", "pre ged", "igcse"]):
-            query = "students studying exam preparation high school"
+            style = "students studying for exams, books and notebooks, bright classroom, Myanmar students education"
         elif any(k in prompt_text for k in ["ccna", "network", "cisco", "it", "cyber"]):
-            query = "technology computer network engineering college"
+            style = "IT students with computers and networking equipment, modern computer lab, technology education"
         elif any(k in prompt_text for k in ["english", "ielts", "toefl"]):
-            query = "students learning english classroom education"
+            style = "English language class, students speaking and learning English, classroom setting"
         else:
-            query = "students college education classroom university learning"
+            style = "students in a modern college classroom, education, learning, Myanmar"
         
-        # Add a random seed to avoid same image every time
-        seed = random.randint(1, 1000)
-        encoded_query = urllib.parse.quote(query)
-        image_url = f"https://source.unsplash.com/featured/1024x576/?{encoded_query}&sig={seed}"
+        image_prompt = f"A beautiful, professional, high-quality photo for an education advertisement. {style}. Bright, colorful, inspiring, professional photography, bokeh background, sharp focus, 4k quality."
         
-        return {"status": "success", "image_url": image_url}
+        response = client.models.generate_images(
+            model="imagen-4.0-generate-001",
+            prompt=image_prompt,
+            config=gtypes.GenerateImagesConfig(
+                number_of_images=1,
+                aspect_ratio="16:9",
+                safety_filter_level="BLOCK_ONLY_HIGH",
+                person_generation="ALLOW_ADULT",
+            )
+        )
+        
+        if response.generated_images:
+            image_bytes = response.generated_images[0].image.image_bytes
+            b64 = base64.b64encode(image_bytes).decode("utf-8")
+            data_url = f"data:image/jpeg;base64,{b64}"
+            return {"status": "success", "image_url": data_url}
+        else:
+            raise Exception("No image generated")
+            
     except Exception as e:
-        print("Image generation failed:", str(e))
-        return {"status": "success", "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1024&q=80"}
+        print("Imagen 4 failed, using fallback:", str(e))
+        # Fallback to Unsplash
+        import random, urllib.parse
+        query = "students college education classroom university learning"
+        seed = random.randint(1, 9999)
+        image_url = f"https://source.unsplash.com/featured/1024x576/?{urllib.parse.quote(query)}&sig={seed}"
+        return {"status": "success", "image_url": image_url}
 
 class PublishPayload(BaseModel):
     message: str
