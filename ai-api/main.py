@@ -352,13 +352,12 @@ Task: Write exactly {payload.draft_count} separate, LONG and DETAILED Facebook p
 Writing style: {mode_desc}
 Requirements for EACH post:
 - Written in Burmese (မြန်မာဘာသာ), can mix with English technical terms
-- MUST be at least 15-20 sentences long — detailed and thorough
-- Use emojis generously throughout the post (every 2-3 sentences)
+- Make it detailed and engaging (around 10-15 sentences)
+- Use emojis generously to make it visually appealing
 - Include a strong opening hook sentence to grab attention
-- Include a numbered or bullet list of at least 5-7 specific tips/points
+- Focus on the benefits and key details of the course/program
 - Include a call-to-action at the end (e.g. contact Nobel Mount, enroll now, share with friends)
-- End with 5-8 relevant hashtags like #GED #NobelMount #Myanmar
-- Make it feel like a real, engaging Facebook post from an education page — NOT a short summary
+- End with relevant hashtags like #NobelMount #Myanmar
 
 Format your response EXACTLY like this — use "===POST_START===" and "===POST_END===" to separate each post:
 
