@@ -55,9 +55,23 @@ def ingest_facebook_json(json_content: str) -> int:
                                             added_count += 1
 
         elif isinstance(data, dict):
-            # If it's a dict, it might be structured differently.
-            # E.g. {"posts": [ ... ]}
-            pass
+            # Check if it's a Facebook Messenger export format
+            if "messages" in data and isinstance(data["messages"], list):
+                for msg in data["messages"]:
+                    sender = msg.get("sender_name", "Unknown Sender")
+                    content = msg.get("content", "")
+                    if content and isinstance(content, str) and len(content.strip()) > 10:
+                        try:
+                            # Messenger exports often use latin-1 encoding for utf-8 characters
+                            content = content.encode('latin1').decode('utf8')
+                        except Exception:
+                            pass
+                        
+                        clean_chunk = content.encode('utf-8', 'ignore').decode('utf-8')
+                        # Format clearly so AI knows it's a chat history
+                        text = f"Historical Messenger Chat from {sender}: {clean_chunk}"
+                        if add_document_to_kb(text):
+                            added_count += 1
             
         print(f"Successfully ingested {added_count} posts from uploaded JSON.")
         return added_count
