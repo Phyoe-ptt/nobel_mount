@@ -20,6 +20,7 @@ load_dotenv(override=True)
 
 # Facebook Tokens (Fallback)
 FB_VERIFY_TOKEN = os.getenv("FB_VERIFY_TOKEN", "nobel_mount_secret_token")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 def get_fb_publish_token():
     try:
@@ -429,8 +430,6 @@ def generate_image_endpoint(payload: ImagePayload):
             config=gtypes.GenerateImagesConfig(
                 number_of_images=1,
                 aspect_ratio="16:9",
-                safety_filter_level="BLOCK_ONLY_HIGH",
-                person_generation="ALLOW_ADULT",
             )
         )
         
