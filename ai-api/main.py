@@ -400,7 +400,7 @@ Write {payload.draft_count} long, detailed posts now:"""
 class ImagePayload(BaseModel):
     prompt: str
 
-@app.post("/image/generate")
+@app.post("/rag/image/generate")
 def generate_image_endpoint(payload: ImagePayload):
     import urllib.parse
     try:

@@ -10,6 +10,7 @@ export const Route = createFileRoute('/inbox')({
 function InboxComponent() {
   const queryClient = useQueryClient()
   const [selectedUser, setSelectedUser] = React.useState<string | null>(null)
+  const [manualReplyText, setManualReplyText] = React.useState('')
 
   const { data: messages = [], isLoading } = useQuery({
     queryKey: ['inbox'],
@@ -58,6 +59,24 @@ function InboxComponent() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['inbox'] })
     }
+  })
+
+  const sendManualReplyMutation = useMutation({
+    mutationFn: async () => {
+      if (!selectedUser || !manualReplyText.trim()) return;
+      const res = await fetch('/facebook/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recipient_id: selectedUser, message: manualReplyText })
+      })
+      if (!res.ok) throw new Error('Failed to send message')
+      return res.json()
+    },
+    onSuccess: () => {
+      setManualReplyText('')
+      queryClient.invalidateQueries({ queryKey: ['inbox'] })
+    },
+    onError: (err) => alert(err.message)
   })
 
   // Group messages by customer (assuming senderId is customer when not from AI, and recipientId is customer when from AI)
@@ -280,11 +299,20 @@ function InboxComponent() {
               <div className="relative">
                 <input 
                   type="text" 
+                  value={manualReplyText}
+                  onChange={e => setManualReplyText(e.target.value)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter') sendManualReplyMutation.mutate()
+                  }}
                   placeholder="Type a manual reply to override AI..." 
                   className="w-full pl-4 pr-24 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
-                <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-1.5 rounded-lg text-sm font-medium transition-colors">
-                  Send
+                <button 
+                  onClick={() => sendManualReplyMutation.mutate()}
+                  disabled={!manualReplyText.trim() || sendManualReplyMutation.isPending}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-1.5 rounded-lg text-sm font-medium transition-colors"
+                >
+                  {sendManualReplyMutation.isPending ? 'Sending...' : 'Send'}
                 </button>
               </div>
               <p className="text-[10px] text-gray-400 mt-2 text-center">Manual replies will temporarily pause the AI autopilot for this customer.</p>

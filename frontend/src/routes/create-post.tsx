@@ -38,7 +38,7 @@ function CreatePostComponent() {
   const generateImageMutation = useMutation({
     mutationFn: async () => {
       const prompt = `Professional photography for an education college in Myanmar, showing ${keywords}, cinematic lighting, high quality, 8k resolution`
-      const res = await fetch('/api/image/generate', {
+      const res = await fetch('/rag/image/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt })
@@ -55,7 +55,7 @@ function CreatePostComponent() {
   const publishMutation = useMutation({
     mutationFn: async () => {
       if (!generatedPosts[selectedPostIndex] || !generatedImage) throw new Error('Need both post and image to publish')
-      const res = await fetch('/api/facebook/publish', {
+      const res = await fetch('/facebook/publish', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: generatedPosts[selectedPostIndex], image_url: generatedImage })
