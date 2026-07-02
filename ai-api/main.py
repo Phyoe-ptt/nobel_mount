@@ -74,7 +74,7 @@ def send_facebook_message(sender_id: str, message_text: str):
         
         # Log AI reply to DB FIRST, before checking if Facebook succeeded
         try:
-            requests.post("http://localhost:8080/api/inbox", json={
+            requests.post("http://backend:8080/api/inbox", json={
                 "senderId": "ITCollegetest",
                 "recipientId": sender_id,
                 "messageText": message_text,
@@ -122,7 +122,7 @@ async def handle_webhook(request: Request):
 
                         # Log incoming user message to DB
                         try:
-                            requests.post("http://localhost:8080/api/inbox", json={
+                            requests.post("http://backend:8080/api/inbox", json={
                                 "senderId": sender_id,
                                 "recipientId": "ITCollegetest",
                                 "messageText": message_text,
