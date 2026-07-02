@@ -14,7 +14,8 @@ function SettingsComponent() {
     delayHours: 1,
     maxFollowUps: 2,
     accuracyThreshold: 85,
-    fbToken: ''
+    fbSyncToken: '',
+    fbPublishToken: ''
   })
 
   const { data: config, isLoading } = useQuery({
@@ -24,14 +25,16 @@ function SettingsComponent() {
       if (!res.ok) throw new Error('Failed to fetch')
       const followUpData = await res.json()
       
-      const tokenRes = await fetch('/api/settings/facebook-token')
-      let fbToken = ''
+      const tokenRes = await fetch('/api/settings/facebook-tokens')
+      let fbSyncToken = ''
+      let fbPublishToken = ''
       if (tokenRes.ok) {
         const tokenData = await tokenRes.json()
-        fbToken = tokenData.token || ''
+        fbSyncToken = tokenData.syncToken || ''
+        fbPublishToken = tokenData.publishToken || ''
       }
       
-      return { ...followUpData, fbToken }
+      return { ...followUpData, fbSyncToken, fbPublishToken }
     }
   })
 
@@ -50,12 +53,15 @@ function SettingsComponent() {
       })
       if (!res.ok) throw new Error('Failed to save follow-up settings')
       
-      const tokenRes = await fetch('/api/settings/facebook-token', {
+      const tokenRes = await fetch('/api/settings/facebook-tokens', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token: data.fbToken })
+        body: JSON.stringify({ 
+          syncToken: data.fbSyncToken,
+          publishToken: data.fbPublishToken 
+        })
       })
-      if (!tokenRes.ok) throw new Error('Failed to save Facebook token')
+      if (!tokenRes.ok) throw new Error('Failed to save Facebook tokens')
       
       return res.json()
     },
@@ -156,13 +162,25 @@ function SettingsComponent() {
         
         <div className="p-6 space-y-6">
           <div>
-            <label className="block text-sm font-semibold text-gray-900 mb-2">Facebook Page Access Token (Long-Lived)</label>
-            <p className="text-xs text-gray-500 mb-3">If auto-sync stops working, your token might have expired. Generate a new long-lived token from Facebook Developer Dashboard and paste it here.</p>
+            <label className="block text-sm font-semibold text-gray-900 mb-2">Sync Token (e.g. Noble Mount Real Page)</label>
+            <p className="text-xs text-gray-500 mb-3">This token is used exclusively to fetch historical posts for the AI Knowledge Base.</p>
             <input 
               type="password" 
               placeholder="EAA..."
-              value={formData.fbToken}
-              onChange={e => setFormData({...formData, fbToken: e.target.value})}
+              value={formData.fbSyncToken}
+              onChange={e => setFormData({...formData, fbSyncToken: e.target.value})}
+              className="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-semibold text-gray-900 mb-2">Target Page Token (e.g. ITCollege Test Page)</label>
+            <p className="text-xs text-gray-500 mb-3">This token is used to automatically reply to messages and publish AI posts.</p>
+            <input 
+              type="password" 
+              placeholder="EAA..."
+              value={formData.fbPublishToken}
+              onChange={e => setFormData({...formData, fbPublishToken: e.target.value})}
               className="w-full px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
             />
           </div>

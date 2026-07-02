@@ -18,9 +18,17 @@ from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-# Facebook Tokens
+# Facebook Tokens (Fallback)
 FB_VERIFY_TOKEN = os.getenv("FB_VERIFY_TOKEN", "nobel_mount_secret_token")
-FB_PAGE_ACCESS_TOKEN = os.getenv("FB_TEST_PAGE_TOKEN")
+
+def get_fb_publish_token():
+    try:
+        resp = requests.get("http://backend:8080/api/settings/facebook-tokens", timeout=3)
+        if resp.ok:
+            return resp.json().get("publishToken")
+    except Exception:
+        pass
+    return os.getenv("FB_TEST_PAGE_TOKEN")
 
 class MessagePayload(BaseModel):
     sender_id: str
@@ -49,7 +57,12 @@ def verify_webhook(request: Request):
 
 def send_facebook_message(sender_id: str, message_text: str):
     """Sends a message back to the user via Facebook Graph API"""
-    url = f"https://graph.facebook.com/v20.0/me/messages?access_token={FB_PAGE_ACCESS_TOKEN}"
+    token = get_fb_publish_token()
+    if not token:
+        print("Error: No Facebook Publish Token found!")
+        return
+        
+    url = f"https://graph.facebook.com/v20.0/me/messages?access_token={token}"
     payload = {
         "recipient": {"id": sender_id},
         "message": {"text": message_text},
@@ -372,8 +385,9 @@ class PublishPayload(BaseModel):
 def publish_to_facebook(payload: PublishPayload):
     """Publish a post directly to the Facebook Page"""
     import requests
-    if not FB_PAGE_ACCESS_TOKEN:
-        raise HTTPException(status_code=500, detail="FB_PAGE_ACCESS_TOKEN is missing")
+    token = get_fb_publish_token()
+    if not token:
+        raise HTTPException(status_code=500, detail="Facebook Publish Token is missing in Settings")
         
     url = f"https://graph.facebook.com/v20.0/me/photos"
     
@@ -389,7 +403,7 @@ def publish_to_facebook(payload: PublishPayload):
             }
             data = {
                 'message': payload.message,
-                'access_token': FB_PAGE_ACCESS_TOKEN
+                'access_token': token
             }
             response = requests.post(url, data=data, files=files)
         else:
@@ -397,7 +411,7 @@ def publish_to_facebook(payload: PublishPayload):
             data = {
                 'message': payload.message,
                 'url': payload.image_url,
-                'access_token': FB_PAGE_ACCESS_TOKEN
+                'access_token': token
             }
             response = requests.post(url, data=data)
             

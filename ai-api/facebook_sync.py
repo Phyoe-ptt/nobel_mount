@@ -9,10 +9,10 @@ def get_fb_token_from_backend():
     """Fetch the Facebook Page Access Token from the Java Backend DB."""
     try:
         # ai-api container calls backend container
-        resp = requests.get("http://backend:8080/api/settings/facebook-token", timeout=3)
+        resp = requests.get("http://backend:8080/api/settings/facebook-tokens", timeout=3)
         if resp.ok:
             data = resp.json()
-            return data.get("token")
+            return data.get("syncToken")
     except Exception as e:
         print(f"Failed to fetch token from backend: {e}")
     return os.getenv("FB_NOBEL_MOUNT_TOKEN")  # Fallback to .env

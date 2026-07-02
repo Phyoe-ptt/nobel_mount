@@ -16,24 +16,31 @@ public class SystemSettingsController {
     @Autowired
     private SystemSettingsRepository settingsRepository;
 
-    @GetMapping("/facebook-token")
-    public ResponseEntity<Map<String, String>> getFacebookToken() {
-        Optional<SystemSettings> setting = settingsRepository.findBySettingKey("FB_PAGE_ACCESS_TOKEN");
-        return setting.map(s -> ResponseEntity.ok(Map.of("token", s.getSettingValue())))
-                .orElseGet(() -> ResponseEntity.ok(Map.of("token", "")));
+    @GetMapping("/facebook-tokens")
+    public ResponseEntity<Map<String, String>> getFacebookTokens() {
+        String syncToken = settingsRepository.findBySettingKey("FB_SYNC_TOKEN")
+                .map(SystemSettings::getSettingValue).orElse("");
+        String publishToken = settingsRepository.findBySettingKey("FB_PUBLISH_TOKEN")
+                .map(SystemSettings::getSettingValue).orElse("");
+                
+        return ResponseEntity.ok(Map.of("syncToken", syncToken, "publishToken", publishToken));
     }
 
-    @PostMapping("/facebook-token")
-    public ResponseEntity<Map<String, String>> updateFacebookToken(@RequestBody Map<String, String> body) {
-        String token = body.get("token");
-        if (token == null) {
-            return ResponseEntity.badRequest().build();
+    @PostMapping("/facebook-tokens")
+    public ResponseEntity<Map<String, String>> updateFacebookTokens(@RequestBody Map<String, String> body) {
+        if (body.containsKey("syncToken")) {
+            SystemSettings syncSetting = settingsRepository.findBySettingKey("FB_SYNC_TOKEN")
+                    .orElse(new SystemSettings("FB_SYNC_TOKEN", ""));
+            syncSetting.setSettingValue(body.get("syncToken"));
+            settingsRepository.save(syncSetting);
         }
-
-        SystemSettings setting = settingsRepository.findBySettingKey("FB_PAGE_ACCESS_TOKEN")
-                .orElse(new SystemSettings("FB_PAGE_ACCESS_TOKEN", ""));
-        setting.setSettingValue(token);
-        settingsRepository.save(setting);
+        
+        if (body.containsKey("publishToken")) {
+            SystemSettings pubSetting = settingsRepository.findBySettingKey("FB_PUBLISH_TOKEN")
+                    .orElse(new SystemSettings("FB_PUBLISH_TOKEN", ""));
+            pubSetting.setSettingValue(body.get("publishToken"));
+            settingsRepository.save(pubSetting);
+        }
 
         return ResponseEntity.ok(Map.of("status", "success"));
     }
