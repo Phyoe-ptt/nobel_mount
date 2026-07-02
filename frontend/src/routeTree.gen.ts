@@ -15,11 +15,13 @@ import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as RolesRouteImport } from './routes/roles'
 import { Route as QueueRouteImport } from './routes/queue'
 import { Route as PageInsightsRouteImport } from './routes/page-insights'
+import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as KnowledgeBaseRouteImport } from './routes/knowledge-base'
 import { Route as InboxRouteImport } from './routes/inbox'
 import { Route as ImageStudioRouteImport } from './routes/image-studio'
 import { Route as CreatePostRouteImport } from './routes/create-post'
 import { Route as ContentPlannerRouteImport } from './routes/content-planner'
+import { Route as AutoPilotRouteImport } from './routes/auto-pilot'
 import { Route as AdsRouteImport } from './routes/ads'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -53,6 +55,11 @@ const PageInsightsRoute = PageInsightsRouteImport.update({
   path: '/page-insights',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KnowledgeBaseRoute = KnowledgeBaseRouteImport.update({
   id: '/knowledge-base',
   path: '/knowledge-base',
@@ -78,6 +85,11 @@ const ContentPlannerRoute = ContentPlannerRouteImport.update({
   path: '/content-planner',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AutoPilotRoute = AutoPilotRouteImport.update({
+  id: '/auto-pilot',
+  path: '/auto-pilot',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdsRoute = AdsRouteImport.update({
   id: '/ads',
   path: '/ads',
@@ -92,11 +104,13 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ads': typeof AdsRoute
+  '/auto-pilot': typeof AutoPilotRoute
   '/content-planner': typeof ContentPlannerRoute
   '/create-post': typeof CreatePostRoute
   '/image-studio': typeof ImageStudioRoute
   '/inbox': typeof InboxRoute
   '/knowledge-base': typeof KnowledgeBaseRoute
+  '/packages': typeof PackagesRoute
   '/page-insights': typeof PageInsightsRoute
   '/queue': typeof QueueRoute
   '/roles': typeof RolesRoute
@@ -107,11 +121,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ads': typeof AdsRoute
+  '/auto-pilot': typeof AutoPilotRoute
   '/content-planner': typeof ContentPlannerRoute
   '/create-post': typeof CreatePostRoute
   '/image-studio': typeof ImageStudioRoute
   '/inbox': typeof InboxRoute
   '/knowledge-base': typeof KnowledgeBaseRoute
+  '/packages': typeof PackagesRoute
   '/page-insights': typeof PageInsightsRoute
   '/queue': typeof QueueRoute
   '/roles': typeof RolesRoute
@@ -123,11 +139,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/ads': typeof AdsRoute
+  '/auto-pilot': typeof AutoPilotRoute
   '/content-planner': typeof ContentPlannerRoute
   '/create-post': typeof CreatePostRoute
   '/image-studio': typeof ImageStudioRoute
   '/inbox': typeof InboxRoute
   '/knowledge-base': typeof KnowledgeBaseRoute
+  '/packages': typeof PackagesRoute
   '/page-insights': typeof PageInsightsRoute
   '/queue': typeof QueueRoute
   '/roles': typeof RolesRoute
@@ -140,11 +158,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/ads'
+    | '/auto-pilot'
     | '/content-planner'
     | '/create-post'
     | '/image-studio'
     | '/inbox'
     | '/knowledge-base'
+    | '/packages'
     | '/page-insights'
     | '/queue'
     | '/roles'
@@ -155,11 +175,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/ads'
+    | '/auto-pilot'
     | '/content-planner'
     | '/create-post'
     | '/image-studio'
     | '/inbox'
     | '/knowledge-base'
+    | '/packages'
     | '/page-insights'
     | '/queue'
     | '/roles'
@@ -170,11 +192,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/ads'
+    | '/auto-pilot'
     | '/content-planner'
     | '/create-post'
     | '/image-studio'
     | '/inbox'
     | '/knowledge-base'
+    | '/packages'
     | '/page-insights'
     | '/queue'
     | '/roles'
@@ -186,11 +210,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AdsRoute: typeof AdsRoute
+  AutoPilotRoute: typeof AutoPilotRoute
   ContentPlannerRoute: typeof ContentPlannerRoute
   CreatePostRoute: typeof CreatePostRoute
   ImageStudioRoute: typeof ImageStudioRoute
   InboxRoute: typeof InboxRoute
   KnowledgeBaseRoute: typeof KnowledgeBaseRoute
+  PackagesRoute: typeof PackagesRoute
   PageInsightsRoute: typeof PageInsightsRoute
   QueueRoute: typeof QueueRoute
   RolesRoute: typeof RolesRoute
@@ -243,6 +269,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PageInsightsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/knowledge-base': {
       id: '/knowledge-base'
       path: '/knowledge-base'
@@ -278,6 +311,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContentPlannerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/auto-pilot': {
+      id: '/auto-pilot'
+      path: '/auto-pilot'
+      fullPath: '/auto-pilot'
+      preLoaderRoute: typeof AutoPilotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ads': {
       id: '/ads'
       path: '/ads'
@@ -298,11 +338,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AdsRoute: AdsRoute,
+  AutoPilotRoute: AutoPilotRoute,
   ContentPlannerRoute: ContentPlannerRoute,
   CreatePostRoute: CreatePostRoute,
   ImageStudioRoute: ImageStudioRoute,
   InboxRoute: InboxRoute,
   KnowledgeBaseRoute: KnowledgeBaseRoute,
+  PackagesRoute: PackagesRoute,
   PageInsightsRoute: PageInsightsRoute,
   QueueRoute: QueueRoute,
   RolesRoute: RolesRoute,
