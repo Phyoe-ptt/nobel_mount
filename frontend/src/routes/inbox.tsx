@@ -73,9 +73,13 @@ function InboxComponent() {
       groups[customerId].push(msg)
     })
 
-    // Sort messages in each group by time
+    // Sort messages in each group by time (handle nulls safely)
     Object.keys(groups).forEach(key => {
-      groups[key].sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime())
+      groups[key].sort((a, b) => {
+        const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return timeA - timeB;
+      })
     })
 
     return groups
@@ -86,7 +90,11 @@ function InboxComponent() {
     const lastMsg = msgs[msgs.length - 1]
     const hasUnresolvedHandoff = msgs.some(m => m.requiresHuman && !m.resolved)
     return { id, lastMsg, hasUnresolvedHandoff }
-  }).sort((a, b) => new Date(b.lastMsg.createdAt).getTime() - new Date(a.lastMsg.createdAt).getTime())
+  }).sort((a, b) => {
+    const timeA = a.lastMsg.createdAt ? new Date(a.lastMsg.createdAt).getTime() : 0;
+    const timeB = b.lastMsg.createdAt ? new Date(b.lastMsg.createdAt).getTime() : 0;
+    return timeB - timeA;
+  })
 
   // Auto-select first user if none selected
   React.useEffect(() => {
@@ -137,7 +145,7 @@ function InboxComponent() {
                 <div className="flex justify-between items-start mb-1">
                   <span className="font-semibold text-gray-900 truncate">Customer {c.id.substring(0,6)}...</span>
                   <span className="text-[10px] text-gray-500 whitespace-nowrap">
-                    {new Date(c.lastMsg.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                    {c.lastMsg.createdAt ? new Date(c.lastMsg.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : 'Just now'}
                   </span>
                 </div>
                 <div className="flex gap-2 items-center mb-1">
@@ -245,7 +253,7 @@ function InboxComponent() {
 
                       {/* Timestamp */}
                       <div className={`text-[10px] mt-2 ${!msg.fromAi ? 'text-gray-400' : 'text-blue-200'}`}>
-                        {new Date(msg.createdAt).toLocaleString()}
+                        {msg.createdAt ? new Date(msg.createdAt).toLocaleString() : 'Just now'}
                       </div>
                     </div>
                     

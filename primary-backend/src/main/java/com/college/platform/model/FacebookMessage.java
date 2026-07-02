@@ -3,6 +3,7 @@ package com.college.platform.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name = "facebook_messages")
@@ -22,13 +23,13 @@ public class FacebookMessage {
     private String messageText;
 
     @Column(name = "is_from_ai")
-    private boolean fromAi;
+    private Boolean fromAi;
 
     @Column(name = "requires_human")
-    private boolean requiresHuman;
+    private Boolean requiresHuman;
 
     @Column(name = "is_resolved")
-    private boolean resolved;
+    private Boolean resolved;
 
     @Column(name = "lead_status")
     private String leadStatus;
@@ -37,16 +38,17 @@ public class FacebookMessage {
     private String paymentSlipUrl;
 
     @Column(name = "payment_verified")
-    private boolean paymentVerified;
+    private Boolean paymentVerified;
 
-    @Column(name = "created_at", insertable = false, updatable = false)
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
     // Constructors
     public FacebookMessage() {
     }
 
-    public FacebookMessage(UUID id, String senderId, String recipientId, String messageText, boolean fromAi, boolean requiresHuman, boolean resolved, String leadStatus, String paymentSlipUrl, boolean paymentVerified, LocalDateTime createdAt) {
+    public FacebookMessage(UUID id, String senderId, String recipientId, String messageText, Boolean fromAi, Boolean requiresHuman, Boolean resolved, String leadStatus, String paymentSlipUrl, Boolean paymentVerified, LocalDateTime createdAt) {
         this.id = id;
         this.senderId = senderId;
         this.recipientId = recipientId;
@@ -73,14 +75,14 @@ public class FacebookMessage {
     public String getMessageText() { return messageText; }
     public void setMessageText(String messageText) { this.messageText = messageText; }
 
-    public boolean isFromAi() { return fromAi; }
-    public void setFromAi(boolean fromAi) { this.fromAi = fromAi; }
+    public Boolean isFromAi() { return fromAi; }
+    public void setFromAi(Boolean fromAi) { this.fromAi = fromAi; }
 
-    public boolean isRequiresHuman() { return requiresHuman; }
-    public void setRequiresHuman(boolean requiresHuman) { this.requiresHuman = requiresHuman; }
+    public Boolean isRequiresHuman() { return requiresHuman; }
+    public void setRequiresHuman(Boolean requiresHuman) { this.requiresHuman = requiresHuman; }
 
-    public boolean isResolved() { return resolved; }
-    public void setResolved(boolean resolved) { this.resolved = resolved; }
+    public Boolean isResolved() { return resolved; }
+    public void setResolved(Boolean resolved) { this.resolved = resolved; }
 
     public String getLeadStatus() { return leadStatus; }
     public void setLeadStatus(String leadStatus) { this.leadStatus = leadStatus; }
@@ -88,8 +90,8 @@ public class FacebookMessage {
     public String getPaymentSlipUrl() { return paymentSlipUrl; }
     public void setPaymentSlipUrl(String paymentSlipUrl) { this.paymentSlipUrl = paymentSlipUrl; }
 
-    public boolean isPaymentVerified() { return paymentVerified; }
-    public void setPaymentVerified(boolean paymentVerified) { this.paymentVerified = paymentVerified; }
+    public Boolean isPaymentVerified() { return paymentVerified; }
+    public void setPaymentVerified(Boolean paymentVerified) { this.paymentVerified = paymentVerified; }
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
