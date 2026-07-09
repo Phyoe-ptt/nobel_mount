@@ -18,33 +18,43 @@ def get_fb_token_from_backend():
     return os.getenv("FB_NOBEL_MOUNT_TOKEN")  # Fallback to .env
 
 def sync_page_posts(limit: int = 20) -> dict:
-    """Fetches the latest posts from the Facebook Page and adds them to the Knowledge Base.
+    """Fetches the latest posts from the Facebook Page (via Zernio API) and adds them to the Knowledge Base.
     
     Returns a dict with keys: added, skipped (already existed), total (fetched from FB).
     """
-    token = get_fb_token_from_backend()
-    if not token:
-        print("Error: Facebook Page Access Token not found in DB or environment.")
-        return {"added": 0, "skipped": 0, "total": 0, "error": "Missing Facebook Token. Please add it in Settings."}
+    api_key = os.getenv("ZERMIO_API_KEY")
+    account_id = os.getenv("ZERMIO_SYNC_ACCOUNT_ID")
+    
+    if not api_key or not account_id:
+        print("Error: Zernio API Key or Account ID not found in environment.")
+        return {"added": 0, "skipped": 0, "total": 0, "error": "Missing Zernio Credentials. Please configure them in Settings."}
 
-    # Use /me/feed instead of /me/posts — feed returns ALL content types including
-    # image posts, shared posts, and stories. /me/posts silently drops anything without a message.
-    url = f"https://graph.facebook.com/v20.0/me/feed?fields=message,story,created_time&limit={limit}&access_token={token}"
+    url = f"https://zernio.com/api/v1/accounts/{account_id}/posts"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
     
     added_count = 0
     skipped_count = 0
     try:
-        response = requests.get(url)
+        response = requests.get(url, headers=headers)
         response.raise_for_status()
         data = response.json()
         
-        posts = data.get("data", [])
+        posts = data.get("posts", [])
+        
+        # Limit the number of posts to sync
+        posts = posts[:limit]
+        
         for post in posts:
-            # Prefer typed message; fall back to auto-generated story text
-            message = post.get("message") or post.get("story")
+            # Try to get the message (content) of the post
+            message = post.get("message") or post.get("content") or post.get("text")
+            created_at = post.get("createdAt") or post.get("publishedAt") or "Unknown Date"
+            
             if message and len(message.strip()) > 10:  # Only sync meaningful text
                 # Format it clearly so the AI knows it's a post
-                content = f"Facebook Page Post (Date: {post.get('created_time')}): {message}"
+                content = f"Facebook Page Post (Date: {created_at}): {message}"
                 success = add_document_to_kb(content)
                 if success:
                     added_count += 1
@@ -54,14 +64,12 @@ def sync_page_posts(limit: int = 20) -> dict:
         print(f"Sync complete: {added_count} new, {skipped_count} already existed.")
         return {"added": added_count, "skipped": skipped_count, "total": len(posts)}
     except requests.exceptions.HTTPError as e:
-        print(f"Error syncing Facebook posts: {e}")
-        error_msg = "Unknown Error"
+        print(f"Error syncing Facebook posts via Zernio: {e}")
+        error_msg = "Unknown Zernio API Error"
         if e.response is not None:
             err_data = e.response.json()
-            print("Facebook API Response:", err_data)
-            error_msg = err_data.get("error", {}).get("message", "Facebook API Error")
-            if "expired" in error_msg.lower():
-                error_msg = "Your Facebook Token has expired! Please generate a new one and paste it in the Settings page."
+            print("Zernio API Response:", err_data)
+            error_msg = err_data.get("error", "Zernio API Error")
         return {"added": 0, "skipped": 0, "total": 0, "error": error_msg}
     except Exception as e:
         print(f"Unexpected error: {e}")
