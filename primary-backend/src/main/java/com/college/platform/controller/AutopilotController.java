@@ -40,6 +40,7 @@ public class AutopilotController {
             configToSave.setDailyPostingEnabled(newConfig.isDailyPostingEnabled());
             configToSave.setPageProfileText(newConfig.getPageProfileText());
             configToSave.setScheduleTimes(newConfig.getScheduleTimes());
+            configToSave.setPublishMode(newConfig.getPublishMode());
         }
         return ResponseEntity.ok(repository.save(configToSave));
     }

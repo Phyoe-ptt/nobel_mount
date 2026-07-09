@@ -25,6 +25,10 @@ load_dotenv(override=True)
 os.makedirs("avatars", exist_ok=True)
 app.mount("/avatars", StaticFiles(directory="avatars"), name="avatars")
 
+import asyncio
+from datetime import datetime
+import pytz
+
 # Serve uploads folder for manually uploaded images
 os.makedirs("uploads", exist_ok=True)
 app.mount("/rag/uploads", StaticFiles(directory="uploads"), name="uploads")
@@ -32,6 +36,100 @@ app.mount("/rag/uploads", StaticFiles(directory="uploads"), name="uploads")
 # Facebook Tokens (Fallback)
 FB_VERIFY_TOKEN = os.getenv("FB_VERIFY_TOKEN", "nobel_mount_secret_token")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+# Background Autopilot Loop
+last_run_minute = None
+
+@app.on_event("startup")
+async def startup_event():
+    asyncio.create_task(autopilot_loop())
+
+async def autopilot_loop():
+    global last_run_minute
+    while True:
+        try:
+            # Check every minute
+            tz = pytz.timezone("Asia/Yangon")
+            now = datetime.now(tz)
+            current_minute = now.strftime("%Y-%m-%d %H:%M")
+            current_time_str = now.strftime("%I:%M %p").lstrip("0") # e.g. "3:32 AM"
+            current_time_str_padded = now.strftime("%I:%M %p")      # e.g. "03:32 AM"
+            
+            if last_run_minute != current_minute:
+                # Fetch config from Java backend
+                resp = requests.get("http://backend:8080/api/autopilot", timeout=5)
+                if resp.ok:
+                    config = resp.json()
+                    if config.get("dailyPostingEnabled"):
+                        times_str = config.get("scheduleTimes", "")
+                        times = [t.strip().upper() for t in times_str.split(",")]
+                        
+                        if current_time_str in times or current_time_str_padded in times:
+                            last_run_minute = current_minute
+                            print(f"[AutoPilot] Triggering scheduled post for {current_time_str}")
+                            # Run generation in background
+                            asyncio.create_task(run_autopilot_generation(config))
+        except Exception as e:
+            print(f"[AutoPilot] Background loop error: {e}")
+        
+        await asyncio.sleep(20)
+
+async def run_autopilot_generation(config: dict):
+    try:
+        from google import genai
+        client = genai.Client(api_key=GEMINI_API_KEY)
+        
+        keywords = config.get("pageProfileText", "Nobel Mount College updates")
+        
+        # 1. Generate text
+        prompt = f"""You are an expert social media content writer for Nobel Mount College.
+Task: Write 1 LONG and DETAILED Facebook post about: "{keywords}".
+Requirements:
+- Written in Burmese (မြန်မာဘာသာ)
+- Engaging, professional, around 10 sentences
+- Use emojis generously"""
+        
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt
+        )
+        post_text = response.text.strip()
+        
+        # 2. Generate Image
+        img_prompt = f"Professional marketing banner, {keywords}, high quality, beautiful photography"
+        img_response = client.models.generate_images(
+            model="imagen-4.0-generate-001",
+            prompt=img_prompt,
+            config=dict(number_of_images=1, aspect_ratio="16:9")
+        )
+        img_url = ""
+        if img_response.generated_images:
+            image_bytes = img_response.generated_images[0].image.image_bytes
+            b64 = base64.b64encode(image_bytes).decode("utf-8")
+            img_url = f"data:image/jpeg;base64,{b64}"
+            
+        # 3. Publish or Save to Queue
+        publish_mode = config.get("publishMode", "auto")
+        if publish_mode == "draft":
+            requests.post("http://backend:8080/api/social-posts", json={
+                "content": post_text,
+                "imageUrl": img_url,
+                "status": "DRAFT"
+            })
+            print("[AutoPilot] Post saved to draft queue.")
+        else:
+            # Publish to Facebook immediately (since it's already the scheduled time)
+            publish_payload = {
+                "message": post_text,
+                "image_url": img_url,
+                "scheduled_date": None
+            }
+            # We call our own endpoint function internally (or via requests)
+            requests.post("http://localhost:8000/facebook/publish", json=publish_payload)
+            print("[AutoPilot] Post published to Facebook.")
+            
+    except Exception as e:
+        print(f"[AutoPilot] Generation error: {e}")
 
 def get_fb_publish_token():
     try:
