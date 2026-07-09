@@ -211,7 +211,19 @@ function CreatePostComponent() {
     img.onload = () => {
       logoImgRef.current = img;
       URL.revokeObjectURL(logoUrl);
-      drawState.current.initialized = false; // recalculate logo pos
+      
+      // Calculate initial logo position
+      if (canvasRef.current) {
+        const cw = canvasRef.current.width;
+        drawState.current.logoW = cw * 0.15;
+        drawState.current.logoH = (img.height / img.width) * drawState.current.logoW;
+        // Only reset logo position if it was 0 (not previously dragged)
+        if (drawState.current.logoX === 0) {
+          drawState.current.logoX = cw - drawState.current.logoW - 20;
+          drawState.current.logoY = 20;
+        }
+      }
+      
       drawCanvas();
     };
     img.src = logoUrl;
@@ -221,18 +233,19 @@ function CreatePostComponent() {
   const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-    const x = (e.clientX - rect.left) * scaleX;
-    const y = (e.clientY - rect.top) * scaleY;
+    
+    const x = e.nativeEvent.offsetX * (canvas.width / canvas.clientWidth);
+    const y = e.nativeEvent.offsetY * (canvas.height / canvas.clientHeight);
 
     const state = drawState.current;
 
+    // Hit padding for easier grabbing
+    const padding = Math.max(20, canvas.height * 0.05);
+
     // Check Logo hit (priority over text)
     if (logoFile && logoImgRef.current) {
-      if (x >= state.logoX && x <= state.logoX + state.logoW &&
-          y >= state.logoY && y <= state.logoY + state.logoH) {
+      if (x >= state.logoX - padding && x <= state.logoX + state.logoW + padding &&
+          y >= state.logoY - padding && y <= state.logoY + state.logoH + padding) {
         state.isDragging = 'logo';
         state.dragOffsetX = x - state.logoX;
         state.dragOffsetY = y - state.logoY;
@@ -248,8 +261,9 @@ function CreatePostComponent() {
         const metrics = ctx.measureText(overlayText);
         const textHeight = canvas.height * 0.08; 
         const halfWidth = metrics.width / 2;
-        if (x >= state.textX - halfWidth && x <= state.textX + halfWidth &&
-            y >= state.textY - textHeight && y <= state.textY + (textHeight * 0.2)) {
+        
+        if (x >= state.textX - halfWidth - padding && x <= state.textX + halfWidth + padding &&
+            y >= state.textY - textHeight - padding && y <= state.textY + padding) {
           state.isDragging = 'text';
           state.dragOffsetX = x - state.textX;
           state.dragOffsetY = y - state.textY;
@@ -265,9 +279,9 @@ function CreatePostComponent() {
 
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const rect = canvas.getBoundingClientRect();
-    const x = (e.clientX - rect.left) * (canvas.width / rect.width);
-    const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+    
+    const x = e.nativeEvent.offsetX * (canvas.width / canvas.clientWidth);
+    const y = e.nativeEvent.offsetY * (canvas.height / canvas.clientHeight);
 
     if (state.isDragging === 'logo') {
       state.logoX = x - state.dragOffsetX;
@@ -277,7 +291,6 @@ function CreatePostComponent() {
       state.textY = y - state.dragOffsetY;
     }
     
-    // Request animation frame for smooth dragging
     requestAnimationFrame(() => drawCanvas());
   };
 
