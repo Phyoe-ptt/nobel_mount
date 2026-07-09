@@ -124,7 +124,7 @@ def generate_rag_response(message_text: str) -> str:
     Response in Burmese:"""
     
     try:
-        model = genai.GenerativeModel('gemini-2.0-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         response = model.generate_content(prompt)
         return response.text.strip()
     except Exception as e:
