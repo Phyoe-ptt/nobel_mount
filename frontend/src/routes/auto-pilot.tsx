@@ -57,57 +57,84 @@ function AutoPilotComponent() {
     
     setIsGenerating(true)
     try {
-      // 1. Generate Post
-      const postRes = await fetch('/rag/generate-post', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ keywords: localConfig.pageProfileText, draft_count: 1, writing_mode: 'informative' })
-      })
-      if (!postRes.ok) throw new Error('Failed to generate post text')
-      const postData = await postRes.json()
-      const generatedText = postData.posts[0]
-
-      // 2. Generate Image
-      const prompt = `Professional marketing banner, ${localConfig.pageProfileText}, high quality`
-      const controller = new AbortController()
-      const timeoutId = setTimeout(() => controller.abort(), 60000)
-      const imgRes = await fetch('/rag/image/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt }),
-        signal: controller.signal
-      })
-      clearTimeout(timeoutId)
-      if (!imgRes.ok) throw new Error('Failed to generate image')
-      const imgData = await imgRes.json()
-      const imageUrl = imgData.image_url
-
-      // 3. Publish to Facebook OR Save to Queue
-      if (localConfig.publishMode === 'draft') {
-        const queueRes = await fetch('/api/social-posts', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            content: generatedText, 
-            imageUrl: imageUrl, 
-            status: 'DRAFT',
-            createdAt: new Date().toISOString()
-          })
-        })
-        if (!queueRes.ok) throw new Error('Failed to save to Queue')
-        alert("✨ Auto-Pilot Success! Post and image generated and saved to Queue for review.")
-      } else {
-        const pubRes = await fetch('/facebook/publish', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: generatedText, image_url: imageUrl })
-        })
-        if (!pubRes.ok) {
-          const errData = await pubRes.json()
-          throw new Error(errData.detail || 'Failed to publish to Facebook')
-        }
-        alert("✨ Auto-Pilot Success! Post and image generated and successfully published to Facebook Page!")
+      const times = localConfig.scheduleTimes ? localConfig.scheduleTimes.split(',').map((t: string) => t.trim()).filter(Boolean) : [];
+      if (times.length === 0) {
+        alert("Please add at least one schedule time.");
+        setIsGenerating(false);
+        return;
       }
+
+      for (const timeStr of times) {
+        let isoDate = undefined;
+        const match = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
+        if (match) {
+           let h = parseInt(match[1]);
+           let m = parseInt(match[2]);
+           let ampm = match[3].toUpperCase();
+           if (ampm === 'PM' && h < 12) h += 12;
+           if (ampm === 'AM' && h === 12) h = 0;
+           const d = new Date();
+           d.setHours(h, m, 0, 0);
+           // If the time is already past today, schedule it for tomorrow
+           if (d.getTime() < Date.now()) {
+             d.setDate(d.getDate() + 1);
+           }
+           isoDate = d.toISOString();
+        }
+
+        // 1. Generate Post
+        const postRes = await fetch('/rag/generate-post', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ keywords: localConfig.pageProfileText, draft_count: 1, writing_mode: 'informative' })
+        })
+        if (!postRes.ok) throw new Error(`Failed to generate post text for ${timeStr}`)
+        const postData = await postRes.json()
+        const generatedText = postData.posts[0]
+
+        // 2. Generate Image
+        const prompt = `Professional marketing banner, ${localConfig.pageProfileText}, high quality`
+        const controller = new AbortController()
+        const timeoutId = setTimeout(() => controller.abort(), 60000)
+        const imgRes = await fetch('/rag/image/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt }),
+          signal: controller.signal
+        })
+        clearTimeout(timeoutId)
+        if (!imgRes.ok) throw new Error(`Failed to generate image for ${timeStr}`)
+        const imgData = await imgRes.json()
+        const imageUrl = imgData.image_url
+
+        // 3. Publish to Facebook OR Save to Queue
+        if (localConfig.publishMode === 'draft') {
+          const queueRes = await fetch('/api/social-posts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+              content: generatedText, 
+              imageUrl: imageUrl, 
+              status: 'DRAFT', // could be SCHEDULED, but user chose 'draft'
+              createdAt: isoDate || new Date().toISOString()
+            })
+          })
+          if (!queueRes.ok) throw new Error(`Failed to save to Queue for ${timeStr}`)
+        } else {
+          const pubRes = await fetch('/facebook/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: generatedText, image_url: imageUrl, scheduled_date: isoDate })
+          })
+          if (!pubRes.ok) {
+            const errData = await pubRes.json()
+            throw new Error(errData.detail || `Failed to publish to Facebook for ${timeStr}`)
+          }
+        }
+      }
+      
+      alert(`✨ Auto-Pilot Success! ${times.length} post(s) generated and ${localConfig.publishMode === 'draft' ? 'saved to Queue' : 'scheduled on Facebook'}!`)
+
     } catch (err: any) {
       if (err.name === 'AbortError') {
         alert("Image generation timed out. Please try again.")

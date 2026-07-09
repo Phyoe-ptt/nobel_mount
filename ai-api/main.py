@@ -408,6 +408,25 @@ Write {payload.draft_count} long, detailed posts now:"""
         print(f"Post generation error: {e}")
         raise HTTPException(status_code=500, detail=f"AI generation failed: {str(e)}")
 
+class RewritePayload(BaseModel):
+    content: str
+
+@app.post("/rag/rewrite-post")
+def rewrite_post(payload: RewritePayload):
+    try:
+        from google import genai
+        client = genai.Client(api_key=GEMINI_API_KEY)
+        
+        prompt = f"Rewrite the following Facebook post content to be more engaging and professional. Use Burmese language. Emojis are allowed.\n\nOriginal:\n{payload.content}"
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt
+        )
+        return {"status": "success", "rewritten_content": response.text.strip()}
+    except Exception as e:
+        print(f"Rewrite error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 class ImagePayload(BaseModel):
     prompt: str
     save_as_file: Optional[bool] = False
@@ -504,6 +523,7 @@ async def upload_image(request: Request, file: UploadFile = File(...)):
 class PublishPayload(BaseModel):
     message: str
     image_url: str
+    scheduled_date: Optional[str] = None
 
 @app.post("/facebook/publish")
 def publish_to_facebook(payload: PublishPayload):
@@ -522,35 +542,22 @@ def publish_to_facebook(payload: PublishPayload):
         "Content-Type": "application/json"
     }
     
-    # We will upload the media if we have a valid URL.
-    # Note: Zernio supports publicly accessible URLs. 
-    # Since we can't upload base64 directly to Zernio API in standard payload,
-    # we'll use an image hosting API (like imgbb) if it's base64, or just skip it if it's too complex.
-    
     media_items = []
     if payload.image_url and payload.image_url.startswith("http"):
-        # Assume it's a valid public url (Pollinations, D-ID, etc)
         is_video = payload.image_url.endswith(".mp4")
         media_items.append({
             "type": "video" if is_video else "image",
             "url": payload.image_url
         })
-    elif payload.image_url and payload.image_url.startswith("data:image/"):
-        # Upload base64 to a free image host (ImgBB) to get a public URL for Zernio
-        import base64
-        header, encoded = payload.image_url.split(",", 1)
-        try:
-            # Create a throwaway ImgBB API key just for this bridge, or you can use imgbb's public endpoint
-            # Since we don't have an ImgBB key, we'll try to just post text to avoid failure.
-            pass
-        except Exception:
-            pass
 
     zernio_payload = {
         "content": payload.message,
         "platforms": [{"platform": "facebook", "accountId": account_id}],
-        "publishNow": True
+        "publishNow": True if not payload.scheduled_date else False
     }
+    
+    if payload.scheduled_date:
+        zernio_payload["scheduledDate"] = payload.scheduled_date
     
     if media_items:
         zernio_payload["mediaItems"] = media_items

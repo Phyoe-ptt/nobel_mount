@@ -14,6 +14,8 @@ function CreatePostComponent() {
   const [imagePrompt, setImagePrompt] = React.useState('')
   const [logoFile, setLogoFile] = React.useState<File | null>(null)
   const [overlayText, setOverlayText] = React.useState('')
+  const [rewriteInput, setRewriteInput] = React.useState('')
+  const [isRewriting, setIsRewriting] = React.useState(false)
   const canvasRef = React.useRef<HTMLCanvasElement>(null)
   
   const [generatedPosts, setGeneratedPosts] = React.useState<string[]>([])
@@ -428,12 +430,36 @@ function CreatePostComponent() {
                 <div className="space-y-1">
                   <label className="block text-xs font-medium text-stone-600">Paste the text you want the AI to rewrite</label>
                   <textarea 
+                    value={rewriteInput}
+                    onChange={e => setRewriteInput(e.target.value)}
                     placeholder="Paste original content here..."
                     className="w-full h-32 bg-[#FDFBF7] border border-stone-200 rounded-lg p-3 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-shadow resize-none"
                   />
                 </div>
-                <button className="w-full mt-4 bg-stone-900 hover:bg-stone-800 text-white font-bold text-sm py-2.5 rounded-lg transition-colors shadow-sm">
-                  Rewrite Content
+                <button 
+                  onClick={async () => {
+                    if (!rewriteInput.trim()) return
+                    setIsRewriting(true)
+                    try {
+                      const res = await fetch('/rag/rewrite-post', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ content: rewriteInput })
+                      })
+                      if (!res.ok) throw new Error('Failed to rewrite')
+                      const data = await res.json()
+                      setGeneratedPosts([data.rewritten_content])
+                      setSelectedPostIndex(0)
+                      setPublished(false)
+                    } catch (e: any) {
+                      alert(e.message)
+                    }
+                    setIsRewriting(false)
+                  }} 
+                  disabled={isRewriting} 
+                  className="w-full mt-4 bg-stone-900 hover:bg-stone-800 text-white font-bold text-sm py-2.5 rounded-lg transition-colors shadow-sm disabled:opacity-50"
+                >
+                  {isRewriting ? 'Rewriting...' : 'Rewrite Content'}
                 </button>
               </div>
             )}
