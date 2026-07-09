@@ -12,6 +12,9 @@ function CreatePostComponent() {
   const [keywords, setKeywords] = React.useState('')
   const [draftCount, setDraftCount] = React.useState(3)
   const [imagePrompt, setImagePrompt] = React.useState('')
+  const [logoFile, setLogoFile] = React.useState<File | null>(null)
+  const [overlayText, setOverlayText] = React.useState('')
+  const canvasRef = React.useRef<HTMLCanvasElement>(null)
   
   const [generatedPosts, setGeneratedPosts] = React.useState<string[]>([])
   const [generatedImage, setGeneratedImage] = React.useState<string | null>(null)
@@ -87,10 +90,26 @@ function CreatePostComponent() {
   const publishMutation = useMutation({
     mutationFn: async () => {
       if (!generatedPosts[selectedPostIndex] || !generatedImage) throw new Error('Need both post and image to publish')
+      
+      let finalImageUrl = generatedImage
+      
+      // If user added logo or text, we must upload the flattened canvas to get a new public URL
+      if ((logoFile || overlayText) && canvasRef.current) {
+        const blob = await new Promise<Blob | null>(resolve => canvasRef.current!.toBlob(resolve, 'image/jpeg', 0.9))
+        if (blob) {
+          const formData = new FormData()
+          formData.append('file', new File([blob], 'edited.jpg', { type: 'image/jpeg' }))
+          const res = await fetch('/rag/upload-image', { method: 'POST', body: formData })
+          if (!res.ok) throw new Error('Failed to upload edited image')
+          const data = await res.json()
+          finalImageUrl = data.image_url
+        }
+      }
+
       const res = await fetch('/facebook/publish', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: generatedPosts[selectedPostIndex], image_url: generatedImage })
+        body: JSON.stringify({ message: generatedPosts[selectedPostIndex], image_url: finalImageUrl })
       })
       if (!res.ok) {
         const errorData = await res.json()
@@ -102,8 +121,56 @@ function CreatePostComponent() {
       setPublished(true)
       alert('Successfully published to Facebook Page!')
     },
-    onError: (err) => alert(err.message)
+    onError: (err: any) => alert(err.message)
   })
+
+  // Canvas drawing logic
+  React.useEffect(() => {
+    if (!generatedImage || !canvasRef.current) return;
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.src = generatedImage;
+    img.onload = () => {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+
+      const drawText = () => {
+        if (overlayText) {
+          ctx.fillStyle = 'white';
+          ctx.strokeStyle = 'black';
+          ctx.lineWidth = Math.max(2, canvas.height * 0.005);
+          ctx.font = `bold ${canvas.height * 0.08}px sans-serif`;
+          ctx.textAlign = 'center';
+          ctx.strokeText(overlayText, canvas.width / 2, canvas.height - (canvas.height * 0.05));
+          ctx.fillText(overlayText, canvas.width / 2, canvas.height - (canvas.height * 0.05));
+        }
+      }
+
+      if (logoFile) {
+        const logoUrl = URL.createObjectURL(logoFile);
+        const logoImg = new Image();
+        logoImg.onload = () => {
+          const logoWidth = canvas.width * 0.15;
+          const logoHeight = (logoImg.height / logoImg.width) * logoWidth;
+          ctx.drawImage(logoImg, canvas.width - logoWidth - 20, 20, logoWidth, logoHeight);
+          URL.revokeObjectURL(logoUrl);
+          drawText();
+        };
+        logoImg.src = logoUrl;
+      } else {
+        drawText();
+      }
+    };
+    img.onerror = () => {
+      console.error("Failed to load image for canvas. It might be blocked by CORS.");
+    }
+  }, [generatedImage, logoFile, overlayText]);
+
 
   return (
     <div className="max-w-6xl mx-auto h-full grid grid-cols-1 lg:grid-cols-[450px_1fr] gap-6 items-start">
@@ -307,29 +374,65 @@ function CreatePostComponent() {
                   Generating AI Image...
                 </div>
               ) : generatedImage ? (
-                <div className="relative rounded-xl overflow-hidden border border-stone-200 h-64">
-                  <img src={generatedImage} alt="Generated Visual" className="w-full h-full object-cover" />
-                  <div className="absolute bottom-3 right-3 flex gap-2">
-                    <button 
-                      onClick={() => generateImageMutation.mutate()}
-                      className="bg-white/90 backdrop-blur text-stone-900 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm hover:bg-white transition-colors"
-                    >
-                      Regenerate Image
-                    </button>
-                    <label className="bg-stone-900/90 backdrop-blur text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm hover:bg-stone-900 transition-colors cursor-pointer flex items-center gap-1">
-                      {uploadImageMutation.isPending ? 'Uploading...' : 'Upload Own Image'}
+                <div className="space-y-3">
+                  <div className="relative rounded-xl overflow-hidden border border-stone-200 bg-stone-100 flex items-center justify-center min-h-[16rem]">
+                    <canvas ref={canvasRef} className="max-w-full h-auto max-h-96 object-contain" />
+                    <div className="absolute bottom-3 right-3 flex gap-2">
+                      <button 
+                        onClick={() => generateImageMutation.mutate()}
+                        className="bg-white/90 backdrop-blur text-stone-900 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm hover:bg-white transition-colors"
+                      >
+                        Regenerate Image
+                      </button>
+                      <label className="bg-stone-900/90 backdrop-blur text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm hover:bg-stone-900 transition-colors cursor-pointer flex items-center gap-1">
+                        {uploadImageMutation.isPending ? 'Uploading...' : 'Upload Own'}
+                        <input 
+                          type="file" 
+                          accept="image/*"
+                          className="hidden" 
+                          onChange={(e) => {
+                            if (e.target.files && e.target.files[0]) {
+                              uploadImageMutation.mutate(e.target.files[0])
+                            }
+                          }}
+                          disabled={uploadImageMutation.isPending}
+                        />
+                      </label>
+                    </div>
+                  </div>
+                  
+                  {/* Mini Image Editor Controls */}
+                  <div className="bg-[#FDFBF7] p-3 rounded-lg border border-stone-200 flex flex-col gap-3">
+                    <div>
+                      <label className="block text-xs font-bold text-stone-700 mb-1">Add Text to Image</label>
                       <input 
-                        type="file" 
-                        accept="image/*"
-                        className="hidden" 
-                        onChange={(e) => {
-                          if (e.target.files && e.target.files[0]) {
-                            uploadImageMutation.mutate(e.target.files[0])
-                          }
-                        }}
-                        disabled={uploadImageMutation.isPending}
+                        type="text" 
+                        value={overlayText}
+                        onChange={e => setOverlayText(e.target.value)}
+                        placeholder="Type text to overlay..."
+                        className="w-full bg-white border border-stone-200 rounded-lg px-3 py-2 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400"
                       />
-                    </label>
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-stone-700 mb-1">Add Logo to Image</label>
+                      <div className="flex items-center gap-2">
+                        <label className="bg-white border border-stone-200 text-stone-700 text-xs font-bold px-3 py-2 rounded-lg cursor-pointer hover:bg-stone-50 transition-colors">
+                          Choose Logo (PNG)
+                          <input 
+                            type="file" 
+                            accept="image/png, image/jpeg"
+                            className="hidden" 
+                            onChange={(e) => setLogoFile(e.target.files?.[0] || null)}
+                          />
+                        </label>
+                        {logoFile && (
+                          <div className="flex items-center gap-2 text-xs font-medium text-stone-600 bg-stone-100 px-2 py-1 rounded-md">
+                            <span className="truncate max-w-[100px]">{logoFile.name}</span>
+                            <button onClick={() => setLogoFile(null)} className="text-red-500 hover:text-red-700 font-bold">&times;</button>
+                          </div>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
               ) : (
