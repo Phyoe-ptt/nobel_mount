@@ -65,6 +65,25 @@ function CreatePostComponent() {
     }
   })
 
+  const uploadImageMutation = useMutation({
+    mutationFn: async (file: File) => {
+      const formData = new FormData()
+      formData.append('file', file)
+      const res = await fetch('/rag/upload-image', {
+        method: 'POST',
+        body: formData
+      })
+      if (!res.ok) throw new Error('Failed to upload image')
+      return res.json()
+    },
+    onSuccess: (data) => {
+      setGeneratedImage(data.image_url)
+    },
+    onError: (err: any) => {
+      alert('Upload error: ' + err.message)
+    }
+  })
+
   const publishMutation = useMutation({
     mutationFn: async () => {
       if (!generatedPosts[selectedPostIndex] || !generatedImage) throw new Error('Need both post and image to publish')
@@ -290,14 +309,47 @@ function CreatePostComponent() {
               ) : generatedImage ? (
                 <div className="relative rounded-xl overflow-hidden border border-stone-200 h-64">
                   <img src={generatedImage} alt="Generated Visual" className="w-full h-full object-cover" />
-                  <button 
-                    onClick={() => generateImageMutation.mutate()}
-                    className="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-stone-900 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm hover:bg-white transition-colors"
-                  >
-                    Regenerate Image
-                  </button>
+                  <div className="absolute bottom-3 right-3 flex gap-2">
+                    <button 
+                      onClick={() => generateImageMutation.mutate()}
+                      className="bg-white/90 backdrop-blur text-stone-900 text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm hover:bg-white transition-colors"
+                    >
+                      Regenerate Image
+                    </button>
+                    <label className="bg-stone-900/90 backdrop-blur text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm hover:bg-stone-900 transition-colors cursor-pointer flex items-center gap-1">
+                      {uploadImageMutation.isPending ? 'Uploading...' : 'Upload Own Image'}
+                      <input 
+                        type="file" 
+                        accept="image/*"
+                        className="hidden" 
+                        onChange={(e) => {
+                          if (e.target.files && e.target.files[0]) {
+                            uploadImageMutation.mutate(e.target.files[0])
+                          }
+                        }}
+                        disabled={uploadImageMutation.isPending}
+                      />
+                    </label>
+                  </div>
                 </div>
-              ) : null}
+              ) : (
+                <div className="w-full h-48 border border-dashed border-stone-300 rounded-xl flex items-center justify-center bg-stone-50">
+                  <label className="bg-stone-900 text-white text-sm font-bold px-4 py-2 rounded-lg shadow-sm hover:bg-stone-800 transition-colors cursor-pointer">
+                    {uploadImageMutation.isPending ? 'Uploading...' : 'Upload Manually'}
+                    <input 
+                      type="file" 
+                      accept="image/*"
+                      className="hidden" 
+                      onChange={(e) => {
+                        if (e.target.files && e.target.files[0]) {
+                          uploadImageMutation.mutate(e.target.files[0])
+                        }
+                      }}
+                      disabled={uploadImageMutation.isPending}
+                    />
+                  </label>
+                </div>
+              )}
             </div>
 
             <div className="pt-4 border-t border-stone-100 flex justify-end">

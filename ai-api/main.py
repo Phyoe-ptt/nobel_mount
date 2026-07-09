@@ -25,6 +25,10 @@ load_dotenv(override=True)
 os.makedirs("avatars", exist_ok=True)
 app.mount("/avatars", StaticFiles(directory="avatars"), name="avatars")
 
+# Serve uploads folder for manually uploaded images
+os.makedirs("uploads", exist_ok=True)
+app.mount("/rag/uploads", StaticFiles(directory="uploads"), name="uploads")
+
 # Facebook Tokens (Fallback)
 FB_VERIFY_TOKEN = os.getenv("FB_VERIFY_TOKEN", "nobel_mount_secret_token")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -471,6 +475,31 @@ def generate_image_endpoint(payload: ImagePayload):
         seed = random.randint(1, 9999)
         image_url = f"https://source.unsplash.com/featured/1024x576/?{urllib.parse.quote(query)}&sig={seed}"
         return {"status": "success", "image_url": image_url}
+
+@app.post("/rag/upload-image")
+async def upload_image(request: Request, file: UploadFile = File(...)):
+    """Upload an image manually for a post"""
+    try:
+        import uuid
+        ext = file.filename.split(".")[-1]
+        filename = f"{uuid.uuid4().hex}.{ext}"
+        filepath = os.path.join("uploads", filename)
+        
+        with open(filepath, "wb") as buffer:
+            content = await file.read()
+            buffer.write(content)
+            
+        # Return full URL for Zernio to access
+        host = request.headers.get("host", "168.144.47.213")
+        scheme = request.url.scheme
+        # Often behind proxy, so force http/https logic if needed, but relative or domain is fine.
+        # Since this is behind Nginx, host is correct.
+        image_url = f"http://168.144.47.213/rag/uploads/{filename}"
+        
+        return {"status": "success", "image_url": image_url}
+    except Exception as e:
+        print("Upload error:", e)
+        raise HTTPException(status_code=500, detail=str(e))
 
 class PublishPayload(BaseModel):
     message: str
