@@ -48,9 +48,8 @@ async def autopilot_loop():
     global last_run_minute
     while True:
         try:
-            # Check every minute
-            tz = pytz.timezone("Asia/Yangon")
-            now = datetime.now(tz)
+            # Check every minute using system local time
+            now = datetime.now()
             current_minute = now.strftime("%Y-%m-%d %H:%M")
             current_time_str = now.strftime("%I:%M %p").lstrip("0") # e.g. "3:32 AM"
             current_time_str_padded = now.strftime("%I:%M %p")      # e.g. "03:32 AM"
