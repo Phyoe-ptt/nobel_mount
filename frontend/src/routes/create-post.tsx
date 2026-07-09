@@ -124,52 +124,167 @@ function CreatePostComponent() {
     onError: (err: any) => alert(err.message)
   })
 
-  // Canvas drawing logic
-  React.useEffect(() => {
-    if (!generatedImage || !canvasRef.current) return;
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+  // Drag and Drop State
+  const imgRef = React.useRef<HTMLImageElement | null>(null)
+  const logoImgRef = React.useRef<HTMLImageElement | null>(null)
+  const drawState = React.useRef({
+    textX: 0, textY: 0,
+    logoX: 0, logoY: 0, logoW: 0, logoH: 0,
+    isDragging: 'none' as 'none' | 'text' | 'logo',
+    dragOffsetX: 0, dragOffsetY: 0,
+    initialized: false
+  })
 
+  // Canvas drawing logic
+  const drawCanvas = React.useCallback(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext('2d');
+    const img = imgRef.current;
+    if (!canvas || !ctx || !img) return;
+
+    // Clear and draw main image
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0);
+
+    const state = drawState.current;
+
+    // Initialize positions if not done
+    if (!state.initialized) {
+      state.textX = canvas.width / 2;
+      state.textY = canvas.height - (canvas.height * 0.05);
+      
+      if (logoImgRef.current) {
+        state.logoW = canvas.width * 0.15;
+        state.logoH = (logoImgRef.current.height / logoImgRef.current.width) * state.logoW;
+        state.logoX = canvas.width - state.logoW - 20;
+        state.logoY = 20;
+      }
+      state.initialized = true;
+    }
+
+    // Draw Text
+    if (overlayText) {
+      ctx.fillStyle = 'white';
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = Math.max(2, canvas.height * 0.005);
+      ctx.font = `bold ${canvas.height * 0.08}px sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.strokeText(overlayText, state.textX, state.textY);
+      ctx.fillText(overlayText, state.textX, state.textY);
+    }
+
+    // Draw Logo
+    if (logoFile && logoImgRef.current) {
+      ctx.drawImage(logoImgRef.current, state.logoX, state.logoY, state.logoW, state.logoH);
+    }
+  }, [overlayText, logoFile]);
+
+  // Load Main Image
+  React.useEffect(() => {
+    if (!generatedImage) return;
     const img = new Image();
     img.crossOrigin = "anonymous";
     img.src = generatedImage;
     img.onload = () => {
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx.drawImage(img, 0, 0);
-
-      const drawText = () => {
-        if (overlayText) {
-          ctx.fillStyle = 'white';
-          ctx.strokeStyle = 'black';
-          ctx.lineWidth = Math.max(2, canvas.height * 0.005);
-          ctx.font = `bold ${canvas.height * 0.08}px sans-serif`;
-          ctx.textAlign = 'center';
-          ctx.strokeText(overlayText, canvas.width / 2, canvas.height - (canvas.height * 0.05));
-          ctx.fillText(overlayText, canvas.width / 2, canvas.height - (canvas.height * 0.05));
-        }
+      imgRef.current = img;
+      if (canvasRef.current) {
+        canvasRef.current.width = img.width;
+        canvasRef.current.height = img.height;
       }
-
-      if (logoFile) {
-        const logoUrl = URL.createObjectURL(logoFile);
-        const logoImg = new Image();
-        logoImg.onload = () => {
-          const logoWidth = canvas.width * 0.15;
-          const logoHeight = (logoImg.height / logoImg.width) * logoWidth;
-          ctx.drawImage(logoImg, canvas.width - logoWidth - 20, 20, logoWidth, logoHeight);
-          URL.revokeObjectURL(logoUrl);
-          drawText();
-        };
-        logoImg.src = logoUrl;
-      } else {
-        drawText();
-      }
+      drawState.current.initialized = false; // reset positions for new image
+      drawCanvas();
     };
     img.onerror = () => {
       console.error("Failed to load image for canvas. It might be blocked by CORS.");
     }
-  }, [generatedImage, logoFile, overlayText]);
+  }, [generatedImage, drawCanvas]);
+
+  // Load Logo Image
+  React.useEffect(() => {
+    if (!logoFile) {
+      logoImgRef.current = null;
+      drawCanvas();
+      return;
+    }
+    const logoUrl = URL.createObjectURL(logoFile);
+    const img = new Image();
+    img.onload = () => {
+      logoImgRef.current = img;
+      URL.revokeObjectURL(logoUrl);
+      drawState.current.initialized = false; // recalculate logo pos
+      drawCanvas();
+    };
+    img.src = logoUrl;
+  }, [logoFile, drawCanvas]);
+
+  // Mouse Events for Dragging
+  const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    const x = (e.clientX - rect.left) * scaleX;
+    const y = (e.clientY - rect.top) * scaleY;
+
+    const state = drawState.current;
+
+    // Check Logo hit (priority over text)
+    if (logoFile && logoImgRef.current) {
+      if (x >= state.logoX && x <= state.logoX + state.logoW &&
+          y >= state.logoY && y <= state.logoY + state.logoH) {
+        state.isDragging = 'logo';
+        state.dragOffsetX = x - state.logoX;
+        state.dragOffsetY = y - state.logoY;
+        return;
+      }
+    }
+
+    // Check Text hit
+    if (overlayText) {
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.font = `bold ${canvas.height * 0.08}px sans-serif`;
+        const metrics = ctx.measureText(overlayText);
+        const textHeight = canvas.height * 0.08; 
+        const halfWidth = metrics.width / 2;
+        if (x >= state.textX - halfWidth && x <= state.textX + halfWidth &&
+            y >= state.textY - textHeight && y <= state.textY + (textHeight * 0.2)) {
+          state.isDragging = 'text';
+          state.dragOffsetX = x - state.textX;
+          state.dragOffsetY = y - state.textY;
+          return;
+        }
+      }
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    const state = drawState.current;
+    if (state.isDragging === 'none') return;
+
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = (e.clientX - rect.left) * (canvas.width / rect.width);
+    const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+
+    if (state.isDragging === 'logo') {
+      state.logoX = x - state.dragOffsetX;
+      state.logoY = y - state.dragOffsetY;
+    } else if (state.isDragging === 'text') {
+      state.textX = x - state.dragOffsetX;
+      state.textY = y - state.dragOffsetY;
+    }
+    
+    // Request animation frame for smooth dragging
+    requestAnimationFrame(() => drawCanvas());
+  };
+
+  const handleMouseUp = () => {
+    drawState.current.isDragging = 'none';
+  };
+
 
 
   return (
@@ -376,7 +491,14 @@ function CreatePostComponent() {
               ) : generatedImage ? (
                 <div className="space-y-3">
                   <div className="relative rounded-xl overflow-hidden border border-stone-200 bg-stone-100 flex items-center justify-center min-h-[16rem]">
-                    <canvas ref={canvasRef} className="max-w-full h-auto max-h-96 object-contain" />
+                    <canvas 
+                      ref={canvasRef} 
+                      className={`max-w-full h-auto max-h-96 object-contain cursor-move`}
+                      onMouseDown={handleMouseDown}
+                      onMouseMove={handleMouseMove}
+                      onMouseUp={handleMouseUp}
+                      onMouseLeave={handleMouseUp}
+                    />
                     <div className="absolute bottom-3 right-3 flex gap-2">
                       <button 
                         onClick={() => generateImageMutation.mutate()}
