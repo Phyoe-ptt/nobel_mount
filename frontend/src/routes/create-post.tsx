@@ -11,6 +11,7 @@ function CreatePostComponent() {
   const [activeTab, setActiveTab] = React.useState('news')
   const [keywords, setKeywords] = React.useState('')
   const [draftCount, setDraftCount] = React.useState(3)
+  const [imagePrompt, setImagePrompt] = React.useState('')
   
   const [generatedPosts, setGeneratedPosts] = React.useState<string[]>([])
   const [generatedImage, setGeneratedImage] = React.useState<string | null>(null)
@@ -37,7 +38,8 @@ function CreatePostComponent() {
 
   const generateImageMutation = useMutation({
     mutationFn: async () => {
-      const prompt = `Professional education marketing banner poster, modern graphic design style, clean layout, flat vector illustration, vibrant blue and yellow color scheme, college advertisement, typography, related to ${keywords}, high quality`
+      const basePrompt = `Professional education marketing banner poster, modern graphic design style, clean layout, flat vector illustration, vibrant blue and yellow color scheme, college advertisement, typography, related to ${keywords}, high quality`
+      const prompt = imagePrompt.trim() ? `${basePrompt}. Additional instructions: ${imagePrompt.trim()}` : basePrompt
       // Use AbortController with 60s timeout for Imagen 4 generation
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 60000)
@@ -113,13 +115,25 @@ function CreatePostComponent() {
           <div className="p-5 border-b border-stone-100">
             <h3 className="font-bold text-stone-900 mb-4">Generation settings</h3>
             
-            <div className="space-y-1">
-              <label className="block text-sm font-bold text-stone-800">Images</label>
-              <select className="w-full bg-[#FDFBF7] border border-stone-200 rounded-lg px-3 py-2 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-shadow">
-                <option>Let AI decide (recommended)</option>
-                <option>Always generate image</option>
-                <option>Never generate image</option>
-              </select>
+            <div className="space-y-4">
+              <div className="space-y-1">
+                <label className="block text-sm font-bold text-stone-800">Images</label>
+                <select className="w-full bg-[#FDFBF7] border border-stone-200 rounded-lg px-3 py-2 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-shadow">
+                  <option>Let AI decide (recommended)</option>
+                  <option>Always generate image</option>
+                  <option>Never generate image</option>
+                </select>
+              </div>
+
+              <div className="space-y-1">
+                <label className="block text-sm font-bold text-stone-800">Custom Image Prompt (Optional)</label>
+                <textarea 
+                  value={imagePrompt}
+                  onChange={e => setImagePrompt(e.target.value)}
+                  placeholder="e.g. Add NobelMount logo, write text 'Special Promotion'"
+                  className="w-full h-20 bg-[#FDFBF7] border border-stone-200 rounded-lg p-3 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent transition-shadow resize-none"
+                />
+              </div>
             </div>
             
             <p className="text-xs text-stone-500 mt-4 leading-relaxed">
