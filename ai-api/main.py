@@ -380,7 +380,7 @@ Format your response EXACTLY like this — use "===POST_START===" and "===POST_E
 Write {payload.draft_count} long, detailed posts now:"""
 
     try:
-        model = genai.GenerativeModel('gemini-2.5-flash')
+        model = genai.GenerativeModel('gemini-3.1-flash-lite')
         response = model.generate_content(prompt)
         raw = response.text.strip()
 
@@ -543,7 +543,7 @@ async def verify_payment_slip(file: UploadFile = File(...)):
     import json
     try:
         content = await file.read()
-        model = genai.GenerativeModel('gemini-2.5-flash')
+        model = genai.GenerativeModel('gemini-3.1-flash-lite')
         
         prompt = """Analyze this image. It is supposed to be a Myanmar payment slip (KPay or WavePay).
         Extract the following:
@@ -580,7 +580,7 @@ def generate_video_script(payload: ScriptPayload):
         prompt = f"Write a very short, engaging 15-second video script (about 3 sentences) for a talking head video about this topic: '{payload.topic}'. Make it sound natural, enthusiastic, and professional. Do NOT include any stage directions like [smiles] or [music plays], just the spoken words."
         
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-3.1-flash-lite',
             contents=prompt,
         )
         return {"status": "success", "script": response.text.strip()}
