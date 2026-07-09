@@ -4,6 +4,30 @@ import { ShieldCheck, Clock, X } from 'lucide-react'
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 
+const to24Hour = (time12h: string) => {
+  if (!time12h) return '';
+  const match = time12h.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!match) return time12h;
+  let h = parseInt(match[1]);
+  const m = match[2];
+  const ampm = match[3].toUpperCase();
+  if (ampm === 'PM' && h < 12) h += 12;
+  if (ampm === 'AM' && h === 12) h = 0;
+  return `${h.toString().padStart(2, '0')}:${m}`;
+}
+
+const to12Hour = (time24h: string) => {
+  if (!time24h) return '';
+  const match = time24h.match(/(\d+):(\d+)/);
+  if (!match) return time24h;
+  let h = parseInt(match[1]);
+  const m = match[2];
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  if (h > 12) h -= 12;
+  if (h === 0) h = 12;
+  return `${h.toString().padStart(2, '0')}:${m} ${ampm}`;
+}
+
 export const Route = createFileRoute('/auto-pilot')({
   component: AutoPilotComponent,
 })
@@ -211,16 +235,15 @@ function AutoPilotComponent() {
                 <div key={idx} className="flex items-center gap-3">
                   <div className="relative flex-1">
                     <input 
-                      type="text" 
-                      value={schedule.trim()}
+                      type="time" 
+                      value={to24Hour(schedule.trim())}
                       onChange={e => {
                         const times = localConfig.scheduleTimes.split(',').map((s: string) => s.trim())
-                        times[idx] = e.target.value
+                        times[idx] = to12Hour(e.target.value)
                         setLocalConfig({...localConfig, scheduleTimes: times.join(',')})
                       }}
-                      className="w-full bg-white border border-stone-200 rounded-lg pl-3 pr-10 py-2 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400"
+                      className="w-full bg-white border border-stone-200 rounded-lg pl-3 pr-4 py-2 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400"
                     />
-                    <Clock size={16} className="absolute right-3 top-2.5 text-stone-400 pointer-events-none" />
                   </div>
                   <button 
                     onClick={() => {
