@@ -218,11 +218,13 @@ async def handle_webhook(request: Request):
     try:
         data = await request.json()
         try:
-            print("Received Webhook Data")
-        except:
-            pass
+            import json
+            print("Received Webhook Data:", json.dumps(data, indent=2))
+        except Exception as e:
+            print("Failed to print data:", e)
         
         if data.get("object") == "page":
+            # (Original Facebook webhook logic preserved)
             for entry in data.get("entry", []):
                 for messaging_event in entry.get("messaging", []):
                     if "message" in messaging_event and "text" in messaging_event["message"]:
@@ -250,8 +252,41 @@ async def handle_webhook(request: Request):
                         except Exception as e:
                             print("Failed to log user message to DB:", e)
                         
-                        # Send the reply back to the user
+                        # Send the reply back to the user via Zernio
                         send_facebook_message(sender_id, reply_text)
+        
+        # --- ADDED: Zernio Webhook Support ---
+        elif data.get("event") == "message.received":
+            message_obj = data.get("message", {})
+            message_text = message_obj.get("text", "")
+            sender_id = message_obj.get("sender", {}).get("id", "")
+            direction = message_obj.get("direction", "")
+            
+            # We only want to reply to incoming messages (from customers)
+            if direction == "incoming" and message_text and sender_id:
+                # Call our Gemini logic
+                reply_text = generate_rag_response(message_text)
+                
+                requires_human = False
+                if "[HUMAN_NEEDED]" in reply_text:
+                    requires_human = True
+                    reply_text = "မင်္ဂလာပါခင်ဗျာ၊ ဒီမေးခွန်းအတွက် ကျွန်တော့်မှာ အချက်အလက် အပြည့်အစုံ မရှိသေးတဲ့အတွက် တာဝန်ရှိသူနဲ့ ခဏလောက် ချိတ်ဆက်ပေးပါမယ်ခင်ဗျာ။ ခဏလေး စောင့်ပေးပါနော်..."
+
+                # Log incoming user message to DB
+                try:
+                    requests.post("http://backend:8080/api/inbox", json={
+                        "senderId": sender_id,
+                        "recipientId": "ITCollegetest",
+                        "messageText": message_text,
+                        "fromAi": False,
+                        "requiresHuman": requires_human,
+                        "resolved": False
+                    }, timeout=3)
+                except Exception as e:
+                    print("Failed to log user message to DB:", e)
+                
+                # Send the reply back to the user via Zernio
+                send_facebook_message(sender_id, reply_text)
                         
         return {"status": "EVENT_RECEIVED"}
     except Exception as e:
