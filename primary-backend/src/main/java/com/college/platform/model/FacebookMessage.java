@@ -16,6 +16,9 @@ public class FacebookMessage {
     @Column(name = "sender_id", nullable = false)
     private String senderId;
 
+    @Column(name = "sender_name")
+    private String senderName;
+
     @Column(name = "recipient_id", nullable = false)
     private String recipientId;
 
@@ -48,9 +51,10 @@ public class FacebookMessage {
     public FacebookMessage() {
     }
 
-    public FacebookMessage(UUID id, String senderId, String recipientId, String messageText, Boolean fromAi, Boolean requiresHuman, Boolean resolved, String leadStatus, String paymentSlipUrl, Boolean paymentVerified, LocalDateTime createdAt) {
+    public FacebookMessage(UUID id, String senderId, String senderName, String recipientId, String messageText, Boolean fromAi, Boolean requiresHuman, Boolean resolved, String leadStatus, String paymentSlipUrl, Boolean paymentVerified, LocalDateTime createdAt) {
         this.id = id;
         this.senderId = senderId;
+        this.senderName = senderName;
         this.recipientId = recipientId;
         this.messageText = messageText;
         this.fromAi = fromAi;
@@ -68,6 +72,9 @@ public class FacebookMessage {
 
     public String getSenderId() { return senderId; }
     public void setSenderId(String senderId) { this.senderId = senderId; }
+
+    public String getSenderName() { return senderName; }
+    public void setSenderName(String senderName) { this.senderName = senderName; }
 
     public String getRecipientId() { return recipientId; }
     public void setRecipientId(String recipientId) { this.recipientId = recipientId; }

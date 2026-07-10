@@ -107,8 +107,10 @@ function InboxComponent() {
   const customers = Object.keys(groupedConversations).map(id => {
     const msgs = groupedConversations[id]
     const lastMsg = msgs[msgs.length - 1]
-    const hasUnresolvedHandoff = msgs.some(m => m.requiresHuman && !m.resolved)
-    return { id, lastMsg, hasUnresolvedHandoff }
+    const hasUnresolvedHandoff = msgs.some((m: any) => m.requiresHuman && !m.resolved)
+    const name = msgs.find((m: any) => m.senderName)?.senderName || `Customer ${id.substring(0,6)}...`
+    const fullName = msgs.find((m: any) => m.senderName)?.senderName || `Customer ${id}`
+    return { id, lastMsg, hasUnresolvedHandoff, name, fullName }
   }).sort((a, b) => {
     const timeA = a.lastMsg.createdAt ? new Date(a.lastMsg.createdAt).getTime() : 0;
     const timeB = b.lastMsg.createdAt ? new Date(b.lastMsg.createdAt).getTime() : 0;
@@ -162,7 +164,7 @@ function InboxComponent() {
                 }`}
               >
                 <div className="flex justify-between items-start mb-1">
-                  <span className="font-semibold text-gray-900 truncate">Customer {c.id.substring(0,6)}...</span>
+                  <span className="font-semibold text-gray-900 truncate">{c.name}</span>
                   <span className="text-[10px] text-gray-500 whitespace-nowrap">
                     {c.lastMsg.createdAt ? new Date(c.lastMsg.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : 'Just now'}
                   </span>
@@ -203,7 +205,7 @@ function InboxComponent() {
                   <User size={20} />
                 </div>
                 <div>
-                  <h2 className="font-bold text-gray-900">Customer {selectedUser}</h2>
+                  <h2 className="font-bold text-gray-900">{customers.find(c => c.id === selectedUser)?.fullName || `Customer ${selectedUser}`}</h2>
                   <p className="text-xs text-gray-500">Facebook Messenger</p>
                 </div>
               </div>

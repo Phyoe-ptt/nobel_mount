@@ -223,7 +223,7 @@ def send_facebook_message(sender_id: str, message_text: str, conversation_id: st
     except Exception as e:
         print(f"Unexpected Error sending message: {e}")
 
-def process_zernio_message(message_text: str, sender_id: str, conversation_id: str, account_id: str):
+def process_zernio_message(message_text: str, sender_id: str, sender_name: str, conversation_id: str, account_id: str):
     """Background task to process the message and reply"""
     try:
         # Call our Gemini logic
@@ -238,6 +238,7 @@ def process_zernio_message(message_text: str, sender_id: str, conversation_id: s
         try:
             requests.post("http://backend:8080/api/inbox", json={
                 "senderId": sender_id,
+                "senderName": sender_name,
                 "recipientId": "ITCollegetest",
                 "messageText": message_text,
                 "fromAi": False,
@@ -268,6 +269,7 @@ async def handle_webhook(request: Request, background_tasks: BackgroundTasks):
             message_obj = data.get("message", {})
             message_text = message_obj.get("text", "")
             sender_id = message_obj.get("sender", {}).get("id", "")
+            sender_name = message_obj.get("sender", {}).get("name", "")
             direction = message_obj.get("direction", "")
             conversation_id = message_obj.get("conversationId", "")
             account_id = data.get("account", {}).get("id", "")
@@ -275,7 +277,7 @@ async def handle_webhook(request: Request, background_tasks: BackgroundTasks):
             # We only want to reply to incoming messages (from customers)
             if direction == "incoming" and message_text and sender_id:
                 # Add to background tasks so we can return 200 OK immediately and prevent Zernio retries
-                background_tasks.add_task(process_zernio_message, message_text, sender_id, conversation_id, account_id)
+                background_tasks.add_task(process_zernio_message, message_text, sender_id, sender_name, conversation_id, account_id)
                         
         return {"status": "EVENT_RECEIVED"}
     except Exception as e:
