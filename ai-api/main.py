@@ -597,7 +597,7 @@ def generate_image_endpoint(payload: ImagePayload):
         image_prompt = f"A beautiful, professional, high-quality photo. {style}. Bright, colorful, inspiring, professional photography, sharp focus, 4k quality."
         
         response = client.models.generate_images(
-            model="imagen-4.0-generate-001",
+            model="imagen-3.0-generate-001",
             prompt=image_prompt,
             config=gtypes.GenerateImagesConfig(
                 number_of_images=1,
