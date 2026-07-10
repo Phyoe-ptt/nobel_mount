@@ -46,15 +46,18 @@ async def startup_event():
 
 async def autopilot_loop():
     global last_run_minute
+    tz = pytz.timezone('Asia/Bangkok') # +07:00 timezone
     while True:
         try:
-            # Check every minute using system local time
-            now = datetime.now()
+            # Check every minute using timezone-aware time
+            now = datetime.now(tz)
             current_minute = now.strftime("%Y-%m-%d %H:%M")
             current_time_str = now.strftime("%I:%M %p").lstrip("0") # e.g. "3:32 AM"
             current_time_str_padded = now.strftime("%I:%M %p")      # e.g. "03:32 AM"
             
             if last_run_minute != current_minute:
+                last_run_minute = current_minute # Update immediately to prevent spamming
+                
                 # Fetch config from Java backend
                 resp = requests.get("http://backend:8080/api/autopilot", timeout=5)
                 if resp.ok:
@@ -64,7 +67,6 @@ async def autopilot_loop():
                         times = [t.strip().upper() for t in times_str.split(",")]
                         
                         if current_time_str in times or current_time_str_padded in times:
-                            last_run_minute = current_minute
                             print(f"[AutoPilot] Triggering scheduled post for {current_time_str}")
                             # Run generation in background
                             asyncio.create_task(run_autopilot_generation(config))
