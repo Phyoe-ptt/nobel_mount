@@ -295,7 +295,7 @@ function AutoPilotComponent() {
                 className="w-full bg-white border border-stone-200 rounded-lg px-3 py-2 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400"
               >
                 <option value="draft">Save as Draft (Review manually)</option>
-                <option value="auto">Auto-Publish (Queue automatically)</option>
+                <option value="auto">Auto-Publish (Direct to Facebook)</option>
               </select>
             </div>
           </div>
