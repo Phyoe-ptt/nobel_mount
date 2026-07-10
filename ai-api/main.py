@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, HTTPException, UploadFile, File
+from fastapi import FastAPI, Request, HTTPException, UploadFile, File, BackgroundTasks
 from pydantic import BaseModel
 from typing import List, Optional
 import os
@@ -221,8 +221,37 @@ def send_facebook_message(sender_id: str, message_text: str, conversation_id: st
     except Exception as e:
         print(f"Unexpected Error sending message: {e}")
 
+def process_zernio_message(message_text: str, sender_id: str, conversation_id: str, account_id: str):
+    """Background task to process the message and reply"""
+    try:
+        # Call our Gemini logic
+        reply_text = generate_rag_response(message_text)
+        
+        requires_human = False
+        if "[HUMAN_NEEDED]" in reply_text:
+            requires_human = True
+            reply_text = "မင်္ဂလာပါခင်ဗျာ၊ ဒီမေးခွန်းအတွက် ကျွန်တော့်မှာ အချက်အလက် အပြည့်အစုံ မရှိသေးတဲ့အတွက် တာဝန်ရှိသူနဲ့ ခဏလောက် ချိတ်ဆက်ပေးပါမယ်ခင်ဗျာ။ ခဏလေး စောင့်ပေးပါနော်..."
+
+        # Log incoming user message to DB
+        try:
+            requests.post("http://backend:8080/api/inbox", json={
+                "senderId": sender_id,
+                "recipientId": "ITCollegetest",
+                "messageText": message_text,
+                "fromAi": False,
+                "requiresHuman": requires_human,
+                "resolved": False
+            }, timeout=3)
+        except Exception as e:
+            print("Failed to log user message to DB:", e)
+        
+        # Send the reply back to the user via Zernio
+        send_facebook_message(sender_id, reply_text, conversation_id=conversation_id, account_id=account_id)
+    except Exception as e:
+        print(f"Error in background task: {e}")
+
 @app.post("/webhook")
-async def handle_webhook(request: Request):
+async def handle_webhook(request: Request, background_tasks: BackgroundTasks):
     """Handle incoming messages from ITCollegetest Facebook Page"""
     try:
         data = await request.json()
@@ -243,29 +272,8 @@ async def handle_webhook(request: Request):
             
             # We only want to reply to incoming messages (from customers)
             if direction == "incoming" and message_text and sender_id:
-                # Call our Gemini logic
-                reply_text = generate_rag_response(message_text)
-                
-                requires_human = False
-                if "[HUMAN_NEEDED]" in reply_text:
-                    requires_human = True
-                    reply_text = "မင်္ဂလာပါခင်ဗျာ၊ ဒီမေးခွန်းအတွက် ကျွန်တော့်မှာ အချက်အလက် အပြည့်အစုံ မရှိသေးတဲ့အတွက် တာဝန်ရှိသူနဲ့ ခဏလောက် ချိတ်ဆက်ပေးပါမယ်ခင်ဗျာ။ ခဏလေး စောင့်ပေးပါနော်..."
-
-                # Log incoming user message to DB
-                try:
-                    requests.post("http://backend:8080/api/inbox", json={
-                        "senderId": sender_id,
-                        "recipientId": "ITCollegetest",
-                        "messageText": message_text,
-                        "fromAi": False,
-                        "requiresHuman": requires_human,
-                        "resolved": False
-                    }, timeout=3)
-                except Exception as e:
-                    print("Failed to log user message to DB:", e)
-                
-                # Send the reply back to the user via Zernio
-                send_facebook_message(sender_id, reply_text, conversation_id=conversation_id, account_id=account_id)
+                # Add to background tasks so we can return 200 OK immediately and prevent Zernio retries
+                background_tasks.add_task(process_zernio_message, message_text, sender_id, conversation_id, account_id)
                         
         return {"status": "EVENT_RECEIVED"}
     except Exception as e:
