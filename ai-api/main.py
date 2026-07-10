@@ -139,7 +139,7 @@ Requirements:
                 "scheduled_date": None
             }
             # Call our own endpoint function internally to avoid localhost deadlock
-            publish_to_facebook(FacebookPublishPayload(**publish_payload))
+            publish_to_facebook(PublishPayload(**publish_payload))
             print("[AutoPilot] Post published to Facebook.")
             
     except Exception as e:
