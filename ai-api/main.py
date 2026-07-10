@@ -274,6 +274,12 @@ async def handle_webhook(request: Request, background_tasks: BackgroundTasks):
             conversation_id = message_obj.get("conversationId", "")
             account_id = data.get("account", {}).get("id", "")
             
+            # CRITICAL: Only allow auto-replies on the ITCollegetest page to protect the real page!
+            TEST_ACCOUNT_ID = os.getenv("ZERNIO_TEST_ACCOUNT_ID", "6a4ff1243ecd8aa3447feda8")
+            if account_id != TEST_ACCOUNT_ID:
+                print(f"Ignored message for real account {account_id}")
+                return {"status": "IGNORED"}
+            
             # We only want to reply to incoming messages (from customers)
             if direction == "incoming" and message_text and sender_id:
                 # Add to background tasks so we can return 200 OK immediately and prevent Zernio retries
