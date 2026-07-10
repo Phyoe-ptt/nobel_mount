@@ -164,19 +164,23 @@ def verify_webhook(request: Request):
             raise HTTPException(status_code=403, detail="Verification token mismatch")
     raise HTTPException(status_code=400, detail="Bad Request")
 
-def send_facebook_message(sender_id: str, message_text: str, conversation_id: str = None):
+def send_facebook_message(sender_id: str, message_text: str, conversation_id: str = None, account_id: str = None):
     """Sends a message back to the user via Zernio API"""
     api_key = os.getenv("ZERMIO_API_KEY")
-    account_id = os.getenv("ZERMIO_ACCOUNT_ID")
+    
+    # Use provided account_id, or fallback to .env
+    if not account_id:
+        account_id = os.getenv("ZERMIO_ACCOUNT_ID")
     
     if not api_key or not account_id:
-        print("Error: ZERMIO_API_KEY or ZERMIO_ACCOUNT_ID missing in .env!")
+        print("Error: ZERMIO_API_KEY or ZERMIO_ACCOUNT_ID missing!")
         return
         
     if conversation_id:
         # Use the official Zernio inbox API endpoint
         url = f"https://zernio.com/api/v1/inbox/conversations/{conversation_id}/messages"
         payload = {
+            "accountId": account_id,
             "text": message_text
         }
     else:
@@ -269,6 +273,7 @@ async def handle_webhook(request: Request):
             sender_id = message_obj.get("sender", {}).get("id", "")
             direction = message_obj.get("direction", "")
             conversation_id = message_obj.get("conversationId", "")
+            account_id = data.get("account", {}).get("id", "")
             
             # We only want to reply to incoming messages (from customers)
             if direction == "incoming" and message_text and sender_id:
@@ -294,7 +299,7 @@ async def handle_webhook(request: Request):
                     print("Failed to log user message to DB:", e)
                 
                 # Send the reply back to the user via Zernio
-                send_facebook_message(sender_id, reply_text, conversation_id=conversation_id)
+                send_facebook_message(sender_id, reply_text, conversation_id=conversation_id, account_id=account_id)
                         
         return {"status": "EVENT_RECEIVED"}
     except Exception as e:
