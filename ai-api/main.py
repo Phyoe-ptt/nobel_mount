@@ -181,7 +181,7 @@ def send_facebook_message(sender_id: str, message_text: str, conversation_id: st
         url = f"https://zernio.com/api/v1/inbox/conversations/{conversation_id}/messages"
         payload = {
             "accountId": account_id,
-            "text": message_text
+            "message": message_text
         }
     else:
         # Fallback if no conversation ID is known
@@ -189,9 +189,7 @@ def send_facebook_message(sender_id: str, message_text: str, conversation_id: st
         payload = {
             "platform": "facebook",
             "recipientId": sender_id,
-            "message": {
-                "text": message_text
-            }
+            "message": message_text
         }
     headers = {
         "Authorization": f"Bearer {api_key}",
