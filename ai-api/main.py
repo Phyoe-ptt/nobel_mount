@@ -165,23 +165,31 @@ def verify_webhook(request: Request):
     raise HTTPException(status_code=400, detail="Bad Request")
 
 def send_facebook_message(sender_id: str, message_text: str):
-    """Sends a message back to the user via Facebook Graph API"""
-    token = get_fb_publish_token()
-    if not token:
-        print("Error: No Facebook Publish Token found!")
+    """Sends a message back to the user via Zernio API"""
+    api_key = os.getenv("ZERMIO_API_KEY")
+    account_id = os.getenv("ZERMIO_ACCOUNT_ID")
+    
+    if not api_key or not account_id:
+        print("Error: ZERMIO_API_KEY or ZERMIO_ACCOUNT_ID missing in .env!")
         return
         
-    url = f"https://graph.facebook.com/v20.0/me/messages?access_token={token}"
+    # Standard Zernio unified messaging endpoint
+    url = f"https://zernio.com/api/v1/accounts/{account_id}/messages"
     payload = {
-        "recipient": {"id": sender_id},
-        "message": {"text": message_text},
-        "messaging_type": "RESPONSE"
+        "platform": "facebook",
+        "recipientId": sender_id,
+        "message": {
+            "text": message_text
+        }
     }
-    headers = {"Content-Type": "application/json"}
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
     try:
         response = requests.post(url, json=payload, headers=headers)
         
-        # Log AI reply to DB FIRST, before checking if Facebook succeeded
+        # Log AI reply to DB FIRST
         try:
             requests.post("http://backend:8080/api/inbox", json={
                 "senderId": "ITCollegetest",
@@ -194,13 +202,13 @@ def send_facebook_message(sender_id: str, message_text: str):
         except Exception as e:
             print("Failed to log AI reply to DB:", e)
             
-        # Now raise for status so we can catch Facebook errors
+        # Check Zernio errors
         response.raise_for_status()
-        print(f"Message sent successfully to {sender_id}")
+        print(f"Message sent successfully to {sender_id} via Zernio")
             
     except requests.exceptions.HTTPError as e:
-        print(f"Error sending message: {e}")
-        print("Facebook API Response:", e.response.json())
+        print(f"Error sending message via Zernio: {e}")
+        print("Zernio API Response:", e.response.text)
     except Exception as e:
         print(f"Unexpected Error sending message: {e}")
 
