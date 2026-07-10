@@ -99,7 +99,7 @@ Requirements:
         # 2. Generate Image
         img_prompt = f"Professional marketing banner, {keywords}, high quality, beautiful photography"
         img_response = client.models.generate_images(
-            model="imagen-4.0-generate-001",
+            model="imagen-3.0-generate-001",
             prompt=img_prompt,
             config=dict(number_of_images=1, aspect_ratio="16:9")
         )
