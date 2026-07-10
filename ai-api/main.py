@@ -164,7 +164,7 @@ def verify_webhook(request: Request):
             raise HTTPException(status_code=403, detail="Verification token mismatch")
     raise HTTPException(status_code=400, detail="Bad Request")
 
-def send_facebook_message(sender_id: str, message_text: str):
+def send_facebook_message(sender_id: str, message_text: str, conversation_id: str = None):
     """Sends a message back to the user via Zernio API"""
     api_key = os.getenv("ZERMIO_API_KEY")
     account_id = os.getenv("ZERMIO_ACCOUNT_ID")
@@ -173,15 +173,22 @@ def send_facebook_message(sender_id: str, message_text: str):
         print("Error: ZERMIO_API_KEY or ZERMIO_ACCOUNT_ID missing in .env!")
         return
         
-    # Standard Zernio unified messaging endpoint
-    url = f"https://zernio.com/api/v1/accounts/{account_id}/messages"
-    payload = {
-        "platform": "facebook",
-        "recipientId": sender_id,
-        "message": {
+    if conversation_id:
+        # Use the official Zernio inbox API endpoint
+        url = f"https://zernio.com/api/v1/inbox/conversations/{conversation_id}/messages"
+        payload = {
             "text": message_text
         }
-    }
+    else:
+        # Fallback if no conversation ID is known
+        url = f"https://zernio.com/api/v1/accounts/{account_id}/messages"
+        payload = {
+            "platform": "facebook",
+            "recipientId": sender_id,
+            "message": {
+                "text": message_text
+            }
+        }
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
@@ -261,6 +268,7 @@ async def handle_webhook(request: Request):
             message_text = message_obj.get("text", "")
             sender_id = message_obj.get("sender", {}).get("id", "")
             direction = message_obj.get("direction", "")
+            conversation_id = message_obj.get("conversationId", "")
             
             # We only want to reply to incoming messages (from customers)
             if direction == "incoming" and message_text and sender_id:
@@ -286,7 +294,7 @@ async def handle_webhook(request: Request):
                     print("Failed to log user message to DB:", e)
                 
                 # Send the reply back to the user via Zernio
-                send_facebook_message(sender_id, reply_text)
+                send_facebook_message(sender_id, reply_text, conversation_id=conversation_id)
                         
         return {"status": "EVENT_RECEIVED"}
     except Exception as e:
