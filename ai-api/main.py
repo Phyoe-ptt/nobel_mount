@@ -131,7 +131,17 @@ Requirements:
             print("[AutoPilot] Post published to Facebook.")
             
     except Exception as e:
-        print(f"[AutoPilot] Generation error: {e}")
+        error_str = str(e)
+        print(f"[AutoPilot] Generation error: {error_str}")
+        try:
+            import requests
+            requests.post("http://backend:8080/api/social-posts", json={
+                "content": f"🚨 AUTOPILOT FAILED: {error_str}",
+                "imageUrl": "",
+                "status": "FAILED"
+            }, timeout=3)
+        except Exception as inner_e:
+            print(f"Failed to log error to backend: {inner_e}")
 
 def get_fb_publish_token():
     try:

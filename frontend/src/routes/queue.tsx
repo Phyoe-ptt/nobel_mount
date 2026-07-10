@@ -43,7 +43,7 @@ function QueueComponent() {
     }
   })
 
-  const draftPosts = posts.filter((p: any) => p.status === 'DRAFT' || !p.status)
+  const draftPosts = posts.filter((p: any) => p.status === 'DRAFT' || p.status === 'FAILED' || !p.status)
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
