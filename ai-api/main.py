@@ -98,17 +98,26 @@ Requirements:
         post_text = response.text.strip()
         
         # 2. Generate Image
-        img_prompt = f"Professional marketing banner, {keywords}, high quality, beautiful photography"
-        img_response = client.models.generate_images(
-            model="imagen-3.0-generate-001",
-            prompt=img_prompt,
-            config=types.GenerateImagesConfig(number_of_images=1, aspect_ratio="16:9")
-        )
         img_url = ""
-        if img_response.generated_images:
-            image_bytes = img_response.generated_images[0].image.image_bytes
-            b64 = base64.b64encode(image_bytes).decode("utf-8")
-            img_url = f"data:image/jpeg;base64,{b64}"
+        try:
+            img_prompt = f"Professional marketing banner, {keywords}, high quality, beautiful photography"
+            img_response = client.models.generate_images(
+                model="imagen-3.0-generate-001",
+                prompt=img_prompt,
+                config=types.GenerateImagesConfig(number_of_images=1, aspect_ratio="16:9")
+            )
+            if img_response.generated_images:
+                image_bytes = img_response.generated_images[0].image.image_bytes
+                import base64
+                b64 = base64.b64encode(image_bytes).decode("utf-8")
+                img_url = f"data:image/jpeg;base64,{b64}"
+        except Exception as img_err:
+            print(f"[AutoPilot] Imagen failed, using Unsplash fallback: {img_err}")
+            import random, urllib.parse
+            query = "students college education classroom university learning"
+            seed = random.randint(1, 9999)
+            img_url = f"https://source.unsplash.com/featured/1024x576/?{urllib.parse.quote(query)}&sig={seed}"
+
             
         # 3. Publish or Save to Queue
         publish_mode = config.get("publishMode", "auto")
