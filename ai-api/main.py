@@ -122,11 +122,14 @@ Requirements:
         # 3. Publish or Save to Queue
         publish_mode = config.get("publishMode", "auto")
         if publish_mode == "draft":
-            requests.post("http://backend:8080/api/social-posts", json={
+            import requests
+            resp = requests.post("http://backend:8080/api/social-posts", json={
                 "content": post_text,
                 "imageUrl": img_url,
                 "status": "DRAFT"
-            })
+            }, timeout=10)
+            if not resp.ok:
+                raise Exception(f"Failed to save to draft queue: {resp.text}")
             print("[AutoPilot] Post saved to draft queue.")
         else:
             # Publish to Facebook immediately (since it's already the scheduled time)
@@ -135,8 +138,8 @@ Requirements:
                 "image_url": img_url,
                 "scheduled_date": None
             }
-            # We call our own endpoint function internally (or via requests)
-            requests.post("http://localhost:8000/facebook/publish", json=publish_payload)
+            # Call our own endpoint function internally to avoid localhost deadlock
+            publish_to_facebook(FacebookPublishPayload(**publish_payload))
             print("[AutoPilot] Post published to Facebook.")
             
     except Exception as e:
