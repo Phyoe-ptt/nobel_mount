@@ -18,7 +18,16 @@ function QueueComponent() {
   })
 
   const updateStatusMutation = useMutation({
-    mutationFn: async ({ id, status }: { id: number, status: string }) => {
+    mutationFn: async ({ id, status, content, imageUrl }: { id: number, status: string, content?: string, imageUrl?: string }) => {
+      if (status === 'PUBLISHED') {
+        const pubRes = await fetch('/facebook/publish', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: content, image_url: imageUrl })
+        })
+        if (!pubRes.ok) throw new Error('Failed to publish to Facebook')
+      }
+
       const res = await fetch(`/api/social-posts/${id}/status`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -28,6 +37,9 @@ function QueueComponent() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['socialPosts'] })
+    },
+    onError: (err) => {
+      alert("Error: " + err.message)
     }
   })
 
@@ -65,7 +77,7 @@ function QueueComponent() {
               </div>
               <div className="flex items-center gap-3 mt-6 pt-4 border-t border-stone-100">
                 <button 
-                  onClick={() => updateStatusMutation.mutate({ id: post.id, status: 'PUBLISHED' })}
+                  onClick={() => updateStatusMutation.mutate({ id: post.id, status: 'PUBLISHED', content: post.content, imageUrl: post.imageUrl })}
                   disabled={updateStatusMutation.isPending}
                   className="bg-[#C69A55] hover:bg-[#B38745] text-white font-bold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-colors disabled:opacity-50"
                 >
