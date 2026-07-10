@@ -78,6 +78,7 @@ async def autopilot_loop():
 async def run_autopilot_generation(config: dict):
     try:
         from google import genai
+        from google.genai import types
         client = genai.Client(api_key=GEMINI_API_KEY)
         
         keywords = config.get("pageProfileText", "Nobel Mount College updates")
@@ -101,7 +102,7 @@ Requirements:
         img_response = client.models.generate_images(
             model="imagen-3.0-generate-001",
             prompt=img_prompt,
-            config=dict(number_of_images=1, aspect_ratio="16:9")
+            config=types.GenerateImagesConfig(number_of_images=1, aspect_ratio="16:9")
         )
         img_url = ""
         if img_response.generated_images:
